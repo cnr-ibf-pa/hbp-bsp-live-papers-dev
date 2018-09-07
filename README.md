@@ -1,1 +1,1 @@
-# hbp-bsp-live-papers
+# Human Brain Project - Brain Simulation Platform "Live Papers"
