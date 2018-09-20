@@ -1,956 +1,973 @@
-<html>
-   <head>
-      <title>Migliore et al. 2018</title>
-      <meta name="viewport" content="width = device-width, initial-scale = 1">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-      <link rel="stylesheet" type="text/css" href="../static/css/live_paper.css">
-      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-   </head>
-   <body class="container">
-      <br>
-      <div class="box rounded">
-         <h5 style="font-family: 'Merriweather', serif; text-align:center; line-height: 1.25;">The physiological variability of channel density in hippocampal CA1 pyramidal cells and interneurons explored using a unified data-driven modeling workflow</h5>
-      </div>
-      <p>
-      <p><strong>Authors: </strong>Rosanna Migliore<sup>1</sup>, Carmen A. Lupascu<sup>1</sup>, Luca L. Bologna<sup>1</sup>, Armando Romani<sup>2</sup>, Jean-Denis Courcol<sup>2</sup>, Stefano Antonel<sup>2</sup>, Werner A.H. Van Geit<sup>2</sup>, Alex M. Thomson<sup>3</sup>, Audrey Mercer<sup>3</sup>, Sigrun Lange<sup>3,4</sup>, Joanne Falck<sup>3</sup>, Christian A. Rössert<sup>2</sup>, Ying Shi<sup>2</sup>, Olivier Hagens<sup>5</sup>, Maurizio Pezzoli<sup>5</sup>, Tamas F. Freund<sup>6,7</sup>, Szabolcs Kali<sup>6,7</sup>, Eilif B. Muller<sup>2</sup>, Felix Schürmann<sup>2</sup>, Henry Markram<sup>2</sup>, and Michele Migliore<sup>1</sup></p>
-      <p><strong>Author information: </strong><sup>1</sup> Institute of Biophysics, National Research Council, Palermo, Italy, <sup>2 </sup>Blue Brain Project, École Polytechnique Fédérale de Lausanne, Campus Biotech, Geneva, Switzerland, <sup>3</sup> University College London, United Kingdom,<sup>4</sup> University of Westminster, London, United Kingdom,<sup>5 </sup>Laboratory of Neural Microcircuitry (LNMC), Brain Mind Institute, EPFL, Lausanne, Switzerland,<sup>6</sup> Institute of Experimental Medicine, Hungarian Academy of Sciences, Budapest, Hungary, <sup>7</sup> Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest, Hungary.</p>
-      <p><strong>Corresponding author: </strong>Rosanna Migliore ( <em><a href="mailto:rosanna.migliore@cnr.it">rosanna.migliore@cnr.it</a></em> )</p>
-      </p>
-      <div class="rainbow-row">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-      </div>
-      <div>
-         <p><strong>Journal: </strong><a href="http://journals.plos.org/ploscompbiol/" target="_blank"><span class="color_link">Plos Computational Biology</span></a></p>
-         <p><strong>Download Url: </strong><a href="https://doi.org/10.1371/journal.pcbi.1006423" target="_blank"><span class="color_link">https://doi.org/10.1371/journal.pcbi.1006423</span></a></p>
-         <p><strong>Citation: </strong> Migliore R, Lupascu CA, Bologna LL, Romani A, Courcol J-D, Antonel S, et al. (2018) The physiological variability of channel density in hippocampal CA1 pyramidal cells and interneurons explored using a unified data-driven modeling workflow. PLoS Comput Biol 14(9): e1006423.</p>
-         <p><strong>DOI: </strong><a href="https://doi.org/10.1371/journal.pcbi.1006423" target="_blank"><span class="color_link">https://doi.org/10.1371/journal.pcbi.1006423</span></a></p>
-         <p><strong>Licence: </strong>the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><span class="color_link">Creative Commons Attribution (CC BY) license</span></a>&nbsp;applies for all files.&nbsp;Under this Open Access license anyone&nbsp; may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.</p>
-      </div>
-      <div class="note rounded">
-         <h5>Abstract:</h5>
-         The peak conductance of many ion channel types measured in any given animal is highly variable across neurons, both within and between neuronal populations. The current view is that this occurs&nbsp; because a neuron needs to adapt its intrinsic electrophysiological properties either to maintain the same operative range in the presence of abnormal inputs or to compensate for the effects of&nbsp; pathological conditions. Limited experimental and modeling evidence suggests this might be&nbsp; implemented via the correlation and/or degeneracy in the function of multiple types of conductances. To study this mechanism in hippocampal CA1 neurons and interneurons, we systematically generated a set of morphologically and biophysically accurate models. We then analyzed the ensembles of peak conductance obtained for each model neuron. The results suggest that the set of conductances expressed in the various neuron types may be divided into two groups: one group is responsible for the major characteristics of the firing behavior in each population and the other more involved with&nbsp; degeneracy. These models provide experimentally testable predictions on the combination and relative proportion of the different conductance types that should be present in hippocampal CA1&nbsp; pyramidal cells and interneurons.
-      </div>
-      <h5>Resources</h5>
-      <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
-      </p>
-      <ul class="collapsible" data-collapsible="expandable">
-         <li class="active">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Migliore et al. 2018</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/live_paper.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+
+<body class="container">
+    <br>
+    <div class="box rounded">
+        <h5 style="font-family: 'Merriweather', serif; text-align:center; line-height: 1.25;">The physiological variability of channel density in hippocampal CA1 pyramidal cells and interneurons explored using a unified data-driven modeling workflow</h5>
+    </div>
+    <div>
+        <p><strong>Authors: </strong>Rosanna Migliore<sup>1</sup>, Carmen A. Lupascu<sup>1</sup>, Luca L. Bologna<sup>1</sup>, Armando Romani<sup>2</sup>, Jean-Denis Courcol<sup>2</sup>, Stefano Antonel<sup>2</sup>, Werner A.H. Van Geit<sup>2</sup>, Alex
+            M. Thomson<sup>3</sup>, Audrey Mercer<sup>3</sup>, Sigrun Lange<sup>3,4</sup>, Joanne Falck<sup>3</sup>, Christian A. Rössert<sup>2</sup>, Ying Shi<sup>2</sup>, Olivier Hagens<sup>5</sup>, Maurizio Pezzoli<sup>5</sup>, Tamas F. Freund<sup>6,7</sup>,
+            Szabolcs Kali<sup>6,7</sup>, Eilif B. Muller<sup>2</sup>, Felix Schürmann<sup>2</sup>, Henry Markram<sup>2</sup>, and Michele Migliore<sup>1</sup></p>
+        <p><strong>Author information: </strong><sup>1</sup> Institute of Biophysics, National Research Council, Palermo, Italy, <sup>2 </sup>Blue Brain Project, École Polytechnique Fédérale de Lausanne, Campus Biotech, Geneva, Switzerland, <sup>3</sup>            University College London, United Kingdom,<sup>4</sup> University of Westminster, London, United Kingdom,<sup>5 </sup>Laboratory of Neural Microcircuitry (LNMC), Brain Mind Institute, EPFL, Lausanne, Switzerland,<sup>6</sup> Institute of Experimental
+            Medicine, Hungarian Academy of Sciences, Budapest, Hungary, <sup>7</sup> Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest, Hungary.</p>
+        <p><strong>Corresponding author: </strong>Rosanna Migliore ( <em><a href="mailto:rosanna.migliore@cnr.it">rosanna.migliore@cnr.it</a></em> )</p>
+    </div>
+    <div class="rainbow-row">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <p><strong>Journal: </strong><a href="https://journals.plos.org/ploscompbiol/" target="_blank"><span class="color_link">Plos Computational Biology</span></a></p>
+        <p><strong>Download Url: </strong><a href="https://doi.org/10.1371/journal.pcbi.1006423" target="_blank"><span class="color_link">https://doi.org/10.1371/journal.pcbi.1006423</span></a></p>
+        <p><strong>Citation: </strong> Migliore R, Lupascu CA, Bologna LL, Romani A, Courcol J-D, Antonel S, et al. (2018) The physiological variability of channel density in hippocampal CA1 pyramidal cells and interneurons explored using a unified data-driven
+            modeling workflow. PLoS Comput Biol 14(9): e1006423.</p>
+        <p><strong>DOI: </strong><a href="https://doi.org/10.1371/journal.pcbi.1006423" target="_blank"><span class="color_link">https://doi.org/10.1371/journal.pcbi.1006423</span></a></p>
+        <p><strong>Licence: </strong>the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><span class="color_link">Creative Commons Attribution (CC BY) license</span></a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp; may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.</p>
+    </div>
+    <div class="note rounded">
+        <h5>Abstract:</h5>
+        The peak conductance of many ion channel types measured in any given animal is highly variable across neurons, both within and between neuronal populations. The current view is that this occurs&nbsp; because a neuron needs to adapt its intrinsic electrophysiological
+        properties either to maintain the same operative range in the presence of abnormal inputs or to compensate for the effects of&nbsp; pathological conditions. Limited experimental and modeling evidence suggests this might be&nbsp; implemented via
+        the correlation and/or degeneracy in the function of multiple types of conductances. To study this mechanism in hippocampal CA1 neurons and interneurons, we systematically generated a set of morphologically and biophysically accurate models. We
+        then analyzed the ensembles of peak conductance obtained for each model neuron. The results suggest that the set of conductances expressed in the various neuron types may be divided into two groups: one group is responsible for the major characteristics
+        of the firing behavior in each population and the other more involved with&nbsp; degeneracy. These models provide experimentally testable predictions on the combination and relative proportion of the different conductance types that should be
+        present in hippocampal CA1&nbsp; pyramidal cells and interneurons.
+    </div>
+    <h5>Resources</h5>
+    <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
+    </p>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li class="active">
             <div class="collapsible-header amber lighten-5">
-               <i class="material-icons">settings_input_antenna</i>Morphologies
+                <i class="material-icons">settings_input_antenna</i>Morphologies
             </div>
             <!-- option: leak_remove -->
             <div class="collapsible-body ">
-               <p>Morphology files (in .asc format) used in the paper for each etype (see Table S5 of the Supplementary Material):</p>
-               <div style="margin-left:25px">
-                  <table class="striped">
-                     <tbody>
-                        <tr>
-                           <td>
-                              010710HP2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/010710HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_010710HP2_20180118155959.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              011017HP2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/011017HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_011017HP2_20180110153901.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              011023HP2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/011023HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_011023HP2_20180116154023.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              011127HP1
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/011127HP1.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_011127HP1_20180120115056.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              031031AM1
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/031031AM1.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_031031AM1_20180201104443.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              060314AM2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/060314AM2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_060314AM2_20180120154128.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              970509HP2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970509HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_970509HP2_20180117154753.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              970627BHP1
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970627BHP1.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_970627BHP1_20180120160112.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              970717D
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970717D.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_970717D_20180118154811.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              970911C
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970911C.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_970911C_20180120154902.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              971114B
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/971114B.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_971114B_20180117154233.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              980120A
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/980120A.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_980120A_20180119154402.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              980513B
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/980513B.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_980513B_20180119155952.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              990111HP2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/990111HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_990111HP2_20180118155424.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              990611HP2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/990611HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_990611HP2_20180122160209.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              990827IN5HP3
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/990827IN5HP3.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_990827IN5HP3_20180122140555.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              dend-050921AM2_axon-051208AM2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/dend-050921AM2_axon-051208AM2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              dend-990803_axon-051208AM2
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/dend-990803_axon-051208AM2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141017_a1-2_idC
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141017_a1-2_idC.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141017_a1-2_idC_20170918151638.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141208_B_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141208_B_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141208_B_idA_20170915151855.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141209_A_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141209_A_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141209_B_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141209_B_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141209_B_idA_20170915152336.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141215_A_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141215_A_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141216_A_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141216_A_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141216_A_idA_20171003152605.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg141217_A_idB
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141217_A_idB.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141217_A_idB_20170915111538.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              mpg150305_A_idB
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg150305_A_idB.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg150305_A_idB_20170915111718.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140521_B0_Rat_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140521_B0_Rat_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140521_B0_Rat_idA_20170915111955.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140521_B0_Rat_idC
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140521_B0_Rat_idC.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140521_B0_Rat_idC_20170915112201.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idA
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idA_20170915112548.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idB
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idB.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idB_20170915112605.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idC
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idC.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idC_20170912112759.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idF
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idF.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idF_20171003112912.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idG
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idG.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idH
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idH.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idH_20170915113422.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td>
-                              oh140807_A0_idJ
-                           </td>
-                           <td>
-                              <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idJ.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
-                           </td>
-                           <td>
-                              <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idJ_20170915113621.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
-                           </td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <br>
-               </div>
+                <p>Morphology files (in .asc format) used in the paper for each etype (see Table S5 of the Supplementary Material):</p>
+                <div style="margin-left:25px">
+                    <table class="striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    010710HP2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/010710HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_010710HP2_20180118155959.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    011017HP2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/011017HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_011017HP2_20180110153901.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    011023HP2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/011023HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_011023HP2_20180116154023.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    011127HP1
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/011127HP1.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_011127HP1_20180120115056.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    031031AM1
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/031031AM1.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_031031AM1_20180201104443.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    060314AM2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/060314AM2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_060314AM2_20180120154128.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    970509HP2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970509HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_970509HP2_20180117154753.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    970627BHP1
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970627BHP1.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_970627BHP1_20180120160112.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    970717D
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970717D.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_970717D_20180118154811.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    970911C
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/970911C.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_970911C_20180120154902.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    971114B
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/971114B.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_971114B_20180117154233.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    980120A
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/980120A.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_bAC_980120A_20180119154402.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    980513B
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/980513B.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_980513B_20180119155952.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    990111HP2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/990111HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cNAC_990111HP2_20180118155424.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    990611HP2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/990611HP2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_990611HP2_20180122160209.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    990827IN5HP3
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/990827IN5HP3.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_int_cAC_990827IN5HP3_20180122140555.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    dend-050921AM2_axon-051208AM2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/dend-050921AM2_axon-051208AM2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    dend-990803_axon-051208AM2
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/dend-990803_axon-051208AM2.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141017_a1-2_idC
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141017_a1-2_idC.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141017_a1-2_idC_20170918151638.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141208_B_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141208_B_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141208_B_idA_20170915151855.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141209_A_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141209_A_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141209_B_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141209_B_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141209_B_idA_20170915152336.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141215_A_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141215_A_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141216_A_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141216_A_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141216_A_idA_20171003152605.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg141217_A_idB
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg141217_A_idB.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg141217_A_idB_20170915111538.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    mpg150305_A_idB
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/mpg150305_A_idB.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_mpg150305_A_idB_20170915111718.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140521_B0_Rat_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140521_B0_Rat_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140521_B0_Rat_idA_20170915111955.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140521_B0_Rat_idC
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140521_B0_Rat_idC.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140521_B0_Rat_idC_20170915112201.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idA
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idA.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idA_20170915112548.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idB
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idB.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idB_20170915112605.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idC
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idC.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idC_20170912112759.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idF
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idF.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idF_20171003112912.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idG
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idG.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idH
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idH.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idH_20170915113422.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    oh140807_A0_idJ
+                                </td>
+                                <td>
+                                    <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/morphologies/oh140807_A0_idJ.asc" class="waves-effect waves-light"><i class="material-icons left">archive</i>Download</a>
+                                </td>
+                                <td>
+                                    <a href="https://bbp.epfl.ch/public/morph-view/CA1_pyr_cACpyr_oh140807_A0_idJ_20170915113621.html" target="_blank" class="waves-effect waves-light"><i class="material-icons left">3d_rotation</i>View</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
             </div>
-         </li>
-         <li>
+        </li>
+        <li>
             <div class="collapsible-header amber lighten-5">
-               <i class="material-icons">timeline</i>Electrophysiological Traces
+                <i class="material-icons">timeline</i>Electrophysiological Traces
             </div>
             <!-- option: waves, show_chart, multiline_chart -->
-            </div>
             <div class="collapsible-body">
-               <ul class = "collapsible">
-                  <div class="row">
-                     <div class="col s12">
-                        <ul class="tabs">
-                           <li class="tab col s3"><a href="#int-bAC">int-bAC</a></td></tr>
-                           <li class="tab col s3"><a href="#int-cAC">int-cAC</a></td></tr>
-                           <li class="tab col s3"><a href="#int-cNAC">int-cNAC</a></td></tr>
-                           <li class="tab col s3"><a href="#pyr-cAC">pyr-cAC</a></td></tr>
-                        </ul>
-                     </div>
-                  </div>
-                  <div id="int-bAC" class="col s12">
-                     <div style="margin-left:25px">
-                        <table class="striped">
-                           <tbody>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/Ivy_960711AHP3/96711008.abf">abf-int-bAC/Ivy_960711AHP3/96711008</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/PVBC_990111ABHP1/99111000.abf">abf-int-bAC/PVBC_990111ABHP1/99111000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/PVBC_990111ABHP1/99111001.abf">abf-int-bAC/PVBC_990111ABHP1/99111001</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/PVBC_990111ABHP1/99111002.abf">abf-int-bAC/PVBC_990111ABHP1/99111002</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_AA_970911C/97911000.abf">abf-int-bAC/SP_AA_970911C/97911000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_AA_970911C/97911001.abf">abf-int-bAC/SP_AA_970911C/97911001</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_AA_970911C/97911002.abf">abf-int-bAC/SP_AA_970911C/97911002</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_BS/95810035.abf">abf-int-bAC/SP_BS/95810035</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_BS/95810036.abf">abf-int-bAC/SP_BS/95810036</a></td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div id="int-cAC" class="col s12">
-                     <div style="margin-left:25px">
-                        <table class="striped">
-                           <tbody>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205021.abf">abf-int-cAC/OLM_980205FHP/98205021</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205022.abf">abf-int-cAC/OLM_980205FHP/98205022</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205024.abf">abf-int-cAC/OLM_980205FHP/98205024</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205025.abf">abf-int-cAC/OLM_980205FHP/98205025</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_OLM_970428A1/97428000.abf">abf-int-cAC/SO_OLM_970428A1/97428000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_OLM_970428A1/97428001.abf">abf-int-cAC/SO_OLM_970428A1/97428001</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509008.abf">abf-int-cAC/SO_Tri_970509HP2/97509008</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509009.abf">abf-int-cAC/SO_Tri_970509HP2/97509009</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509010.abf">abf-int-cAC/SO_Tri_970509HP2/97509010</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509011.abf">abf-int-cAC/SO_Tri_970509HP2/97509011</a></td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div id="int-cNAC" class="col s12">
-                     <div style="margin-left:25px">
-                        <table class="striped">
-                           <tbody>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_981215GHP4/98D15008.abf">abf-int-cNAC/PVBC_981215GHP4/98D15008</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_981215GHP4/98D15009.abf">abf-int-cNAC/PVBC_981215GHP4/98D15009</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_990111HP2/99111004.abf">abf-int-cNAC/PVBC_990111HP2/99111004</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_990111HP2/99111006.abf">abf-int-cNAC/PVBC_990111HP2/99111006</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS/95817000.abf">abf-int-cNAC/SP_BS/95817000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS/95817001.abf">abf-int-cNAC/SP_BS/95817001</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS/95817002.abf">abf-int-cNAC/SP_BS/95817002</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS_980513B/98513011.abf">abf-int-cNAC/SP_BS_980513B/98513011</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_Ivy_970717D/97717005.abf">abf-int-cNAC/SP_Ivy_970717D/97717005</a></td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-                  <div id="pyr-cAC" class="col s12">
-                     <div style="margin-left:25px">
-                        <table class="striped">
-                           <tbody>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810005.abf">abf-pyr-cAC/95810005/95810005</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810006.abf">abf-pyr-cAC/95810005/95810006</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810007.abf">abf-pyr-cAC/95810005/95810007</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810008.abf">abf-pyr-cAC/95810005/95810008</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810010/95810010.abf">abf-pyr-cAC/95810010/95810010</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810011/95810011.abf">abf-pyr-cAC/95810011/95810011</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810012.abf">abf-pyr-cAC/95810012/95810012</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810013.abf">abf-pyr-cAC/95810012/95810013</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810014.abf">abf-pyr-cAC/95810012/95810014</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810015.abf">abf-pyr-cAC/95810012/95810015</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810026.abf">abf-pyr-cAC/95810012/95810026</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810027.abf">abf-pyr-cAC/95810012/95810027</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810028.abf">abf-pyr-cAC/95810012/95810028</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810029.abf">abf-pyr-cAC/95810012/95810029</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810022.abf">abf-pyr-cAC/95810022/95810022</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810023.abf">abf-pyr-cAC/95810022/95810023</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810024.abf">abf-pyr-cAC/95810022/95810024</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810025.abf">abf-pyr-cAC/95810022/95810025</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810030/95810030.abf">abf-pyr-cAC/95810030/95810030</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810031/95810031.abf">abf-pyr-cAC/95810031/95810031</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810032/95810032.abf">abf-pyr-cAC/95810032/95810032</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810033/95810033.abf">abf-pyr-cAC/95810033/95810033</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810037.abf">abf-pyr-cAC/95810037/95810037</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810038.abf">abf-pyr-cAC/95810037/95810038</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810039.abf">abf-pyr-cAC/95810037/95810039</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810040.abf">abf-pyr-cAC/95810037/95810040</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810041.abf">abf-pyr-cAC/95810037/95810041</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817003/95817003.abf">abf-pyr-cAC/95817003/95817003</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817004/95817004.abf">abf-pyr-cAC/95817004/95817004</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817005/95817005.abf">abf-pyr-cAC/95817005/95817005</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817005/95817006.abf">abf-pyr-cAC/95817005/95817006</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817007/95817007.abf">abf-pyr-cAC/95817007/95817007</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817007/95817008.abf">abf-pyr-cAC/95817007/95817008</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822000/95822000.abf">abf-pyr-cAC/95822000/95822000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822000/95822001.abf">abf-pyr-cAC/95822000/95822001</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822002/95822002.abf">abf-pyr-cAC/95822002/95822002</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822002/95822003.abf">abf-pyr-cAC/95822002/95822003</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822007/95822009.abf">abf-pyr-cAC/95822007/95822009</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822010/95822010.abf">abf-pyr-cAC/95822010/95822010</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822010/95822011.abf">abf-pyr-cAC/95822010/95822011</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95824000/95824000.abf">abf-pyr-cAC/95824000/95824000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95824004/95824004.abf">abf-pyr-cAC/95824004/95824004</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95824006/95824006.abf">abf-pyr-cAC/95824006/95824006</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831000/95831000.abf">abf-pyr-cAC/95831000/95831000</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831002/95831002.abf">abf-pyr-cAC/95831002/95831002</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831003/95831003.abf">abf-pyr-cAC/95831003/95831003</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831004/95831004.abf">abf-pyr-cAC/95831004/95831004</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95912005/95912005.abf">abf-pyr-cAC/95912005/95912005</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95912005/95912006.abf">abf-pyr-cAC/95912005/95912006</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95914002/95914002.abf">abf-pyr-cAC/95914002/95914002</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95914002/95914003.abf">abf-pyr-cAC/95914002/95914003</a></td>
-                              </tr>
-                              <tr>
-                                 <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95914002/95914004.abf">abf-pyr-cAC/95914002/95914004</a></td>
-                              </tr>
-                           </tbody>
-                        </table>
-                     </div>
-                  </div>
-               </ul>
+                <div class="collapsible">
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs">
+                                <li class="tab col s3"><a href="#int-bAC">int-bAC</a></li>
+                                <li class="tab col s3"><a href="#int-cAC">int-cAC</a></li>
+                                <li class="tab col s3"><a href="#int-cNAC">int-cNAC</a></li>
+                                <li class="tab col s3"><a href="#pyr-cAC">pyr-cAC</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="int-bAC" class="col s12">
+                        <div style="margin-left:25px">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/Ivy_960711AHP3/96711008.abf">abf-int-bAC/Ivy_960711AHP3/96711008</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/PVBC_990111ABHP1/99111000.abf">abf-int-bAC/PVBC_990111ABHP1/99111000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/PVBC_990111ABHP1/99111001.abf">abf-int-bAC/PVBC_990111ABHP1/99111001</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/PVBC_990111ABHP1/99111002.abf">abf-int-bAC/PVBC_990111ABHP1/99111002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_AA_970911C/97911000.abf">abf-int-bAC/SP_AA_970911C/97911000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_AA_970911C/97911001.abf">abf-int-bAC/SP_AA_970911C/97911001</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_AA_970911C/97911002.abf">abf-int-bAC/SP_AA_970911C/97911002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_BS/95810035.abf">abf-int-bAC/SP_BS/95810035</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-bAC/SP_BS/95810036.abf">abf-int-bAC/SP_BS/95810036</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="int-cAC" class="col s12">
+                        <div style="margin-left:25px">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205021.abf">abf-int-cAC/OLM_980205FHP/98205021</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205022.abf">abf-int-cAC/OLM_980205FHP/98205022</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205024.abf">abf-int-cAC/OLM_980205FHP/98205024</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/OLM_980205FHP/98205025.abf">abf-int-cAC/OLM_980205FHP/98205025</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_OLM_970428A1/97428000.abf">abf-int-cAC/SO_OLM_970428A1/97428000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_OLM_970428A1/97428001.abf">abf-int-cAC/SO_OLM_970428A1/97428001</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509008.abf">abf-int-cAC/SO_Tri_970509HP2/97509008</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509009.abf">abf-int-cAC/SO_Tri_970509HP2/97509009</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509010.abf">abf-int-cAC/SO_Tri_970509HP2/97509010</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cAC/SO_Tri_970509HP2/97509011.abf">abf-int-cAC/SO_Tri_970509HP2/97509011</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="int-cNAC" class="col s12">
+                        <div style="margin-left:25px">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_981215GHP4/98D15008.abf">abf-int-cNAC/PVBC_981215GHP4/98D15008</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_981215GHP4/98D15009.abf">abf-int-cNAC/PVBC_981215GHP4/98D15009</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_990111HP2/99111004.abf">abf-int-cNAC/PVBC_990111HP2/99111004</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/PVBC_990111HP2/99111006.abf">abf-int-cNAC/PVBC_990111HP2/99111006</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS/95817000.abf">abf-int-cNAC/SP_BS/95817000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS/95817001.abf">abf-int-cNAC/SP_BS/95817001</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS/95817002.abf">abf-int-cNAC/SP_BS/95817002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_BS_980513B/98513011.abf">abf-int-cNAC/SP_BS_980513B/98513011</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-int-cNAC/SP_Ivy_970717D/97717005.abf">abf-int-cNAC/SP_Ivy_970717D/97717005</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="pyr-cAC" class="col s12">
+                        <div style="margin-left:25px">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810005.abf">abf-pyr-cAC/95810005/95810005</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810006.abf">abf-pyr-cAC/95810005/95810006</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810007.abf">abf-pyr-cAC/95810005/95810007</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810005/95810008.abf">abf-pyr-cAC/95810005/95810008</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810010/95810010.abf">abf-pyr-cAC/95810010/95810010</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810011/95810011.abf">abf-pyr-cAC/95810011/95810011</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810012.abf">abf-pyr-cAC/95810012/95810012</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810013.abf">abf-pyr-cAC/95810012/95810013</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810014.abf">abf-pyr-cAC/95810012/95810014</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810015.abf">abf-pyr-cAC/95810012/95810015</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810026.abf">abf-pyr-cAC/95810012/95810026</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810027.abf">abf-pyr-cAC/95810012/95810027</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810028.abf">abf-pyr-cAC/95810012/95810028</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810012/95810029.abf">abf-pyr-cAC/95810012/95810029</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810022.abf">abf-pyr-cAC/95810022/95810022</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810023.abf">abf-pyr-cAC/95810022/95810023</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810024.abf">abf-pyr-cAC/95810022/95810024</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810022/95810025.abf">abf-pyr-cAC/95810022/95810025</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810030/95810030.abf">abf-pyr-cAC/95810030/95810030</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810031/95810031.abf">abf-pyr-cAC/95810031/95810031</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810032/95810032.abf">abf-pyr-cAC/95810032/95810032</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810033/95810033.abf">abf-pyr-cAC/95810033/95810033</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810037.abf">abf-pyr-cAC/95810037/95810037</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810038.abf">abf-pyr-cAC/95810037/95810038</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810039.abf">abf-pyr-cAC/95810037/95810039</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810040.abf">abf-pyr-cAC/95810037/95810040</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95810037/95810041.abf">abf-pyr-cAC/95810037/95810041</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817003/95817003.abf">abf-pyr-cAC/95817003/95817003</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817004/95817004.abf">abf-pyr-cAC/95817004/95817004</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817005/95817005.abf">abf-pyr-cAC/95817005/95817005</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817005/95817006.abf">abf-pyr-cAC/95817005/95817006</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817007/95817007.abf">abf-pyr-cAC/95817007/95817007</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95817007/95817008.abf">abf-pyr-cAC/95817007/95817008</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822000/95822000.abf">abf-pyr-cAC/95822000/95822000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822000/95822001.abf">abf-pyr-cAC/95822000/95822001</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822002/95822002.abf">abf-pyr-cAC/95822002/95822002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822002/95822003.abf">abf-pyr-cAC/95822002/95822003</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822007/95822009.abf">abf-pyr-cAC/95822007/95822009</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822010/95822010.abf">abf-pyr-cAC/95822010/95822010</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95822010/95822011.abf">abf-pyr-cAC/95822010/95822011</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95824000/95824000.abf">abf-pyr-cAC/95824000/95824000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95824004/95824004.abf">abf-pyr-cAC/95824004/95824004</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95824006/95824006.abf">abf-pyr-cAC/95824006/95824006</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831000/95831000.abf">abf-pyr-cAC/95831000/95831000</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831002/95831002.abf">abf-pyr-cAC/95831002/95831002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831003/95831003.abf">abf-pyr-cAC/95831003/95831003</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95831004/95831004.abf">abf-pyr-cAC/95831004/95831004</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95912005/95912005.abf">abf-pyr-cAC/95912005/95912005</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95912005/95912006.abf">abf-pyr-cAC/95912005/95912006</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95914002/95914002.abf">abf-pyr-cAC/95914002/95914002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95914002/95914003.abf">abf-pyr-cAC/95914002/95914003</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/exp_data/abf-pyr-cAC/95914002/95914004.abf">abf-pyr-cAC/95914002/95914004</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </li>
-         <li>
+        </li>
+        <li>
             <div class="collapsible-header amber lighten-5">
-               <i class="material-icons">note_add</i>Mod Files
+                <i class="material-icons">note_add</i>Mod Files
             </div>
             <!-- option: folder_special, archive -->
             <div class="collapsible-body">
-               <p>A reduced self-consistent set of files needed to reproduce&nbsp;Fig.4A of the paper is available on <a href="https://senselab.med.yale.edu/modeldb/enterCode.cshtml?model=244688#tabs-1" target="_blank">ModelDB</a>.
-                  <br><br>Use the BSP Neuron As A Service (NaaS) tool to do in silico experiments with the single cell models shown in Fig.4A:<br>
-                  <span style="margin-left:25px">> Start by clicking on any button below to run a simulation.</span><br>
-                  <span style="margin-left:25px">> After entering the NaaS page, click on the "Simulation" tab, adjust the current strength with the appropriate value, and run the simulation by clicking the "Start simulation" button.</span>
-               <table>
-                  <tbody>
-                     <tr>
-                        <td>
-                           <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_bAC_011023HP2_20180116154023')">int bAC 0.6 nA<i class="material-icons right">play_arrow</i></button>
-                        </td>
-                        <td>
-                           <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cAC_980120A_20180115155814')">int cAC 0.4 nA<i class="material-icons right">play_arrow</i></button>
-                        </td>
-                        <td>
-                           <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cNAC_980513B_20180119155127')">int cNAC 0.4 nA<i class="material-icons right">play_arrow</i></button>
-                        </td>
-                        <td><span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Available soon">
+                <p>A reduced self-consistent set of files needed to reproduce&nbsp;Fig.4A of the paper is available on <a href="https://senselab.med.yale.edu/modeldb/enterCode.cshtml?model=244688#tabs-1" target="_blank">ModelDB</a>.
+                    <br><br>Use the BSP Neuron As A Service (NaaS) tool to do in silico experiments with the single cell models shown in Fig.4A:<br>
+                    <span style="margin-left:25px">> Start by clicking on any button below to run a simulation.</span><br>
+                    <span style="margin-left:25px">> After entering the NaaS page, click on the "Simulation" tab, adjust the current strength with the appropriate value, and run the simulation by clicking the "Start simulation" button.</span>
+                </p>
+                <div style="margin-left:25px">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_bAC_011023HP2_20180116154023')">int bAC 0.6 nA<i class="material-icons right">play_arrow</i></button>
+                                </td>
+                                <td>
+                                    <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cAC_980120A_20180115155814')">int cAC 0.4 nA<i class="material-icons right">play_arrow</i></button>
+                                </td>
+                                <td>
+                                    <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cNAC_980513B_20180119155127')">int cNAC 0.4 nA<i class="material-icons right">play_arrow</i></button>
+                                </td>
+                                <td><span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Available soon">
                            <button class="btn waves-effect waves-light" disabled>pyr cAC 0.4 nA<i class="material-icons right">play_arrow</i></button></span>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td>
-                           <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Available soon">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Available soon">
                            <button class="btn waves-effect waves-light" disabled>int bAC 1.0 nA<i class="material-icons right">play_arrow</i></button></span>
-                        </td>
-                        <td>
-                           <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cAC_980513B_20180119155952')">int cAC 0.6 nA<i class="material-icons right">play_arrow</i></button>
-                        </td>
-                        <td>
-                           <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cNAC_060314AM2_20180120154747')">int cNAC 0.8 nA<i class="material-icons right">play_arrow</i></button>
-                        </td>
-                        <td>
-                           <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008')">pyr cAC 0.8 nA<i class="material-icons right">play_arrow</i></button>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-               </p>
+                                </td>
+                                <td>
+                                    <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cAC_980513B_20180119155952')">int cAC 0.6 nA<i class="material-icons right">play_arrow</i></button>
+                                </td>
+                                <td>
+                                    <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_int_cNAC_060314AM2_20180120154747')">int cNAC 0.8 nA<i class="material-icons right">play_arrow</i></button>
+                                </td>
+                                <td>
+                                    <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008')">pyr cAC 0.8 nA<i class="material-icons right">play_arrow</i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
             </div>
-         </li>
-         <li>
+        </li>
+        <li>
             <div class="collapsible-header amber lighten-5">
-               <i class="material-icons">local_play</i>Optimizations
+                <i class="material-icons">local_play</i>Optimizations
             </div>
             <!-- option: folder_special, all_inclusive, transform -->
             <div class="collapsible-body">
-               <p><span class="txt_style1">The optimization results for each morphology are individually available in the <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901" target="_blank"><span class="color_link">Model Catalog</span></a> at the following links:</span></p>
-               <div style="margin-left:25px">
-                  <table class="striped">
-                     <tbody>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.797c2f2f-3bb0-42a0-a1b3-f9c0b23562a0" target=”_blank”>CA1_int_bAC_011017HP2_20180110153901</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2e5f5e6b-67fb-4353-b662-bbf628a98b7b"  target=”_blank”>CA1_int_bAC_011023HP2_20180116154023</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7f54f3e5-98e5-442f-9c99-825515914143"  target=”_blank”>CA1_int_bAC_011127HP1_20180120115056</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9566838f-5327-477d-a973-6fd17628d15c" target="_blank">CA1_int_cAC_031031AM1_20180201104443</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2d809d28-1f94-4ef6-acfc-083644afdcbf" target="_blank">CA1_int_bAC_060314AM2_20180120154128</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.df94ec03-1db8-4add-a666-719aed295c2f" target="_blank">CA1_int_bAC_971114B_20180117154233</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.229ea1dd-83e9-49cb-9232-a1737da8c0fc" target="_blank">CA1_int_bAC_980120A_20180119154402</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a3c4911d-1708-4623-940f-7237cf123ac5" target="_blank">CA1_int_cAC_010710HP2_20180118155959</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.c12c0bb4-aca3-46f4-b32d-f5c6fb159b40" target="_blank">CA1_int_cAC_011017HP2_20180121160005</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9f7318e5-10c1-44b1-b988-4e9b3d494304" target="_blank">CA1_int_cAC_970627BHP1_20180120160112</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a8fc7a4a-2bed-41cc-a50a-48dd4ae6ba66" target="_blank">CA1_int_cAC_980120A_20180115155814</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.8e4f466a-1e46-49fa-9721-009b419d739a" target="_blank">CA1_int_cAC_980513B_20180119155952</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4b1b1b9c-3551-44fc-bdaa-249342e0987c" target="_blank">CA1_int_cAC_990611HP2_20180122160209</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.735e0e44-4119-4ca3-bb11-84ab85197ebd" target="_blank">CA1_int_cAC_990827IN5HP3_20180122140555</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b27ff78c-f5aa-4875-9d76-309020273d17" target="_blank">CA1_int_cNAC_010710HP2_20180119154335</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.f2094c54-313c-49f4-ae68-19a18d60c5a3" target="_blank">CA1_int_cNAC_011017HP2_20180119154507</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.e5e49856-b327-41e2-8548-54a60dddf4d2" target="_blank">CA1_int_cNAC_011023HP2_20180118154613</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.f0b1bc0d-93d5-43a5-bf14-f1d1f4aaab28" target="_blank">CA1_int_cNAC_060314AM2_20180120154747</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.8f4f2800-032e-4e4e-9558-0062bd347b47" target="_blank">CA1_int_cNAC_970509HP2_20180117154753</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.fe620da5-8e3a-45c5-b6b8-cf3718bc80be" target="_blank">CA1_int_cNAC_970627BHP1_20180120154830</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9f15749a-80af-48dd-a7dc-9bf39fcf8c78" target="_blank">CA1_int_cNAC_970717D_20180118154811</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.15dc3f29-cc6c-41be-8eac-59129bd3111f" target="_blank">CA1_int_cNAC_970911C_20180120154902</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a7c7e184-c1a7-4036-b90e-aeef0a372bf9" target="_blank">CA1_int_cNAC_971114B_20180119155005</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a10aea2a-db40-4e17-a33c-cb0b90f97692" target="_blank">CA1_int_cNAC_980120A_20180119155115</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.dff2cb1f-42d9-4357-95f9-43719c3f5005" target="_blank">CA1_int_cNAC_980513B_20180119155127</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.ff93ad81-46c6-4488-9c34-dafd03af34bb" target="_blank">CA1_int_cNAC_990111HP2_20180118155424</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.cb20dbad-6d54-417a-9ed1-5f793af5485e" target="_blank">CA1_int_cNAC_990611HP2_20180120155246</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830/CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830.zip">CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830</a><br> (Direct link. The model is NOT present in the Model Catalog because it is NOT used for the circuit)</td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002/CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002.zip">CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002</a> <br>(Direct link. The model is NOT present in the Model Catalog because it is NOT used for the circuit)</td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.97484317-6cbd-40be-a452-242866098295" target="_blank">CA1_pyr_cACpyr_mpg141017_a1-2_idC_20170918151638</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6841fa4f-3ba0-4b61-accf-7ed233caca77" target="_blank">CA1_pyr_cACpyr_mpg141208_B_idA_20170915151855</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b41cd647-a934-48cc-a9c3-cd17aeeba667" target="_blank">CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.25f389ea-ae7f-4207-9fd8-e81c99fce710" target="_blank">CA1_pyr_cACpyr_mpg141209_B_idA_20170915152336</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.57c4db57-e5cf-4645-9fec-d58dcb09d68c" target="_blank">CA1_pyr_cACpyr_mpg141215_A_idA_20170915152442</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.5d98f53d-5846-47bc-8c52-c6c3fcf3a4ec" target="_blank">CA1_pyr_cACpyr_mpg141216_A_idA_20171003152605</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3b49cf1a-24cf-427a-ba0b-561d82114825" target="_blank">CA1_pyr_cACpyr_mpg141217_A_idB_20170915111538</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.0bc21fc0-85ab-45d8-a0b2-32ac90f71fd7" target="_blank">CA1_pyr_cACpyr_mpg150305_A_idB_20170915111718</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7eb381cf-7897-4d60-9ff8-9c90e72af4a1" target="_blank">CA1_pyr_cACpyr_oh140521_B0_Rat_idA_20170915111955</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.dbae7b41-9fa2-4b4c-ac5c-882735d057e3" target="_blank">CA1_pyr_cACpyr_oh140521_B0_Rat_idC_20170915112201</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b1a62b3e-55ea-4b23-939f-94862ad56516" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idA_20170915112548</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.bb45cb7f-240e-46cc-bfaa-436a4e7a81b9" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idB_20170915112605</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6301f31a-6151-4c0e-ad93-9439e5b6169a" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idC_20170912112759</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.fe0e30a5-102e-422c-b614-2932b6f46ae1" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idF_20171003112912</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.d4272705-bc99-4c4a-9e4d-3ce114382b90" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3689543c-eb2c-4d76-806e-bda7a8e0b9eb" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idH_20170915113422</a></td>
-                        </tr>
-                        <tr>
-                           <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.c3c2d607-00f5-433a-84a6-449a2c9e2508" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idJ_20170915113621</a></td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
+                <p><span class="txt_style1">The optimization results for each morphology are individually available in the <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901" target="_blank"><span class="color_link">Model Catalog</span></a>
+                    at the following links:</span>
+                </p>
+                <div style="margin-left:25px">
+                    <table class="striped">
+                        <tbody>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.797c2f2f-3bb0-42a0-a1b3-f9c0b23562a0" target=”_blank”>CA1_int_bAC_011017HP2_20180110153901</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2e5f5e6b-67fb-4353-b662-bbf628a98b7b" target=”_blank”>CA1_int_bAC_011023HP2_20180116154023</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7f54f3e5-98e5-442f-9c99-825515914143" target=”_blank”>CA1_int_bAC_011127HP1_20180120115056</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9566838f-5327-477d-a973-6fd17628d15c" target="_blank">CA1_int_cAC_031031AM1_20180201104443</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2d809d28-1f94-4ef6-acfc-083644afdcbf" target="_blank">CA1_int_bAC_060314AM2_20180120154128</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.df94ec03-1db8-4add-a666-719aed295c2f" target="_blank">CA1_int_bAC_971114B_20180117154233</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.229ea1dd-83e9-49cb-9232-a1737da8c0fc" target="_blank">CA1_int_bAC_980120A_20180119154402</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a3c4911d-1708-4623-940f-7237cf123ac5" target="_blank">CA1_int_cAC_010710HP2_20180118155959</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.c12c0bb4-aca3-46f4-b32d-f5c6fb159b40" target="_blank">CA1_int_cAC_011017HP2_20180121160005</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9f7318e5-10c1-44b1-b988-4e9b3d494304" target="_blank">CA1_int_cAC_970627BHP1_20180120160112</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a8fc7a4a-2bed-41cc-a50a-48dd4ae6ba66" target="_blank">CA1_int_cAC_980120A_20180115155814</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.8e4f466a-1e46-49fa-9721-009b419d739a" target="_blank">CA1_int_cAC_980513B_20180119155952</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4b1b1b9c-3551-44fc-bdaa-249342e0987c" target="_blank">CA1_int_cAC_990611HP2_20180122160209</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.735e0e44-4119-4ca3-bb11-84ab85197ebd" target="_blank">CA1_int_cAC_990827IN5HP3_20180122140555</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b27ff78c-f5aa-4875-9d76-309020273d17" target="_blank">CA1_int_cNAC_010710HP2_20180119154335</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.f2094c54-313c-49f4-ae68-19a18d60c5a3" target="_blank">CA1_int_cNAC_011017HP2_20180119154507</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.e5e49856-b327-41e2-8548-54a60dddf4d2" target="_blank">CA1_int_cNAC_011023HP2_20180118154613</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.f0b1bc0d-93d5-43a5-bf14-f1d1f4aaab28" target="_blank">CA1_int_cNAC_060314AM2_20180120154747</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.8f4f2800-032e-4e4e-9558-0062bd347b47" target="_blank">CA1_int_cNAC_970509HP2_20180117154753</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.fe620da5-8e3a-45c5-b6b8-cf3718bc80be" target="_blank">CA1_int_cNAC_970627BHP1_20180120154830</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9f15749a-80af-48dd-a7dc-9bf39fcf8c78" target="_blank">CA1_int_cNAC_970717D_20180118154811</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.15dc3f29-cc6c-41be-8eac-59129bd3111f" target="_blank">CA1_int_cNAC_970911C_20180120154902</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a7c7e184-c1a7-4036-b90e-aeef0a372bf9" target="_blank">CA1_int_cNAC_971114B_20180119155005</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a10aea2a-db40-4e17-a33c-cb0b90f97692" target="_blank">CA1_int_cNAC_980120A_20180119155115</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.dff2cb1f-42d9-4357-95f9-43719c3f5005" target="_blank">CA1_int_cNAC_980513B_20180119155127</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.ff93ad81-46c6-4488-9c34-dafd03af34bb" target="_blank">CA1_int_cNAC_990111HP2_20180118155424</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.cb20dbad-6d54-417a-9ed1-5f793af5485e" target="_blank">CA1_int_cNAC_990611HP2_20180120155246</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830/CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830.zip">CA1_pyr_cACpyr_dend-050921AM2_axon-051208AM2_20170915145830</a><br>                                    (Direct link. The model is NOT present in the Model Catalog because it is NOT used for the circuit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Migliore_2018_CA1/models/CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002/CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002.zip">CA1_pyr_cACpyr_dend-990803_axon-051208AM2_20170909151002</a>                                    <br>(Direct link. The model is NOT present in the Model Catalog because it is NOT used for the circuit)</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.97484317-6cbd-40be-a452-242866098295" target="_blank">CA1_pyr_cACpyr_mpg141017_a1-2_idC_20170918151638</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6841fa4f-3ba0-4b61-accf-7ed233caca77" target="_blank">CA1_pyr_cACpyr_mpg141208_B_idA_20170915151855</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b41cd647-a934-48cc-a9c3-cd17aeeba667" target="_blank">CA1_pyr_cACpyr_mpg141209_A_idA_20170912152008</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.25f389ea-ae7f-4207-9fd8-e81c99fce710" target="_blank">CA1_pyr_cACpyr_mpg141209_B_idA_20170915152336</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.57c4db57-e5cf-4645-9fec-d58dcb09d68c" target="_blank">CA1_pyr_cACpyr_mpg141215_A_idA_20170915152442</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.5d98f53d-5846-47bc-8c52-c6c3fcf3a4ec" target="_blank">CA1_pyr_cACpyr_mpg141216_A_idA_20171003152605</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3b49cf1a-24cf-427a-ba0b-561d82114825" target="_blank">CA1_pyr_cACpyr_mpg141217_A_idB_20170915111538</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.0bc21fc0-85ab-45d8-a0b2-32ac90f71fd7" target="_blank">CA1_pyr_cACpyr_mpg150305_A_idB_20170915111718</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7eb381cf-7897-4d60-9ff8-9c90e72af4a1" target="_blank">CA1_pyr_cACpyr_oh140521_B0_Rat_idA_20170915111955</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.dbae7b41-9fa2-4b4c-ac5c-882735d057e3" target="_blank">CA1_pyr_cACpyr_oh140521_B0_Rat_idC_20170915112201</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b1a62b3e-55ea-4b23-939f-94862ad56516" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idA_20170915112548</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.bb45cb7f-240e-46cc-bfaa-436a4e7a81b9" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idB_20170915112605</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6301f31a-6151-4c0e-ad93-9439e5b6169a" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idC_20170912112759</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.fe0e30a5-102e-422c-b614-2932b6f46ae1" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idF_20171003112912</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.d4272705-bc99-4c4a-9e4d-3ce114382b90" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idG_20170915113354</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3689543c-eb2c-4d76-806e-bda7a8e0b9eb" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idH_20170915113422</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.c3c2d607-00f5-433a-84a6-449a2c9e2508" target="_blank">CA1_pyr_cACpyr_oh140807_A0_idJ_20170915113621</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            </div>
-         </li>
-      </ul>
-      <br>
-      <div class="rainbow-row">
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-         <div></div>
-      </div>
-      <br>
-      <br>
-   </body>
+        </li>
+    </ul>
+    <br>
+    <div class="rainbow-row">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br>
+    <br>
+</body>
+
 </html>
