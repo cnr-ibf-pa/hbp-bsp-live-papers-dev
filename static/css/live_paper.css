@@ -1,120 +1,111 @@
-.page_style{
-	background-color: rgb(245,245,245,1);
-	padding: 20px;
-}
-.box_panel{
-	background-color: rgba(0,172,230,0.3); 
-	border-style: solid; 
-	border-width: thin;
-	margin: 20px;
-	padding: 17px;
-	min-width: 180px;
-}
-.title{
-	font-size:20px;
-	font-family: Verdana, sans-serif;
-}
-.txt_style{
-	font-family: Verdana, sans-serif;
-	font-weight: normal;
-	text-align: justify;
-	word-break: break-all;
-}
-.color_link{
-	color:#0000cd;
-}
-.txt_style1{
-	font-size:16px;
-	text-align: justify;
-	font-weight: normal;
-	font-family: Verdana, sans-serif;
-}
-.table1{
-	height:326px; 
-	width:60%;
-}
-.tb1_col{
-	background-color:#ffffff; 
-	width:50%; 
-	min-width:10px; 
-	word-break: break-all;
-	vertical-align: text-top;
-}
-.table2{
-	height:498px; 
-	width:80%;
-}
-.tb2_col1{
-	background-color:#ffffff; 
-	width:36%; 
-	min-width:10px; 
-	word-break: break-all;
-	vertical-align: text-top;
-}
-.tb2_col{
-	background-color:#ffffff; 
-	width:33%; 
-	min-width:10px; 
-	word-break: break-all;
-	vertical-align: text-top;
-}
-.table3{
-	width:75%;
-}
-.tb3_col1{
-	background-color:#ffffff;
-	width:45%;
-	min-width: 10px;
-	word-break: break-all;
-	vertical-align: text-top;
-}
-.tb3_col2{
-	background-color:#ffffff; 
-	width:50%;
-	min-width: 10px; 
-	word-break: break-all;
-	padding-right: 15px;
-	vertical-align: text-top;
-}
-.main_menu{
-	background-color: rgb(245,245,245,1);
-	padding: 20px;
-	margin: 20px;
-}
-.panel{
-	margin-top: 10px; 
-	background: white;
-	width: 640px;
-	height: 95px;
-	display: inline-block;
-}
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    width: 150px;
-    padding: 6px 14px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 5px 3px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
+/* Obtain smaller sized materialize CSS buttons (if needed) */
+.btn-small {
+     border: none;
+     border-radius: 2px;
+     display: inline-block;
+     height: 32px;
+     line-height: 32px;
+     padding-left: 16px;
+     padding-right: 16px;
+     text-transform: uppercase;
+     max-font-size: 13pt;
+     vertical-align: middle;
+     -webkit-tap-highlight-color: transparent;
 }
 
-.button_1{
-    background-color: rgb(226, 230, 234); 
-    color: black; 
-    border: 1px solid rgb(226, 230, 234);
+/* For using materialize CSS tabs (if needed) */
+ .tabs .tab {
+     text-transform: none;
+}
+ .tabs .tab a.active {
+     background-color:#ffb74d;
+     color:#000;
 }
 
-.button_1:hover {
-    background-color: rgb(210, 220, 225);
-    color: black;
+/* For journal title header */
+ .box {
+     position: relative;
+     width: 100%;
+     padding: 1em 1.5em;
+     margin: 2em auto;
+     color: #000;
+     background: #ffd180;
+     overflow: hidden;
 }
-.color_panel{
-    background-color: red;/*rgb(245,245,245,1);*/
-    padding: 20px;
+ .box.rounded {
+     -moz-border-radius: 10px 10px 10px 10px;
+     border-radius: 10px 10px 10px 10px;
+}
+
+/* For abstract box with folder corner */
+ .note {
+     position: relative;
+     width: 100%;
+     padding: 1em 1.5em;
+     margin: 2em auto;
+     color: #000;
+     background: #fff8e1;
+     overflow: hidden;
+}
+ .note:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     border-width: 0 16px 16px 0;
+     border-style: solid;
+     border-color: #fff #fff #658E15 #658E15;
+     background: #ffca28;
+     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+     box-shadow: 0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    /* Firefox 3.0 damage limitation */
+     display: block;
+     width: 0;
+}
+ .note.rounded {
+     -moz-border-radius: 5px 0 5px 5px;
+     border-radius: 5px 0 5px 5px;
+}
+ .note.rounded:before {
+     border-width: 8px;
+     border-color: #fff #fff transparent transparent;
+     -moz-border-radius: 0 0 0 5px;
+     border-radius: 0 0 0 5px;
+}
+
+/* For HBP rainbow footer */
+ .rainbow-row{
+     display:table;
+     table-layout:fixed;
+     width:100%
+}
+ .rainbow-row>div{
+     width:12.5%;
+     display:table-cell;
+     height:10px
+}
+ .rainbow-row>div:nth-child(1){
+     background:#EF5450
+}
+ .rainbow-row>div:nth-child(2){
+     background:#F47716
+}
+ .rainbow-row>div:nth-child(3){
+     background:#FBB535
+}
+ .rainbow-row>div:nth-child(4){
+     background:#FBCB3F
+}
+ .rainbow-row>div:nth-child(5){
+     background:#33AABB
+}
+ .rainbow-row>div:nth-child(6){
+     background:#2D8EB3
+}
+ .rainbow-row>div:nth-child(7){
+     background:#2070A8
+}
+ .rainbow-row>div:nth-child(8){
+     background:#164E75
 }
