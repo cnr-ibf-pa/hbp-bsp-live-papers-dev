@@ -1,0 +1,8 @@
+{
+    "filename": "bAP-DayEtAl2006-D1.csv",
+    "delimiter": " ",
+    "timecolumn": 0,
+    "units": "dF/F0",
+    "time_units": "microns",
+    "method": "genfromtxt"
+}
