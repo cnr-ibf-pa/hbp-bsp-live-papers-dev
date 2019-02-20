@@ -1,8 +1,0 @@
-{
-    "delimiter": " ",
-    "timecolumn": 0,
-    "units": "Hz",
-    "time_units": "pA",
-    "method": "genfromtxt",
-    "signal_group_mode": 'all-in-one'
-}
