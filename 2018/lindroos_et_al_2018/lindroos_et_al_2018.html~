@@ -335,7 +335,7 @@
                               </button>
                            </td>
                            <td>
-                              <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/MSND1_dynamic')">MSN D1 DA (t)
+                              <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/model/MSND1_dynamic')">MSN D1 DA(t)
                               <i class="material-icons right">play_arrow</i>
                               </button>
                            </td>
