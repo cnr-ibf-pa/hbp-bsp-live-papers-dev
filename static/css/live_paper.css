@@ -22,6 +22,19 @@
      color:#000;
 }
 
+/* Text align center */
+.ta-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* HBP icon style */
+.hbp-icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
 /* For journal title header */
  .box {
      position: relative;
@@ -32,6 +45,7 @@
      background: #ffd180;
      overflow: hidden;
 }
+
  .box.rounded {
      -moz-border-radius: 10px 10px 10px 10px;
      border-radius: 10px 10px 10px 10px;
