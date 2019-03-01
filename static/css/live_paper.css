@@ -1,3 +1,9 @@
+/* Font size for different sections  */
+.intro-text {
+    font-size: 1.2em;
+}
+
+
 /* Obtain smaller sized materialize CSS buttons (if needed) */
 .btn-small {
      border: none;
@@ -35,6 +41,12 @@
     margin-right: 20px;
 }
 
+/* HBP icon style */
+.hbp-icon-small {
+    height: 22px;
+    width: 22px;
+}
+
 /* For journal title header */
  .box {
      position: relative;
@@ -61,7 +73,8 @@
      background: #fff8e1;
      overflow: hidden;
 }
- .note:before {
+
+.note:before {
      content: "";
      position: absolute;
      top: 0;
@@ -94,6 +107,10 @@
      table-layout:fixed;
      width:100%
 }
+
+ .rainbow-row.rr-small>div {
+    height: 3px;
+ }
  .rainbow-row>div{
      width:12.5%;
      display:table-cell;
