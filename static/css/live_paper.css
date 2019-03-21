@@ -3,6 +3,11 @@
     font-size: 1.2em;
 }
 
+/* Justify text */
+.just-text {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 /* Obtain smaller sized materialize CSS buttons (if needed) */
 .btn-small {
