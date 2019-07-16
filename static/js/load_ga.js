@@ -9,7 +9,8 @@ if (url.includes("https://humanbrainproject.github.io/hbp-bsp-live-papers/") ||
     ga_script.src = './epfl_bspg_analytics.js';
 	console.log("Loading ga for epfl")
 } else if (url.includes("https://cnr-ibf-pa.github.io/hbp-bsp-live-papers-dev/")){
-    ga_script.src = './ibf_bspg_analytics.js';
+    //ga_script.src = './ibf_bspg_analytics.js';
+    ga_script.src = 'https://raw.githubusercontent.com/cnr-ibf-pa/hbp-bsp-live-papers-dev/master/static/js/ibf_bspg_analytics.js';
 	console.log("Loading ga for bspg")
 } else {
     console.log("Loading locally or from an unknown domain");
