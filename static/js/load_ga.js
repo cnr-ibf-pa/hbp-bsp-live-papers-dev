@@ -6,12 +6,11 @@ var url = window.location.href;
 
 if (url.includes("https://humanbrainproject.github.io/hbp-bsp-live-papers/") ||
     url.includes("https://collab.humanbrainproject.eu")){
-    ga_script.src = './epfl_bspg_analytics.js';
 	console.log("Loading ga for epfl")
+    ga_script.src = 'https://humanbrainproject.github.io/hbp-bsp-live-papers-dev/static/js/ibf_bspg_analytics.js';
 } else if (url.includes("https://cnr-ibf-pa.github.io/hbp-bsp-live-papers-dev/")){
-    //ga_script.src = './ibf_bspg_analytics.js';
-    ga_script.src = 'https://raw.githubusercontent.com/cnr-ibf-pa/hbp-bsp-live-papers-dev/master/static/js/ibf_bspg_analytics.js';
 	console.log("Loading ga for bspg")
+    ga_script.src = 'https://cnr-ibf-pa.github.io/hbp-bsp-live-papers-dev/static/js/ibf_bspg_analytics.js';
 } else {
     console.log("Loading locally or from an unknown domain");
 } 
