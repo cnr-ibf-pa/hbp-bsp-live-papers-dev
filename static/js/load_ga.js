@@ -7,8 +7,10 @@ var url = window.location.href;
 if (url.includes("https://humanbrainproject.github.io/hbp-bsp-live-papers/") ||
     url.includes("https://collab.humanbrainproject.eu")){
     ga_script.src = 'epfl_bspg_analytics.js';
+	console.log("Loading ga for epfl")
 } else if (url.includes("https://cnr-ibf-pa.github.io/hbp-bsp-live-papers-dev/")){
     ga_script.src = 'ibf_bspg_analytics.js';
+	console.log("Loading ga for bspg")
 } else {
     console.log("Loading locally or from an unknown domain");
 } 
