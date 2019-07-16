@@ -1,7 +1,7 @@
 var head = document.getElementsByTagName('head')[0];
 var ga_script_g = document.createElement('SCRIPT');
 var ga_script = document.createElement('SCRIPT');
-ga_script_g.async = true';
+ga_script_g.async = true;
 ga_script.type = 'text/javascript';
 
 var url = window.location.href;
