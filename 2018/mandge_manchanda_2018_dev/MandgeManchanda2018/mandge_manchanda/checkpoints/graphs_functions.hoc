@@ -1,0 +1,23 @@
+objref g_vgraph
+g_vgraph = new Graph(0)
+g_vgraph.addvar("soma.v(0.5)",1,2)
+g_vgraph.view(0, -60, 80, 120, 496, 152, 300.24, 200.1)
+graphList[0].append(g_vgraph)
+
+// objref g_cai
+// g_cai = new Graph(0)
+// g_cai.addexpr("soma.cai(0.5)*1e6",2,2)
+// g_cai.view(0, 136, 200, 30, 441, 441, 249.84, 189.3)
+// graphList[0].append(g_cai) 
+
+
+proc init(){					// init Function
+		v=v_init				// rmp
+
+		finitialize(v)			// reset all state variables
+		fcurrent()     			// calculate all currents
+		// e_pas =  v + (ina + ik + ih + ica+ icl +im8_trpm8 )/g_pas	// calculate leak equilibrium potential
+		e_pas = -41.583 // calcualted from above equation
+}
+
+init()
