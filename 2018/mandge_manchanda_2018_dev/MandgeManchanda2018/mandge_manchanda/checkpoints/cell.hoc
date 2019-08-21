@@ -1,6 +1,8 @@
 load_file("nrngui.hoc")
-load_file("morphology.hoc")
-load_file("graphs_functions.hoc")
+// nrn_load_dll("../mechanisms/nrnmech.dll")
+load_file("../morphology/morphology.hoc")   // Loading morphology with mechanisms
+load_file("tautables.hoc")                  // Loading tautables for the mechanisms
+load_file("graphs_functions.hoc")           // Loading graphs and functions
 
 xpanel("Mandge & Manchanda 2018")
   xbutton("Generate Fig 9A", "{xopen(\"fig9A.hoc\") init() run()}")

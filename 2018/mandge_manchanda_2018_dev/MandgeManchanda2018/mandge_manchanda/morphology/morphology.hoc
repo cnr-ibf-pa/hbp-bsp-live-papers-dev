@@ -5,9 +5,9 @@
 // IIT Bombay, Mumbai, India 400076
 // email: darshanmandge@iitb.ac.in
 
-load_file("nrngui.hoc")
+// load_file("nrngui.hoc")
 load_file("tautables.hoc")
-nrncontrolmenu()
+// nrncontrolmenu()
 
 v_init = -53.5 // Yoshimura and de Groat 1999
 tstop = 200
