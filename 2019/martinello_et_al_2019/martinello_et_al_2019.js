@@ -78,7 +78,7 @@ $(document).ready(function () {
         $('#error-msg').animate({opacity: 0}, 0);
         $('#plots').animate({opacity: 0}, fadeoutval);
         $('#loader').animate({opacity: 1}, fadeinval);
-        title = "<h5>50hz train simulation</h5>";
+        title = "<h5>50hz train stimulus</h5>";
         var xmin = 50;
         var xmax = 550;
         layout_01['xaxis']['autorange'] = false;
@@ -93,7 +93,7 @@ $(document).ready(function () {
         $('#error-msg').animate({opacity: 0}, 0);
         $('#plots').animate({opacity: 0}, fadeoutval);
         $('#loader').animate({opacity: 1}, fadeinval);
-        title = "<h5>Single AP simulation</h5>";
+        title = "<h5>Single AP stimulus</h5>";
         var xmin=99;
         var xmax=106;
         layout_01['xaxis']['autorange'] = false;
