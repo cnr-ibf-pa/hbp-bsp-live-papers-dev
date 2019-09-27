@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Martinello et al. 2019</title>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="martinello_et_al_2019.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./martinello_et_al_2019.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">INSERT TITLE HERE</h5>
+        </div>
+        <div>
+            <p>
+            <strong>Authors: </strong>
+            Author 1<sup>1</sup>,
+            Author 2<sup>2</sup>, 
+            Author 3<sup>3</sup>, 
+            Author 4<sup>4</sup>, 
+            </p>
+            <p>
+            <strong>Author information: </strong>
+            <sup>1</sup> Institute 1
+            <sup>2 </sup>Institute 2 
+            <sup>3</sup>Institute 3
+            <sup>4</sup>Institute 4 ,
+            </p>
+            <p>
+            <strong>Corresponding author: </strong>Author (
+            <em>
+                <a href="mailto:xxxx.yyyyyyy@xxx.xx">xxxxx.xxxxx@xxxx.xxx</a>
+            </em> )
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p>
+            <strong>Journal: </strong>
+            <a href="https://aaaaaaaaa/aaaaaaaa/aaaaaa" target="_blank">
+                <span class="color_link">Journal</span>
+            </a>
+            </p>
+            <p>
+            <strong>Download Url: </strong>
+            <a href="https://doi.org/xxxxxxxx" target="_blank">
+                <span class="color_link">https://doi.org/xxxxxxxxxxxxxx</span>
+            </a>
+            </p>
+            <p>
+            <strong>Citation: </strong> xxxxxxxxxxxxxxxxxxxxx
+            </p>
+            <p>
+            <strong>DOI: </strong>
+            <a href="https://doi.org/xxxxxxxxxxx" target="_blank">
+                <span class="color_link">https://doi.org/xxxxxxxxxxxxx</span>
+            </a>
+            </p>
+            <p>
+            <strong>Licence: </strong>the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp; may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.
+            </p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+            officia deserunt mollit anim id est laborum.
+        </div>
+        <h5>Resources</h5>
+        <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
+        </p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">timeline</i>Electrophysiological Traces
+                </div>
+                <!-- option: waves, show_chart, multiline_chart -->
+                <div class="collapsible-body">
+                        <div class="collapsible">
+                            <div class="row">
+                                <div class="col s12">
+                                    SOME TEXT AND LINKs HERE
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div id="collapsetitle" class="collapsible-header amber lighten-5">
+                    <i class="material-icons">note_add</i>ModelDB link and test simulations
+                </div>
+                <div id="collapsebody" class="collapsible-body">
+                    <p>A reduced self-consistent set of files needed to reproduce&nbsp;XXXX of the paper is available on
+                    <a href="https://senselab.med.yale.edu/modeldb/enterCode.cshtml?model=244688#tabs-1" target="_blank">ModelDB---LINK TO BE CHANGED---</a>
+                    <br>
+                    <br>
+                    Use the buttons below to reproduce figures XXXX and YYYY of the paper
+                    <div class="divider"></div>
+                    <div style="position:relative; margin-left:25px; margin-right:25px">
+                        <div id="plots" class="plots">
+                            <div id="plot-title" style="text-align: center">
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col s6" id="plotlyChart_01"></div>
+                                <div class="col s6" id="plotlyChart_02"></div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="overlay" id="error-msg">
+                            <div class="loader-class ">
+                                <div style="text-align:center" class="row">
+                                    An error occurred while connecting to the server
+                                    <br>
+                                    Please try again in a few seconds
+                                </div>
+                            </div>
+                        </div> 
+
+
+                        <div class="overlay" id="loader">
+                            <div class="loader-class ">
+                                <div style="text-align:center" class="row">
+                                    Launching simulation. Please wait ...
+                                    <div class="progress ">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+
+                    </div>
+                    <div class="row">
+                        <div id="paper-sim" class="col s12" style="margin-top:10px;">
+                            <br>
+                            <div style="margin-left:25px; margin-right:25px">
+                                <div class="divider"></div>
+                                <h6><strong>Settings</strong></h6>
+
+                                <table class="centered">
+                                    <tbody>
+                                        <tr id="paramsrow" class="row">
+                                            <td>
+                                                \(g_{KM}\)
+                                            </td>
+                                            <td>
+                                                <div class="settings input-field col s12">
+                                                    <input type="number" id="gkm" step="0.001" min="0"/>
+                                                    <label for="gkm"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                \(g_{Ca}\)
+                                            </td>
+                                            <td>
+                                                <div class="settings input-field col s12">
+                                                    <input type="number" id="gca" step="0.001" min="0"/>
+                                                    <label for="gca"></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <!-- Switch -->
+                                                <div class="switch tooltipped" data-position="top" data-html="true" data-tooltip="'Reset' to reproduce Fig. 1B, Fig. 1C and Fig. 1D. 'Set' to insert your own simulation parameters.">
+                                                    <label>
+                                                        <input id="switch" type="checkbox">
+                                                        <span class="lever"></span>
+                                                        <br>
+                                                        Reset/Set
+                                                        <br>
+                                                        parameters
+                                                    </label>
+                                                </div>
+                                                <br>
+                                                <div class="switch tooltipped" data-position="top" data-html="true" data-tooltip="'Keep lines' to prevent the plots to be cleaned up">
+                                                    <label>
+                                                        <input  id="switch-lines" type="checkbox">
+                                                        <span class="lever"></span>
+                                                        <br>
+                                                        Persistent
+                                                        <br>
+                                                        plots
+                                                    </label>
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col s5 offset-s1">
+                                <button style="margin:6px" class="col s12 waves-effect waves-light btn" id="run-singleap">Run with single AP</button>
+                                </div>
+                                <div class="col s5">
+                                <button style="margin:6px" class="col s12 waves-effect waves-light btn" id="run-train">Run with 50Hz train</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div> 
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+</html>
