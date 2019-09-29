@@ -1,0 +1,23 @@
+load_file("nrngui.hoc")
+// nrn_load_dll("../mechanisms/nrnmech.dll")
+load_file("../morphology/morphology.hoc")   // Loading morphology with mechanisms
+load_file("tautables.hoc")                  // Loading tautables for the mechanisms
+load_file("graphs_functions.hoc")           // Loading graphs and functions
+
+xpanel("Mandge & Manchanda 2018")
+  xbutton("Generate Fig 9A", "{xopen(\"fig9A.hoc\") init() run()}")
+  xbutton("Generate Fig 16 A, C, D", "generate16acd()")
+  xbutton("Quit between different figure simulations","quit()")
+xpanel()
+
+proc generate16acd() {
+  xopen("fig16ACD.hoc")
+  init()
+  run()
+  gbar_skca3=0.0027
+  init()
+  run()
+  gbar_skca3=0.0045
+  init()
+  run()
+}
