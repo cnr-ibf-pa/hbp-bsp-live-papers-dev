@@ -57,6 +57,14 @@
     width: 42px;
 }
 
+.section-title {
+    background: #fff8e1;
+    padding: 6px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
 .title-style {
     font-family: 'Merriweather', 'serif';
     line-height: 1.5;
