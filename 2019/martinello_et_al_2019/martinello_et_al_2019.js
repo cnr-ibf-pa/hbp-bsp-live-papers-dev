@@ -58,7 +58,7 @@ $(document).ready(function () {
     };
 
     $('#switch')[0].checked = false;
-    $('#switch-single-train')[0].checked=false;
+    //$('#switch_s_t')[0].checked=false;
 
     gca.disabled = true;
     gkm.disabled = true;
@@ -74,7 +74,63 @@ $(document).ready(function () {
     $(window).resize(function(){
         resize_plots();
     });
- 
+
+    $('#run').click(function() {
+        $('#error-msg').animate({opacity: 0}, 0);
+        $('#plots').animate({opacity: 0}, fadeoutval);
+        $('#loader').animate({opacity: 1}, fadeinval);
+        title = "<h5>Single AP stimulus</h5>";
+        var xmin=99;
+        var xmax=106;
+        layout_01['xaxis']['autorange'] = false;
+        layout_01['xaxis']['range'] = [xmin, xmax];
+        var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+        ws.onerror = function(evt){ws_on_error(evt)}
+        ws.onopen = function(){ws_on_open(ws, default_parameters_ap, gkm, gca)}
+        ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
+        });
+        
+
+    $("#switch_s_t").on('change', function() { 
+            if ($(this).is(':checked')) {
+                switchStatus = $(this).is(':checked');
+                $('#run').click(function() {
+                    $('#error-msg').animate({opacity: 0}, 0);
+                    $('#plots').animate({opacity: 0}, fadeoutval);
+                    $('#loader').animate({opacity: 1}, fadeinval);
+                    title = "<h5>50hz train stimulus</h5>";
+                    var xmin = 50;
+                    var xmax = 550;
+                    layout_01['xaxis']['autorange'] = false;
+                    layout_01['xaxis']['range'] = [xmin, xmax];
+                    var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+                    ws.onerror = function(evt){ws_on_error(evt)}
+                    ws.onopen = function(){ws_on_open(ws, default_parameters_train, gkm, gca)}
+                    ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
+                    });
+                }
+            else {
+                switchStatus = $(this).is(':checked');
+                $('#run').click(function() {
+                    $('#error-msg').animate({opacity: 0}, 0);
+                    $('#plots').animate({opacity: 0}, fadeoutval);
+                    $('#loader').animate({opacity: 1}, fadeinval);
+                    title = "<h5>Single AP stimulus</h5>";
+                    var xmin=99;
+                    var xmax=106;
+                    layout_01['xaxis']['autorange'] = false;
+                    layout_01['xaxis']['range'] = [xmin, xmax];
+                    var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+                    ws.onerror = function(evt){ws_on_error(evt)}
+                    ws.onopen = function(){ws_on_open(ws, default_parameters_ap, gkm, gca)}
+                    ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
+                    });
+                }
+        
+            }); 
+
+
+
     $('#switch').on("change", function() {
         if ($('#switch')[0].checked) { 
             gca.disabled = false;
@@ -87,42 +143,10 @@ $(document).ready(function () {
         }
     });
 
-    $("#run-singleap").click();
+    $("#run").click();
 });
 
-	$('#switch-single-train').on("change", function() {
-        if ($('#switch-single-train')[0].checked) { 
-            $('#run').click(function() {
-        		$('#error-msg').animate({opacity: 0}, 0);
-        		$('#plots').animate({opacity: 0}, fadeoutval);
-        		$('#loader').animate({opacity: 1}, fadeinval);
-        		title = "<h5>Single AP stimulus</h5>";
-        		var xmin=99;
-       		 	var xmax=106;
-        		layout_01['xaxis']['autorange'] = false;
-        		layout_01['xaxis']['range'] = [xmin, xmax];
-        		var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
-        		ws.onerror = function(evt){ws_on_error(evt)}
-        		ws.onopen = function(){ws_on_open(ws, default_parameters_ap, gkm, gca)}
-        		ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
-    		});
-        } else {
-            $('#run').click(function() {
-        		$('#error-msg').animate({opacity: 0}, 0);
-        		$('#plots').animate({opacity: 0}, fadeoutval);
-        		$('#loader').animate({opacity: 1}, fadeinval);
-        		title = "<h5>50hz train stimulus</h5>";
-        		var xmin = 50;
-        		var xmax = 550;
-        		layout_01['xaxis']['autorange'] = false;
-        		layout_01['xaxis']['range'] = [xmin, xmax];
-        		var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
-        		ws.onerror = function(evt){ws_on_error(evt)}
-        		ws.onopen = function(){ws_on_open(ws, default_parameters_train, gkm, gca)}
-        		ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
-    		});
-        }
-});
+   
 // open websocket connection
 function ws_on_open(ws, params, gkm, gca){
     ws.send(JSON.stringify({'cmd': 'set_url', 'data': model_url}));
