@@ -128,16 +128,16 @@
                     <i class="material-icons">note_add</i>ModelDB link and test simulations
                 </div>
                 <div id="collapsebody" class="collapsible-body">
-                    <p>A reduced self-consistent set of files needed to reproduce&nbsp;fig.4 b,c and d of the paper is available on
+                    <p>A reduced self-consistent set of files needed to reproduce&nbsp;Fig.4 b,c and d of the paper is available on
                     <a href="https://senselab.med.yale.edu/modeldb/ShowModel.cshtml?model=245417#tabs-1" target="_blank">ModelDB</a>
                     <br>
                     <br>
                     The simulations will reproduce functional effects of Km removal in mossy fiber boutons.<br>                                                                                                                        
-		    Use the <b>"RUN WITH SINGLE AP"</b> or <b>"RUN WITH 50 HZ TRAIN"</b> button to simulate a single current injection or a 50Hz current pulses train, respectively.<br>                                               
-		    The default settings will reproduce control condition in figures 4b,c (Single AP) and d (50Hz Train) of the paper.<br>                                                                                             
-		    Change settings by turning "on" the <b>"Reset/set parameters"</b> switch to run simulation with your own conductance configuration. <br>                                                                           
-		    Set g<sub>KM</sub>=0.0 or both conductances to 0.0 to reproduce respectively red and blue lines of the fig.4b,c,d.<br>                                                                                             
-		    Turn "on" the <b>"Persistent plot"</b> switch to compare plots of different simulations.
+		            The default settings will reproduce control condition in Fig. 4b,c (Single AP) and d (50Hz Train) of the paper.<br>                                                                                             
+                    <br>
+                    <em>HOWTO:  Change settings by turning "on" the <b>"Reset/set parameters"</b> switch to run simulation with your own conductance configuration. Set g<sub>KM</sub>=0.0 or both conductances to 0.0 to reproduce respectively red and blue lines of the Fig. 4b,c,d.<br>                                                                                             
+		    Use the <b>"Single AP/50 Hz Train"</b> switch to simulate a single current injection or a 50Hz current pulses train, respectively.<br>                                               
+            Turn "on" the <b>"Persistent plot"</b> switch to compare plots of different simulations.</em>
 
                     <div class="divider"></div>
                     <div style="position:relative; margin-left:25px; margin-right:25px">
@@ -181,6 +181,9 @@
                             <div style="margin-left:25px; margin-right:25px">
                                 <div class="divider"></div>
                                 <h6><strong>Settings</strong></h6>
+
+                                <div style="overflow-x:auto;">
+                                    <br>
                                 <table class="centered">
                                     <tr>
                                     <tbody>
@@ -191,7 +194,7 @@
                                             </td>
                                             <td>
                                                 <div class="settings input-field col s12">
-                                                    <input type="number" id="gkm" step="0.001" min="0"/>
+                                                    <input type="number" id="gkm" step="0.001" min="0" max="5" style="min-width: 55px"/>
                                                     <label for="gkm"></label>
                                                 </div>
                                             </td>
@@ -200,7 +203,7 @@
                                             </td>
                                             <td>
                                                 <div class="settings input-field col s12">
-                                                    <input type="number" id="gca" step="0.001" min="0"/>
+                                                    <input type="number" id="gca" step="0.001" min="0" max="5" style="min-width: 55px"/>
                                                     <label for="gca"></label>
                                                 </div>
                                             </td>
@@ -256,6 +259,7 @@
                                     </tbody>
                                 </tr>
                                 </table>
+                            </div>
                                 <br>
                             </div>
                             <br>
