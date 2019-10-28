@@ -77,7 +77,7 @@ $(document).ready(function () {
     });
 
     $('#run').click(function() {
-            if ($(this).is(':checked')) {
+            if ($('switch_s_t').is(':checked')) {
                 $('#error-msg').animate({opacity: 0}, 0);
                 $('#plots').animate({opacity: 0}, fadeoutval);
                 $('#loader').animate({opacity: 1}, fadeinval);
