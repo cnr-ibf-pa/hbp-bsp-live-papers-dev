@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <title>Masoli et al. 2019</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
+    </head>
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">Parameter tuning differentiates granule cell subtypes enriching the repertoire of retransmission properties at the cerebellum input stage</h5>
+        </div>
+        <div>
+            <p>
+            <strong>Authors: </strong>Stefano Masoli*
+            <sup>1</sup>, Marialuisa Tognolina*
+            <sup>1</sup>, Umberto Laforenza
+            <sup>4</sup>, Francesco Moccia
+            <sup>3</sup>, Egidio D'Angelo
+            <sup>1,2</sup>
+            </p>
+            <p>
+            <strong>Author information: </strong>
+            <sup>1</sup> Department of Brain and Behavioral Sciences, University of Pavia, Via Forlanini 6, I-27100, Pavia, Italy,
+            <sup>2</sup> Brain Connectivity Center, IRCCS Mondino Foundation, Pavia, Italy,
+            <sup>3</sup> Department of Biology and Biotechnology, University of Pavia, Via Forlanini 6, I-27100, Pavia, Italy,
+            <sup>4</sup> Department of Molecular Medicine, University of Pavia, Via Forlanini 6, I-27100, Pavia, Italy,
+            <sup>*</sup> Co-Author,
+            </p>
+            <p>
+            <strong>Corresponding author: </strong>Egidio D'Angelo (
+            <em>
+                <a href="mailto:dangelo@unipv.it">dangelo@unipv.it</a>
+            </em> )
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p>
+            <strong>Journal: </strong>
+            <a href="https://www.biorxiv.org/" target="_blank">
+                <span class="color_link">Biorxiv</span>
+            </a>
+            </p>
+            <p>
+            <strong>Download Url: </strong>
+            <a href="https://www.biorxiv.org/content/10.1101/638247v1" target="_blank">
+                <span class="color_link">https://www.biorxiv.org/content/10.1101/638247v1</span>
+            </a>
+            </p>
+            <p>
+            <strong>Citation: </strong> Masoli S.*, Tognolina M.*, Laforenza U., Moccia F., D’Angelo E. Parameter tuning differentiates granule cell subtypes enriching the repertoire of retransmission properties at the cerebellum input stage. Bioarxiv 2019.
+            </p>
+            <p>
+            <strong>DOI: </strong>
+            <a href="https://doi.org/10.1101/638247" target="_blank">
+                <span class="color_link">https://doi.org/10.1101/638247</span>
+            </a>
+            </p>
+            <p>
+            <strong>Licence: </strong>the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp; may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.
+            </p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            The cerebellar granule cells (GrCs) form an anatomically homogeneous neuronal population which, in its canonical description, discharges regularly without adaptation. We show here that GrCs in fact generate diverse response patterns to current injection and synaptic activation, ranging from adaptation to acceleration of firing. Adaptation was predicted by parameter optimization in detailed GrC computational models based on the available knowledge on GrC ionic channels. The models also predicted that acceleration required the involvement of additional mechanisms. We found that yet unrecognized TRPM4 currents in accelerating GrCs could specifically account for firing acceleration. Moreover, adapting GrCs were better in transmitting high-frequency mossy fiber (MF) bursts over a background discharge than accelerating GrCs. This implied that different electroresponsive patterns corresponded to specific synaptic properties reflecting different neurotransmitter release probability. The correspondence of pre- and post-synaptic properties generated effective MF-GrC transmission channels, which could enrich the processing of input spike patterns and enhance spatio-temporal recoding at the cerebellar input stage.
+        </div>
+        <h5>Resources</h5>
+        <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
+        </p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li class="active">
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">settings_input_antenna</i>Morphologies
+                </div>
+                <!-- option: leak_remove -->
+                <div class="collapsible-body ">
+                    <p>The morphology for the dendrites and soma is in .asc format. The axon was custom generated using a modified BluePyOpt class. </p>
+                    <!-- <p>The explanation of how to setup a custom axon, or a specific dendritic sectionlist is available at the following link:</p> -->
+
+                    <div style="margin-left:25px">
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Granule cell dend-soma morphology:
+                                    </td>
+                                    <td>
+                                        <a href="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/GrC2018.asc" class="waves-effect waves-light">
+                                            <i class="material-icons left">archive</i>Download
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">timeline</i>Electrophysiological Traces
+                </div>
+                <!-- option: waves, show_chart, multiline_chart -->
+                <div class="collapsible-body">
+                    <div ng-app="neo-visualizer">
+                        <div class="collapsible">
+                            <div class="row">
+                                <div class="col s12">
+                                    <ul class="tabs">
+                                        <li class="tab col s3">
+                                            <a href="#int-bAC">Regular</a>
+                                        </li>
+                                        <li class="tab col s3">
+                                            <a href="#int-cAC">Mild adapting</a>
+                                        </li>
+                                        <li class="tab col s3">
+                                            <a href="#int-cNAC">Strong adapting</a>
+                                        </li>
+                                        <li class="tab col s3">
+                                            <a href="#pyr-cAC">Accelerating</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="int-bAC" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">200918_0001 CC step</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/200918_0001%20CC%20step.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">200918_0000 IV -70</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/200918_0000%20IV%20-70.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="int-cAC" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">101018_0012 CC step</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/101018_0012%20CC%20step.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">101018_0011 IV -70</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/101018_0011%20IV%20-70.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="int-cNAC" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">18gen16_0005 CC step</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/18gen16_0005%20CC%20step.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">18gen16_0004 IV -70</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/18gen16_0004%20IV%20-70.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="pyr-cAC" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">111018_0001 CC step</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/111018_0001%20CC%20step.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">111018_0000 IV -70</div>
+                                            <div class="collapsible-body">
+                                                <span>
+                                                    <visualizer-view
+                                                 source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/cerebellum_circuits/BlueNaaS_models/live_paper_grc/trace/111018_0000%20IV%20-70.abf"
+                                                 height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">note_add</i>Cerebellar granule cells simulation with BlueNaaS
+                </div>
+                <!-- option: folder_special, archive -->
+                <div class="collapsible-body">
+                    <p><br>Use the BSP Neuron As A Service (NaaS) tool to do in silico experiments with the single cell models shown in Fig. 6A of the paper:
+                    <br>
+                    <span style="margin-left:25px">> Start by clicking on any button below to run a simulation.</span>
+                    <br>
+                    <span style="margin-left:25px">> After entering the NaaS page, click on the "Simulation" tab, adjust the current strength with the appropriate value, and run the simulation by clicking the "Start simulation" button.</span>
+                    <br>
+                    <span style="margin-left:25px">> To correctly run a simulation, the temperature need to be set at 32°, the vinit at -70mV and, to match the paper experiments, the positive current injections are: 10, 16 and 22pA. </span>
+                    </p>
+                    <div style="margin-left:25px">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/cerebellum_circuits/BlueNaaS_models/live_paper_grc/SM_GrC2019_non_adapting_low_ahp.zip')">Regular
+                                            <i class="material-icons right">play_arrow</i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/cerebellum_circuits/BlueNaaS_models/live_paper_grc/SM_GrC2019_mild_adapting.zip')">Mild adapting
+                                            <i class="material-icons right">play_arrow</i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/cerebellum_circuits/BlueNaaS_models/live_paper_grc/SM_GrC2019_adapting.zip')">Strong adapting
+                                            <i class="material-icons right">play_arrow</i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Available soon">
+                                            <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/cerebellum_circuits/BlueNaaS_models/live_paper_grc/SM_GrC2019_accellerating.zip')">Accelerating
+                                                <i class="material-icons right">play_arrow</i>
+                                            </button>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">local_play</i>Optimizations
+                </div>
+                <!-- option: folder_special, all_inclusive, transform -->
+                <div class="collapsible-body">
+                    <p>
+                    <span class="txt_style1">The optimization results for each morphology are individually available in the
+                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901" target="_blank">
+                            <span class="color_link">Model Catalog</span>
+                        </a>
+                        at the following links:
+                    </span>
+                    </p>
+                    <div style="margin-left:25px">
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/19/nav/369318?state=model.6f4f624e-a971-4708-ab99-a822b7f3e2a6" target=”_blank”>Regular firing</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/19/nav/369318?state=model.811b606c-9410-440a-804a-3ef45186ac90" target=”_blank”>Mild adapting</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/19/nav/369318?state=model.6c6b3d89-e382-488a-a8aa-06ecdc396726" target=”_blank”>Strong adapting</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/19/nav/369318?state=model.08939668-4a34-4294-9719-4c7f59ab339e" target=”_blank”>Accelerating</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div> 
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+</html>

@@ -52,6 +52,28 @@
     width: 22px;
 }
 
+.hbp-icon-big {
+    height: 42px;
+    width: 42px;
+}
+
+.section-title {
+    background: #fff8e1;
+    padding: 6px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.title-style {
+    font-family: 'Merriweather', 'serif';
+    line-height: 1.5;
+    font-size:28px;
+}
+
+.subtitle {
+    font-size:15px;
+}
 /* For journal title header */
  .box {
      position: relative;
@@ -66,6 +88,10 @@
  .box.rounded {
      -moz-border-radius: 10px 10px 10px 10px;
      border-radius: 10px 10px 10px 10px;
+}
+
+ .box.rounded.centered {
+     text-align: center;
 }
 
 /* For abstract box with folder corner */
