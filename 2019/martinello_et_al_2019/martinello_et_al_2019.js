@@ -76,8 +76,33 @@ $(document).ready(function () {
         resize_plots();
     });
 
+    $("#gca" ).keyup(function() {
+        var val=$('#gca').val()
+        if(val<0 || val>5){
+            $("#run").attr("disabled", true);
+            $("#gca").css("background-color","#f8f8fa");
+             }
+        else{
+            $("#run").attr("disabled", false);
+            $("#gca").css("background-color","#fff");
+             }
+        });
+
+    $("#gkm" ).keyup(function() {
+        var val=$('#gkm').val()
+        if(val<0 || val>5){
+            $("#run").attr("disabled", true);
+            $("#gkm").css("background-color","#f8f8fa");
+             }
+        else{
+            $("#run").attr("disabled", false);
+            $("#gkm").css("background-color","#fff");
+             }
+        });
+
+
     $('#run').click(function() {
-            if ($('switch_s_t').is(':checked')) {
+            if ($('#switch_s_t').is(':checked')) {
                 $('#error-msg').animate({opacity: 0}, 0);
                 $('#plots').animate({opacity: 0}, fadeoutval);
                 $('#loader').animate({opacity: 1}, fadeinval);
