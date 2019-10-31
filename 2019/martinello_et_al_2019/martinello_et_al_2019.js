@@ -76,8 +76,6 @@ $(document).ready(function () {
         resize_plots();
     });
 
-    var x = document.getElementById("gca").value;
-    console.log(x);
 
     $("#gca,#gkm").keyup(function() {
         var val_gca=$('#gca').val();
