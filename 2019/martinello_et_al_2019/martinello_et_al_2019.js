@@ -76,30 +76,25 @@ $(document).ready(function () {
         resize_plots();
     });
 
-    $("#gca" ).keyup(function() {
-        var val=$('#gca').val()
-        if(val<0 || val>5){
+    var x = document.getElementById("gca").value;
+    console.log(x);
+
+    $("#gca,#gkm").keyup(function() {
+        var val_gca=$('#gca').val();
+        var val_gkm=$('#gkm').val();
+        if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5){
+            $("#message").show();
             $("#run").attr("disabled", true);
             $("#gca").css("background-color","#f8f8fa");
-             }
-        else{
-            $("#run").attr("disabled", false);
-            $("#gca").css("background-color","#fff");
-             }
-        });
-
-    $("#gkm" ).keyup(function() {
-        var val=$('#gkm').val()
-        if(val<0 || val>5){
-            $("#run").attr("disabled", true);
             $("#gkm").css("background-color","#f8f8fa");
              }
         else{
+            $("#message").hide();
             $("#run").attr("disabled", false);
+            $("#gca").css("background-color","#fff");
             $("#gkm").css("background-color","#fff");
              }
         });
-
 
     $('#run').click(function() {
             if ($('#switch_s_t').is(':checked')) {
