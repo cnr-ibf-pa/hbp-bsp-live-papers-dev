@@ -46,6 +46,7 @@ $(document).ready(function () {
         xaxis:{title:'t (ms)'}, 
         yaxis:{title:'V (mV)'},
         legend: { "orientation":"h", y:-0.2 },
+        showlegend:true,
         margin: margin,
     };
 
@@ -54,6 +55,7 @@ $(document).ready(function () {
         xaxis:{title:'t (ms)'}, 
         yaxis:{title:'Cai (mM)'},
         legend: { "orientation":"h", y:-0.2 },
+        showlegend:true,
         margin: margin,
     };
 
@@ -66,7 +68,6 @@ $(document).ready(function () {
 
     gca.value = "0.6";
     gkm.value = "0.005";
-
 
     Plotly.newPlot(plotlyChart_01, [{x:[], y:[]}], layout_01, {displayModeBar: false}, {responsive: true});
     Plotly.newPlot(plotlyChart_02, [{x:[], y:[]}], layout_02, {displayModeBar: false}, {responsive: true});
@@ -186,6 +187,8 @@ function ws_on_message(ws, evt, layout_01, layout_02, title) {
     var time = received_msg["data"]["TIME"];
     var v = received_msg["data"]["v(0.5)"];
     var cai = received_msg["data"]["cai(0.5)"];
+    var val_gca=$('#gca').val();
+    var val_gkm=$('#gkm').val();
 
     // read current data in plot
     var datap1 = plotlyChart_01.data;
@@ -205,13 +208,13 @@ function ws_on_message(ws, evt, layout_01, layout_02, title) {
 
     // if the "Keep line" checkbox is selected
     if (!flag == false){
-        datafinalp1.push({x:time, y:v});
-        datafinalp2.push({x:time, y:cai}); 
+        datafinalp1.push({x:time, y:v, name:'gca_'+val_gca+'_gkm_'+val_gkm});
+        datafinalp2.push({x:time, y:cai,name:'gca_'+val_gca+'_gkm_'+val_gkm}); 
         Plotly.react(plotlyChart_01, datafinalp1, layout_01);
         Plotly.react(plotlyChart_02, datafinalp2, layout_02);
     } else {
-        Plotly.react(plotlyChart_01, [{x:time, y:v}], layout_01);
-        Plotly.react(plotlyChart_02, [{x:time, y:cai}], layout_02);
+        Plotly.react(plotlyChart_01, [{x:time, y:v,name:'gca_'+val_gca+'_gkm_'+val_gkm}], layout_01);
+        Plotly.react(plotlyChart_02, [{x:time, y:cai,name:'gca_'+val_gca+'_gkm_'+val_gkm}], layout_02);
     }
     $('#plot-title')[0].innerHTML = title;
     $('#error-msg').animate({opacity: 0}, 0);
