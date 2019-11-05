@@ -75,12 +75,12 @@ $(document).ready(function () {
     $(window).resize(function(){
         resize_plots();
     });
-
-
-    $("#gca,#gkm").keyup(function() {
+    $("#gca,#gkm").on("change", function() {
         var val_gca=$('#gca').val();
         var val_gkm=$('#gkm').val();
-        if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5){
+        console.log('gca:',val_gca);
+        console.log(val_gkm);
+        if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5 || val_gca=='' || val_gkm==''){
             $("#message").show();
             $("#run").attr("disabled", true);
             $("#gca").css("background-color","#f8f8fa");
@@ -92,7 +92,7 @@ $(document).ready(function () {
             $("#gca").css("background-color","#fff");
             $("#gkm").css("background-color","#fff");
              }
-        });
+    });
 
     $('#run').click(function() {
             if ($('#switch_s_t').is(':checked')) {
