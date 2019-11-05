@@ -42,7 +42,7 @@ $(document).ready(function () {
     }
 
     var layout_01= {
-        title: 'Voltage', 
+        title: 'Voltage',
         xaxis:{title:'t (ms)'}, 
         yaxis:{title:'V (mV)'},
         legend: { "orientation":"h", y:-0.2 },
@@ -67,6 +67,7 @@ $(document).ready(function () {
     gca.value = "0.6";
     gkm.value = "0.005";
 
+
     Plotly.newPlot(plotlyChart_01, [{x:[], y:[]}], layout_01, {displayModeBar: false}, {responsive: true});
     Plotly.newPlot(plotlyChart_02, [{x:[], y:[]}], layout_02, {displayModeBar: false}, {responsive: true});
 
@@ -75,11 +76,27 @@ $(document).ready(function () {
     $(window).resize(function(){
         resize_plots();
     });
+
+    $("#gca,#gkm").keyup(function() {
+        var val_gca=$('#gca').val();
+        var val_gkm=$('#gkm').val();
+        if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5 || val_gca=='' || val_gkm==''){
+            $("#message").show();
+            $("#run").attr("disabled", true);
+            $("#gca").css("background-color","#f8f8fa");
+            $("#gkm").css("background-color","#f8f8fa");
+             }
+        else{
+            $("#message").hide();
+            $("#run").attr("disabled", false);
+            $("#gca").css("background-color","#fff");
+            $("#gkm").css("background-color","#fff");
+             }
+    });
+
     $("#gca,#gkm").on("change", function() {
         var val_gca=$('#gca').val();
         var val_gkm=$('#gkm').val();
-        console.log('gca:',val_gca);
-        console.log(val_gkm);
         if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5 || val_gca=='' || val_gkm==''){
             $("#message").show();
             $("#run").attr("disabled", true);
@@ -132,6 +149,7 @@ $(document).ready(function () {
         } else {
             gca.disabled = true;
             gkm.disabled = true;
+            $("#message").hide();
             gca.value = "0.6";
             gkm.value = "0.005";
         }
