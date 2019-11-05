@@ -208,13 +208,13 @@ function ws_on_message(ws, evt, layout_01, layout_02, title) {
 
     // if the "Keep line" checkbox is selected
     if (!flag == false){
-        datafinalp1.push({x:time, y:v, name:'gca_'+val_gca+'_gkm_'+val_gkm});
-        datafinalp2.push({x:time, y:cai,name:'gca_'+val_gca+'_gkm_'+val_gkm}); 
+        datafinalp1.push({x:time, y:v, name:'gkm_'+val_gkm+'_gca_'+val_gca});
+        datafinalp2.push({x:time, y:cai,name:'gkm_'+val_gkm+'_gca_'+val_gca}); 
         Plotly.react(plotlyChart_01, datafinalp1, layout_01);
         Plotly.react(plotlyChart_02, datafinalp2, layout_02);
     } else {
-        Plotly.react(plotlyChart_01, [{x:time, y:v,name:'gca_'+val_gca+'_gkm_'+val_gkm}], layout_01);
-        Plotly.react(plotlyChart_02, [{x:time, y:cai,name:'gca_'+val_gca+'_gkm_'+val_gkm}], layout_02);
+        Plotly.react(plotlyChart_01, [{x:time, y:v,name:'gkm_'+val_gkm+'_gca_'+val_gca}], layout_01);
+        Plotly.react(plotlyChart_02, [{x:time, y:cai,name:'gkm_'+val_gkm+'_gca_'+val_gca}], layout_02);
     }
     $('#plot-title')[0].innerHTML = title;
     $('#error-msg').animate({opacity: 0}, 0);
