@@ -42,10 +42,11 @@ $(document).ready(function () {
     }
 
     var layout_01= {
-        title: 'Voltage', 
+        title: 'Voltage',
         xaxis:{title:'t (ms)'}, 
         yaxis:{title:'V (mV)'},
         legend: { "orientation":"h", y:-0.2 },
+        showlegend:true,
         margin: margin,
     };
 
@@ -54,6 +55,7 @@ $(document).ready(function () {
         xaxis:{title:'t (ms)'}, 
         yaxis:{title:'Cai (mM)'},
         legend: { "orientation":"h", y:-0.2 },
+        showlegend:true,
         margin: margin,
     };
 
@@ -74,6 +76,40 @@ $(document).ready(function () {
 
     $(window).resize(function(){
         resize_plots();
+    });
+
+    $("#gca,#gkm").keyup(function() {
+        var val_gca=$('#gca').val();
+        var val_gkm=$('#gkm').val();
+        if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5 || val_gca=='' || val_gkm==''){
+            $("#message").show();
+            $("#run").attr("disabled", true);
+            $("#gca").css("background-color","#f8f8fa");
+            $("#gkm").css("background-color","#f8f8fa");
+             }
+        else{
+            $("#message").hide();
+            $("#run").attr("disabled", false);
+            $("#gca").css("background-color","#fff");
+            $("#gkm").css("background-color","#fff");
+             }
+    });
+
+    $("#gca,#gkm").on("change", function() {
+        var val_gca=$('#gca').val();
+        var val_gkm=$('#gkm').val();
+        if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5 || val_gca=='' || val_gkm==''){
+            $("#message").show();
+            $("#run").attr("disabled", true);
+            $("#gca").css("background-color","#f8f8fa");
+            $("#gkm").css("background-color","#f8f8fa");
+             }
+        else{
+            $("#message").hide();
+            $("#run").attr("disabled", false);
+            $("#gca").css("background-color","#fff");
+            $("#gkm").css("background-color","#fff");
+             }
     });
 
     $('#run').click(function() {
@@ -114,6 +150,7 @@ $(document).ready(function () {
         } else {
             gca.disabled = true;
             gkm.disabled = true;
+            $("#message").hide();
             gca.value = "0.6";
             gkm.value = "0.005";
         }
@@ -150,6 +187,8 @@ function ws_on_message(ws, evt, layout_01, layout_02, title) {
     var time = received_msg["data"]["TIME"];
     var v = received_msg["data"]["v(0.5)"];
     var cai = received_msg["data"]["cai(0.5)"];
+    var val_gca=$('#gca').val();
+    var val_gkm=$('#gkm').val();
 
     // read current data in plot
     var datap1 = plotlyChart_01.data;
@@ -169,13 +208,13 @@ function ws_on_message(ws, evt, layout_01, layout_02, title) {
 
     // if the "Keep line" checkbox is selected
     if (!flag == false){
-        datafinalp1.push({x:time, y:v});
-        datafinalp2.push({x:time, y:cai}); 
+        datafinalp1.push({x:time, y:v, name:'gkm_'+val_gkm+'_gca_'+val_gca});
+        datafinalp2.push({x:time, y:cai,name:'gkm_'+val_gkm+'_gca_'+val_gca}); 
         Plotly.react(plotlyChart_01, datafinalp1, layout_01);
         Plotly.react(plotlyChart_02, datafinalp2, layout_02);
     } else {
-        Plotly.react(plotlyChart_01, [{x:time, y:v}], layout_01);
-        Plotly.react(plotlyChart_02, [{x:time, y:cai}], layout_02);
+        Plotly.react(plotlyChart_01, [{x:time, y:v,name:'gkm_'+val_gkm+'_gca_'+val_gca}], layout_01);
+        Plotly.react(plotlyChart_02, [{x:time, y:cai,name:'gkm_'+val_gkm+'_gca_'+val_gca}], layout_02);
     }
     $('#plot-title')[0].innerHTML = title;
     $('#error-msg').animate({opacity: 0}, 0);
