@@ -1,4 +1,4 @@
-var model_url = 'bluenaas_models/neuronservice_eg_llb_dev_changed_mod_path_mod.zip';
+var model_url = 'bsp-lp-martinello-et-al-2019/neuronservice_eg_llb_dev_changed_mod_path_mod.zip';
 
 var default_parameters_train = {'soma' : {'gbar_kmb':  0.005, 'gcanbar_can': 0.6}, 
 'tstop' : 600, 'v_init': -80};
