@@ -1,0 +1,14 @@
+objref stim
+soma stim = new IClamp(0.5)
+stim.del  = 13.4
+stim.dur  = 50
+stim.amp  = 0.16
+
+tstop = 75
+{
+xpanel("AP IClamp Paramters", 0)
+xvalue("Delay","stim.del", 1,"stim.del", 0, 0 )
+xvalue("Duration","stim.dur", 1,"stim.dur", 0, 0 )
+xvalue("Amplitude","stim.amp", 1,"stim.amp", 0, 0 )
+xpanel(62,721)
+}
