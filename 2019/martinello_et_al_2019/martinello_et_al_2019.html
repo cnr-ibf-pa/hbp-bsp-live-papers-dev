@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="./martinello_et_al_2019.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
@@ -105,7 +106,7 @@
             Little is known about the properties and function of ion channels that affect synaptic terminal-resting properties. One particular subthreshold-active ion channel, the K<sub>v</sub>7 potassium channel, is highly localized to axons, but its role in regulating synaptic terminal intrinsic excitability and release is largely unexplored. Using electrophysiological recordings together with computational modeling, we found that the K<sub>v</sub>7 current was active at rest in adult hippocampal mossy fiber synaptic terminals and enhanced their membrane conductance. The current also restrained action potential-induced Ca<sup>2+</sup> influx via N- and P/Q-type Ca<sup>2+</sup> channels in boutons. This was associated with a substantial reduction in the spike half-width and afterdepolarization following presynaptic spikes. Further, by constraining spike-induced Ca<sup>2+</sup> influx, the presynaptic K<sub>v</sub>7 current decreased neurotransmission onto CA3 pyramidal neurons and short-term synaptic plasticity at the mossy fiber–CA3 synapse. This is a distinctive mechanism by which KV7 channels influence hippocampal neuronal excitability and synaptic plasticity.
         </div>
         <h5>Resources</h5>
-        <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
+        <p>Data and models: data and models used in the paper are available at the links reported below.
         </p>
         <ul class="collapsible" data-collapsible="expandable">
             <li>
@@ -114,13 +115,8 @@
                 </div>
                 <!-- option: waves, show_chart, multiline_chart -->
                 <div class="collapsible-body">
-                        <div class="collapsible">
-                            <div class="row">
-                                <div class="col s12">
-                                    SOME TEXT AND LINKs HERE
-                                </div>
-                            </div>
-                    </div>
+                    <p/>Download the experimental traces used to reproduce the plots shown in Fig. 3 
+                    of the main manuscript at the following <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/bsp-lp-martinello-et-al-2019/Fig_3_Traces.zip" target="_blank">link</a>.</p>
                 </div>
             </li>
             <li>
@@ -128,12 +124,12 @@
                     <i class="material-icons">note_add</i>ModelDB link and test simulations
                 </div>
                 <div id="collapsebody" class="collapsible-body">
-                    <p>A reduced self-consistent set of files needed to reproduce&nbsp;Fig.4 b,c and d of the paper is available on
+                    <p>A reduced self-consistent set of files needed to reproduce&nbsp;Fig. 4b,c and d of the paper is available on
                     <a href="https://senselab.med.yale.edu/modeldb/ShowModel.cshtml?model=245417#tabs-1" target="_blank">ModelDB</a>
                     <br>
                     <br>
                     The simulations will reproduce functional effects of Km removal in mossy fiber boutons.<br>                                                                                                                        
-		            The default settings will reproduce control condition in Fig. 4b,c (Single AP) and d (50Hz Train) of the paper.<br>                                                                                             
+		            The default settings will reproduce control condition in Fig. 4b,c (Single AP) and Fig. 4d (50Hz Train) of the paper, which refer to the last action potential and all action potentials shown in Fig. 3a and Fig. 3d respectively.<br>
                     <br>
                     <em>HOWTO:  Change settings by turning "on" the <b>"Reset/set parameters"</b> switch to run simulation with your own conductance configuration. Set g<sub>KM</sub>=0.0 or both conductances to 0.0 to reproduce respectively red and blue lines of the Fig. 4b,c,d.<br>                                                                                             
 		    Use the <b>"Single AP/50 Hz Train"</b> switch to simulate a single current injection or a 50Hz current pulses train, respectively.<br>                                               
@@ -184,28 +180,31 @@
 
                                 <div style="overflow-x:auto;">
                                     <br>
+                           
                                 <table class="centered">
                                     <tr>
                                     <tbody>
 
-                                        <tr id="paramsrow">
+                                        <tr id="paramsrow" >
                                             <td>
                                                 \(g_{KM}\)
                                             </td>
                                             <td>
                                                 <div class="settings input-field col s12">
                                                     <input type="number" id="gkm" step="0.001" min="0" max="5" style="min-width: 55px"/>
-                                                    <label for="gkm"></label>
+                                                    <label for="gkm"></label> 
                                                 </div>
                                             </td>
                                             <td>
                                                 \(g_{Ca}\)
                                             </td>
                                             <td>
+                                                
                                                 <div class="settings input-field col s12">
                                                     <input type="number" id="gca" step="0.001" min="0" max="5" style="min-width: 55px"/>
                                                     <label for="gca"></label>
                                                 </div>
+
                                             </td>
                                             <td>
                                                 <!-- Switch -->
@@ -251,14 +250,18 @@
                                             <th style="border: 1px solid black;border-color:#E2E2E2; border-right: none;">
                                             <td>
                                                 <div class="col s5 offset-s1">
-                                                    <button style="margin:6px;width:120px" class="col s12 waves-effect waves-light btn" id="run">Run</button>
+                                                    <button type="submit" style="margin:6px;width:120px" class="col s12 waves-effect waves-light btn" id="run">Run</button>
                                                 </div>
                                             </td>
-                                    
+                                          
+                                        </tr>
+                                        <tr>
+                                             <label id="message" style="color: red; display: none">**Please select a value between 0 and 5</label>
                                         </tr>
                                     </tbody>
                                 </tr>
                                 </table>
+                          
                             </div>
                                 <br>
                             </div>

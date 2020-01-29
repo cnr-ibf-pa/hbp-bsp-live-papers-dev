@@ -1,0 +1,32 @@
+begintemplate templateM
+
+public init
+public soma, dend, apic, axon
+public all, somatic, apical, axonal, basal
+objref all, somatic, apical, axonal, basal, this
+
+
+proc init() {
+	all = new SectionList()
+	somatic = new SectionList()
+	basal = new SectionList()
+	apical = new SectionList()
+	axonal = new SectionList()
+	
+ 	forall delete_section()
+ 	StepDist = 60 // human cells has no spines in their first 60 um
+ 				  // from soma - see Benavides-Piccione 2013
+	F_Spines = 1.9       //As calculated - see detailes in Eyal 2015
+	
+	CM =0.45	// uF/cm2
+	RM = 38907
+	RA = 203
+	E_PAS =  -86
+	//NEW_NSEG = 11
+	
+}
+
+create soma[1], dend[1], apic[1], axon[1]
+
+
+endtemplate templateM
