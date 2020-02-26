@@ -1,10 +1,14 @@
-var model_url = 'bluenaas_models/solinas_test_01.zip';
+var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_02.zip';
+
 
 var default_parameters = {'panel' : {'nBPAP':  1, 'nstim': 70, 
     'FUNCTIONS':['set_pulse()']}, 'tstop' : 250}
 
-
 var recorded_vectors = {
+       'TIME' : 't',
+}
+
+var recorded_vectors1 = {
        'TIME' : 't',
        'soma(0.5)' : 'v',
        'branch[38](0.1)' : 'v_vec_base',
@@ -51,8 +55,8 @@ var fadeinval = 1200;
 var fadeoutval = 600;
 
 
+console.log("document ready");
 $(document).ready(function () {
-
 	var gca = document.getElementById("gca");
 	var gkm = document.getElementById("gkm");
 
@@ -159,11 +163,8 @@ $(document).ready(function () {
 
 
 // open websocket connection
-function ws_on_open(ws, params, gkm, gca){
-    console.log("entered in on open");
+function ws_on_open(ws, params){
 	ws.send(JSON.stringify({'cmd': 'set_url', 'data': model_url}));
-	params["soma"]["gbar_kmb"] = parseFloat(gkm.value)
-	params["soma"]["gcanbar_can"] = parseFloat(gca.value)
 	ws.send(JSON.stringify({"cmd": 'set_params', "data": params}))
 	ws.send(JSON.stringify({'cmd': 'run_simulation', 'data': recorded_vectors}))
 }
@@ -183,13 +184,15 @@ function ws_on_error(evt){
 // open websocket connection
 function ws_on_message(ws, evt, layout_01, layout_02, title) {
 	// handle received message
+    console.log(evt)
 	var received_msg = JSON.parse(evt.data);
 	var time = received_msg["data"]["TIME"];
 	var v = received_msg["data"]["v(0.5)"];
 	var cai = received_msg["data"]["cai(0.5)"];
 	var val_gca=$('#gca').val();
 	var val_gkm=$('#gkm').val();
-
+    
+    console.log(received_msg);
 	// read current data in plot
 	var datap1 = plotlyChart_01.data;
 	var datap2 = plotlyChart_02.data;
