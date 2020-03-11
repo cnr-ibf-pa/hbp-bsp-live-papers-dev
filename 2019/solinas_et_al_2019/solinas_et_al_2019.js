@@ -1,4 +1,4 @@
-var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_03.zip';
+var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_05.zip';
 
 
 var default_parameters = {'panel' : {'nBPAP':  1, 'nstim': 70, 
