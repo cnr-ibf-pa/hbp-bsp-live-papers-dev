@@ -1,28 +1,63 @@
-var model_url = 'bsp-lp-martinello-et-al-2019/neuronservice_eg_llb_dev_changed_mod_path_mod.zip';
+var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_05.zip';
 
-var default_parameters_train = {'soma' : {'gbar_kmb':  0.005, 'gcanbar_can': 0.6}, 
-'tstop' : 600, 'v_init': -80};
 
-var default_parameters_ap = {'soma' : {'gbar_kmb':  0.005, 'gcanbar_can': 0.6}, 
-'tstop' : 600, 'v_init': -80};
+var default_parameters = {'panel' : {'nBPAP':  1, 'nstim': 70, 
+    'FUNCTIONS':['set_pulse()']}, 'tstop' : 250}
 
-var recorded_vectors = {'TIME': 't', 'v(0.5)' : 'v', 'cai(0.5)' : 'cai'};
+var recorded_vectors = {
+       'TIME' : 't',
+}
+
+var recorded_vectors1 = {
+       'TIME' : 't',
+       'soma(0.5)' : 'v',
+       'branch[38](0.1)' : 'v_vec_base',
+       'spine1_head[0]_v' : 'v_vec_spine1_matrix[0]',
+       'spine1_head[1]_v' : 'v_vec_spine1_matrix[1]',
+       'spine1_head[2]_v' : 'v_vec_spine1_matrix[2]',
+       'spine1_head[3]_v' : 'v_vec_spine1_matrix[3]',
+       'spine1_head[4]_v' : 'v_vec_spine1_matrix[4]',
+       'spine1_head[5]_v' : 'v_vec_spine1_matrix[5]',
+       'spine1_head[6]_v' : 'v_vec_spine1_matrix[6]',
+       'spine1_head[7]_v' : 'v_vec_spine1_matrix[7]',
+       'spine1_head[8]_v' : 'v_vec_spine1_matrix[8]',
+       'spine1_head[9]_v' : 'v_vec_spine1_matrix[9]',
+       'spine1_head[10]_v' : 'v_vec_spine1_matrix[10]',
+       'spine2_head[0]_v' : 'v_vec_spine2_matrix[0]',
+       'spine2_head[1]_v' : 'v_vec_spine2_matrix[1]',
+       'spine2_head[2]_v' : 'v_vec_spine2_matrix[2]',
+       'spine2_head[3]_v' : 'v_vec_spine2_matrix[3]',
+       'spine2_head[4]_v' : 'v_vec_spine2_matrix[4]',
+       'spine2_head[5]_v' : 'v_vec_spine2_matrix[5]',
+       'theta1' : 'theta1',
+       'theta2' : 'theta2',
+       'theta3' : 'theta3',
+       'spine1_head[0]_cai' : 'cai_vec_spine1_matrix[0]',
+       'spine1_head[1]_cai' : 'cai_vec_spine1_matrix[1]',
+       'spine1_head[2]_cai' : 'cai_vec_spine1_matrix[2]',
+       'spine1_head[3]_cai' : 'cai_vec_spine1_matrix[3]',
+       'spine1_head[4]_cai' : 'cai_vec_spine1_matrix[4]',
+       'spine1_head[5]_cai' : 'cai_vec_spine1_matrix[5]',
+       'spine1_head[6]_cai' : 'cai_vec_spine1_matrix[6]',
+       'spine1_head[7]_cai' : 'cai_vec_spine1_matrix[7]',
+       'spine1_head[8]_cai' : 'cai_vec_spine1_matrix[8]',
+       'spine1_head[9]_cai' : 'cai_vec_spine1_matrix[9]',
+       'spine1_head[10]_cai' : 'cai_vec_spine1_matrix[10]',
+       'spine2_head[0]_cai' : 'cai_vec_spine2_matrix[0]',
+       'spine2_head[1]_cai' : 'cai_vec_spine2_matrix[1]',
+       'spine2_head[2]_cai' : 'cai_vec_spine2_matrix[2]',
+       'spine2_head[3]_cai' : 'cai_vec_spine2_matrix[3]',
+       'spine2_head[4]_cai' : 'cai_vec_spine2_matrix[4]',
+       'spine2_head[5]_cai' : 'cai_vec_spine2_matrix[5]'
+}
+
 
 var fadeinval = 1200;
 var fadeoutval = 600;
 
-for (var i = 0; i < 20; i++) {                                             
-	var stim_item = "stim["+i+"]"                                              
-	default_parameters_train[stim_item] = {"amp" : 0.03}                      
-} 
 
-default_parameters_ap["stim[0]"] = {"amp" : 0.03}
 
-for (var i = 1; i < 20; i++) {
-	var stim_item = "stim["+i+"]"
-	default_parameters_ap[stim_item] = {"amp" : 0.0}
-}
-
+console.log("document ready");
 $(document).ready(function () {
 
 	var gca = document.getElementById("gca");
@@ -94,7 +129,9 @@ $(document).ready(function () {
 			layout_01['xaxis']['range'] = [xmin, xmax];
 			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
 			ws.onerror = function(evt){ws_on_error(evt)}
-			ws.onopen = function(){ws_on_open(ws, default_parameters_train, gkm, gca)}
+
+			ws.onopen = function(){ws_on_open(ws, default_parameters)}
+
 			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
 		}
 		else {
@@ -108,7 +145,9 @@ $(document).ready(function () {
 			layout_01['xaxis']['range'] = [xmin, xmax];
 			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
 			ws.onerror = function(evt){ws_on_error(evt)}
-			ws.onopen = function(){ws_on_open(ws, default_parameters_ap, gkm, gca)}
+
+			ws.onopen = function(){ws_on_open(ws, default_parameters)}
+
 			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
 		}
 	});    
@@ -131,16 +170,19 @@ $(document).ready(function () {
 
 
 // open websocket connection
-function ws_on_open(ws, params, gkm, gca){
+
+function ws_on_open(ws, params){
 	ws.send(JSON.stringify({'cmd': 'set_url', 'data': model_url}));
-	params["soma"]["gbar_kmb"] = parseFloat(gkm.value)
-	params["soma"]["gcanbar_can"] = parseFloat(gca.value)
+
 	ws.send(JSON.stringify({"cmd": 'set_params', "data": params}))
 	ws.send(JSON.stringify({'cmd': 'run_simulation', 'data': recorded_vectors}))
 }
 
 // handle errors event
-function ws_on_error(){
+
+function ws_on_error(evt){
+    console.log("entered in on error");
+
 	$('#plots').animate({opacity: 0}, fadeoutval);
 	$('#loader').animate({opacity: 0}, fadeoutval);
 	const wait = time => new Promise(
@@ -153,12 +195,18 @@ function ws_on_error(){
 // open websocket connection
 function ws_on_message(ws, evt, layout_01, layout_02, title) {
 	// handle received message
+
+    console.log(evt)
+
 	var received_msg = JSON.parse(evt.data);
 	var time = received_msg["data"]["TIME"];
 	var v = received_msg["data"]["v(0.5)"];
 	var cai = received_msg["data"]["cai(0.5)"];
 	var val_gca=$('#gca').val();
 	var val_gkm=$('#gkm').val();
+
+    
+    console.log(received_msg);
 
 	// read current data in plot
 	var datap1 = plotlyChart_01.data;
