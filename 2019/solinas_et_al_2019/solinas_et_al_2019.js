@@ -51,12 +51,15 @@ var recorded_vectors1 = {
        'spine2_head[5]_cai' : 'cai_vec_spine2_matrix[5]'
 }
 
+
 var fadeinval = 1200;
 var fadeoutval = 600;
 
 
+
 console.log("document ready");
 $(document).ready(function () {
+
 	var gca = document.getElementById("gca");
 	var gkm = document.getElementById("gkm");
 
@@ -126,7 +129,9 @@ $(document).ready(function () {
 			layout_01['xaxis']['range'] = [xmin, xmax];
 			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
 			ws.onerror = function(evt){ws_on_error(evt)}
+
 			ws.onopen = function(){ws_on_open(ws, default_parameters)}
+
 			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
 		}
 		else {
@@ -140,7 +145,9 @@ $(document).ready(function () {
 			layout_01['xaxis']['range'] = [xmin, xmax];
 			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
 			ws.onerror = function(evt){ws_on_error(evt)}
+
 			ws.onopen = function(){ws_on_open(ws, default_parameters)}
+
 			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
 		}
 	});    
@@ -163,15 +170,19 @@ $(document).ready(function () {
 
 
 // open websocket connection
+
 function ws_on_open(ws, params){
 	ws.send(JSON.stringify({'cmd': 'set_url', 'data': model_url}));
+
 	ws.send(JSON.stringify({"cmd": 'set_params', "data": params}))
 	ws.send(JSON.stringify({'cmd': 'run_simulation', 'data': recorded_vectors}))
 }
 
 // handle errors event
+
 function ws_on_error(evt){
     console.log("entered in on error");
+
 	$('#plots').animate({opacity: 0}, fadeoutval);
 	$('#loader').animate({opacity: 0}, fadeoutval);
 	const wait = time => new Promise(
@@ -184,15 +195,19 @@ function ws_on_error(evt){
 // open websocket connection
 function ws_on_message(ws, evt, layout_01, layout_02, title) {
 	// handle received message
+
     console.log(evt)
+
 	var received_msg = JSON.parse(evt.data);
 	var time = received_msg["data"]["TIME"];
 	var v = received_msg["data"]["v(0.5)"];
 	var cai = received_msg["data"]["cai(0.5)"];
 	var val_gca=$('#gca').val();
 	var val_gkm=$('#gkm').val();
+
     
     console.log(received_msg);
+
 	// read current data in plot
 	var datap1 = plotlyChart_01.data;
 	var datap2 = plotlyChart_02.data;
