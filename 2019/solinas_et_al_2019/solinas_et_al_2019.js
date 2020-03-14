@@ -1,6 +1,4 @@
-//var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_05.zip';
 var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_06.zip';
-
 
 var default_parameters = {'panel' : {'nBPAP':  1, 'nstim': 70, 
     'FUNCTIONS':['set_pulse()']}, 'tstop' : 250}
@@ -137,7 +135,12 @@ $(document).ready(function () {
             $('#error-msg').animate({opacity: 0}, 0);
             $('#plots').animate({opacity: 0}, fadeoutval);
             $('#loader').animate({opacity: 1}, fadeinval);
-            layout_01['xaxis']['autorange'] = true;
+			var xmin = 100;
+			var xmax = 180;
+			layout_01['xaxis']['autorange'] = false;
+			layout_01['xaxis']['range'] = [xmin, xmax];
+			layout_02['xaxis']['autorange'] = false;
+			layout_02['xaxis']['range'] = [xmin, xmax];
             var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
             ws.onerror = function(evt){ws_on_error(evt)}
             ws.onopen = function(){ws_on_open(ws, default_parameters)}
@@ -169,18 +172,14 @@ function ws_on_error(evt){
         .then(() => $('#error-msg').animate({opacity: 1}, fadeinval));
 
 }
-// open websocket connection
+
+
+// handle received message
 function ws_on_message(ws, evt, layout_01, layout_02) {
-    // handle received message
-
-    //console.log(evt)
-
     var received_msg = JSON.parse(evt.data);
     var time = received_msg["data"]["TIME"];
     var v_traces = [];
-    //received_msg["data"]["branch[38](0.1)"];
     var cai_traces = [];
-    //received_msg["data"]["soma(0.5)"];
 
     for (var i = 0; i < v_var.length; i++){
 
