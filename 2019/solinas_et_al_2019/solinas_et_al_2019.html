@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
     <head>
         <title>Solinas et al. 2019</title>
@@ -6,9 +6,8 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script type="text/javascript" src="solinas_et_al_2019.js"></script>
-
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="./martinello_et_al_2019.css">
+        <link rel="stylesheet" type="text/css" href="./solinas_et_al_2019.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
         <meta charset="UTF-8">
@@ -18,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
         <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-     </head>
+    </head>
     <body class="container">
         <br>
         <div class="box rounded centered">
@@ -56,7 +55,7 @@
             <sup>2 </sup>Institute of Neuroinformatics, University of Zurich and ETH Zurich, Zurich, Switzerland,
             <sup>3</sup>Institute of Physiology, Otto-von-Guericke-University, Medical Faculty, Magdeburg, Germany,
             <sup>4</sup>Center for Behavioral Brain Sciences (CBBS), Magdeburg, Germany.
-	    </p>
+            </p>
             <p>
             <strong>Corresponding author: </strong>Author (Michele Migliore
             <em>
@@ -106,8 +105,8 @@
         </div>
         <div class="note rounded">
             <h5>Abstract:</h5>
-	    Across the mammalian nervous system, neurotrophins control synaptic plasticity, neuromodulation, and neuronal growth. The neurotrophin Brain-Derived Neurotrophic Factor (BDNF) is known to promote structural and functional synaptic plasticity in the hippocampus, the cerebral cortex, and many other brain areas. In recent years, a wealth of data has been accumulated revealing the paramount importance of BDNF for neuronal function. BDNF signaling gives rise to multiple complex signaling pathways that mediate neuronal survival and differentiation during development, and formation of new memories. These different roles of BDNF for neuronal function have essential consequences if BDNF signaling in the brain is reduced. Thus, BDNF knock-out mice or mice that are deficient in BDNF receptor signaling via TrkB and p75 receptors show deficits in neuronal development, synaptic plasticity, and memory formation. Accordingly, BDNF signaling dysfunctions are associated with many neurological and neurodegenerative conditions including Alzheimer's and Huntington's disease. However, despite the widespread implications of BDNF-dependent signaling in synaptic plasticity in healthy and pathological conditions, the interplay of the involved different biochemical pathways at the synaptic level remained mostly unknown. In this paper, we investigated the role of BDNF/TrkB signaling in spike-timing dependent plasticity (STDP) in rodent hippocampus CA1 pyramidal cells, by implementing the first subcellular model of BDNF regulated, spike timing-dependent long-term potentiation (t-LTP). The model is based on previously published experimental findings on STDP and accounts for the observed magnitude, time course, stimulation pattern and BDNF-dependence of t-LTP. It allows interpreting the main experimental findings concerning specific biomolecular processes, and it can be expanded to take into account more detailed biochemical reactions. The results point out a few predictions on how to enhance LTP induction in such a way to rescue or improve cognitive functions under pathological conditions.
-       </div>
+            Across the mammalian nervous system, neurotrophins control synaptic plasticity, neuromodulation, and neuronal growth. The neurotrophin Brain-Derived Neurotrophic Factor (BDNF) is known to promote structural and functional synaptic plasticity in the hippocampus, the cerebral cortex, and many other brain areas. In recent years, a wealth of data has been accumulated revealing the paramount importance of BDNF for neuronal function. BDNF signaling gives rise to multiple complex signaling pathways that mediate neuronal survival and differentiation during development, and formation of new memories. These different roles of BDNF for neuronal function have essential consequences if BDNF signaling in the brain is reduced. Thus, BDNF knock-out mice or mice that are deficient in BDNF receptor signaling via TrkB and p75 receptors show deficits in neuronal development, synaptic plasticity, and memory formation. Accordingly, BDNF signaling dysfunctions are associated with many neurological and neurodegenerative conditions including Alzheimer's and Huntington's disease. However, despite the widespread implications of BDNF-dependent signaling in synaptic plasticity in healthy and pathological conditions, the interplay of the involved different biochemical pathways at the synaptic level remained mostly unknown. In this paper, we investigated the role of BDNF/TrkB signaling in spike-timing dependent plasticity (STDP) in rodent hippocampus CA1 pyramidal cells, by implementing the first subcellular model of BDNF regulated, spike timing-dependent long-term potentiation (t-LTP). The model is based on previously published experimental findings on STDP and accounts for the observed magnitude, time course, stimulation pattern and BDNF-dependence of t-LTP. It allows interpreting the main experimental findings concerning specific biomolecular processes, and it can be expanded to take into account more detailed biochemical reactions. The results point out a few predictions on how to enhance LTP induction in such a way to rescue or improve cognitive functions under pathological conditions.
+        </div>
         <h5>Resources</h5>
         <p>Data and models: data and models used in the paper are available at the links reported below.
         </p>
@@ -123,26 +122,52 @@
                     <br>
                     <br>
                     The model shows how the back-propagating action potentials in the oblique dendrites of CA1 neurons collide at the spines with a locally elicited EPSP to trigger the release of a retrograde messenger or Brain-Derived Neurotrophic Factor inducing the late expression of spike timing-dependent plasticity.<br>                                                                                                                        
-		            *OLD*The default settings will reproduce control condition in Fig. 4b,c (Single AP) and Fig. 4d (50Hz Train) of the paper, which refer to the last action potential and all action potentials shown in Fig. 3a and Fig. 3d respectively.<br>
                     <br>
-                    <em>HOWTO:  Change settings by turning "on" the <b>"Reset/set parameters"</b> switch to run simulation with your own conductance configuration. Set g<sub>KM</sub>=0.0 or both conductances to 0.0 to reproduce respectively red and blue lines of the Fig. 4b,c,d.<br>                                                                                             
-		    Use the <b>"Single AP/50 Hz Train"</b> switch to simulate a single current injection or a 50Hz current pulses train, respectively.<br>                                               
-            Turn "on" the <b>"Persistent plot"</b> switch to compare plots of different simulations.</em>
-
-                    <div class="divider"></div>
+                    <em>HOWTO:  Change settings by clicking the <strong>"LTP11"</strong> or <strong>"LTP14"</strong> buttons in order to set the default parameters to be used for reproducing the manuscript's figures Fig.3A,3B and Fig.4A,4B respectively. Alternatively you can manually set the "Tstop", "nBPAP" and "nStim" parameters.
+                        Once the parameters are set, click the <strong>"Run"</strong> button to launch the simulation. After the plots are dispayed, you can toggle on/off individual trace visualization by double clicking on trace names in the legend. Finally, you can zoom in by clicking and dragging and zoom out by double clicking inside the plots.</em>
+                    <br>
+                    <br>
                     <div style="position:relative; margin-left:25px; margin-right:25px">
-                        <div id="plots" class="plots">
-                            <div id="plot-title" style="text-align: center">
+                    <div id="plots" class="plots">
+                    <div class="row">
+                        <div class="col s9" style="text-align:center">
+                            <br>
+                            <div id="plotlyChart_01"></div>
+                            <div id="plotlyChart_02"></div>
+                        </div>
+                        <div class="col s3">
+                            <div style="text-align:center">
+                                <h6><strong>Settings</strong></h6>
+                            </div>
+                            <div class="settings input-field col s12">
+                                Tstop
+                                <input type="number" id="tstop" step="1" min="0"/>
                             </div>
                             <br>
-                            <div class="row">
-                                <div class="col s6" id="plotlyChart_01"></div>
-                                <div class="col s6" id="plotlyChart_02"></div>
+                            <div class="settings input-field col s12">
+                                nBPAP
+                                <input type="number" id="nbpap" step="0.1" min="0"/>
                             </div>
+                            <br>
+                            <div class="settings input-field col s12">
+                                nStim
+                                <input type="number" id="nstim" step="1" min="0"/>
+                            </div>
+                            <p style="text-align:center"><strong>Set defaults</strong></p>
+                                <div class="row justify-content-md-center">
+                                    <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp11">LTP11</button>
+                                    <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp12">LTP12</button>
+                                    <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp14">LTP14</button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                <button type="submit" style="margin:6px;" class="col s12 waves-effect waves-light btn" id="run">Run</button>
+                                </div>
                         </div>
-
-
-
+                    </div>
+                    </div>
+                    <br>
+                    <br>
                         <div class="overlay" id="error-msg">
                             <div class="loader-class ">
                                 <div style="text-align:center" class="row">
@@ -164,108 +189,7 @@
                                 </div>
                             </div>
                         </div> 
-
                     </div>
-                    <div class="row">
-                        <div id="paper-sim" class="col s12" style="margin-top:10px;">
-                            <div style="margin-left:25px; margin-right:25px">
-                                <div class="divider"></div>
-                                <h6><strong>Settings</strong></h6>
-
-                                <div style="overflow-x:auto;">
-                                    <br>
-                           
-                                <table class="centered">
-                                    <tr>
-                                    <tbody>
-
-                                        <tr id="paramsrow" >
-                                            <td>
-                                                \(g_{KM}\)
-                                            </td>
-                                            <td>
-                                                <div class="settings input-field col s12">
-                                                    <input type="number" id="gkm" step="0.001" min="0" max="5" style="min-width: 55px"/>
-                                                    <label for="gkm"></label> 
-                                                </div>
-                                            </td>
-                                            <td>
-                                                \(g_{Ca}\)
-                                            </td>
-                                            <td>
-                                                
-                                                <div class="settings input-field col s12">
-                                                    <input type="number" id="gca" step="0.001" min="0" max="5" style="min-width: 55px"/>
-                                                    <label for="gca"></label>
-                                                </div>
-
-                                            </td>
-                                            <td>
-                                                <!-- Switch -->
-                                                <div class="switch tooltipped" data-position="top" data-html="true" data-tooltip="'Reset' to reproduce Fig. 1B, Fig. 1C and Fig. 1D. 'Set' to insert your own simulation parameters.">
-                                                    <label>
-                                                        <input id="switch" type="checkbox">
-                                                        <span class="lever"></span>
-                                                        <br>
-                                                        Reset/Set
-                                                        <br>
-                                                        parameters
-                                                    </label>
-                                                </div>
-
-                                            </td>
-                                           
-                                            <th style="border: 1px solid black;border-color:#E2E2E2; border-left: none;">
-                                            <td>
-                                                <div class="switch tooltipped" data-position="top" data-html="true" data-tooltip="'Keep lines' to prevent the plots to be cleaned up">
-                                                    <label>
-                                                        <input  id="switch-lines" type="checkbox">
-                                                        <span class="lever"></span>
-                                                        <br>
-                                                        Persistent
-                                                        <br>
-                                                        plots
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div class="switch tooltipped" data-position="top" data-html="true" data-tooltip="Switch single or train.">
-                                                    <label>
-                                                        <input id="switch_s_t" type="checkbox">
-                                                        <span class="lever"></span>
-                                                        <br>
-                                                        Single AP/
-                                                        <br>
-                                                        50 Hz Train
-                                                    </label>
-                                                </div>
-                                            </td>
-                                            </th>
-                                            <th style="border: 1px solid black;border-color:#E2E2E2; border-right: none;">
-                                            <td>
-                                                <div class="col s5 offset-s1">
-                                                    <button type="submit" style="margin:6px;width:120px" class="col s12 waves-effect waves-light btn" id="run">Run</button>
-                                                </div>
-                                            </td>
-                                          
-                                        </tr>
-                                        <tr>
-                                             <label id="message" style="color: red; display: none">**Please select a value between 0 and 5</label>
-                                        </tr>
-                                    </tbody>
-                                </tr>
-                                </table>
-                          
-                            </div>
-                                <br>
-                            </div>
-                            <br>
-                
-
-                        </div>
-                    </div>
-                    <br>
-                </div>
                 </div>
             </li>
         </ul>

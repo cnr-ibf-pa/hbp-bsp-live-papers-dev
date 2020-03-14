@@ -1,280 +1,248 @@
-var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_05.zip';
+//var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_05.zip';
+var model_url = 'bsp-lp-solinas-et-al-2019/solinas_test_06.zip';
 
 
 var default_parameters = {'panel' : {'nBPAP':  1, 'nstim': 70, 
     'FUNCTIONS':['set_pulse()']}, 'tstop' : 250}
 
 var recorded_vectors = {
-       'TIME' : 't',
+    'TIME' : 't',
+    'soma(0.5)' : 'v',
+    'branch[38](0.1)' : 'v_vec_base',
+    'spine1_head[0]_v' : 'v_vec_spine1_01',
+    'spine1_head[1]_v' : 'v_vec_spine1_02',
+    'spine1_head[2]_v' : 'v_vec_spine1_03',
+    'spine1_head[3]_v' : 'v_vec_spine1_04',
+    'spine1_head[4]_v' : 'v_vec_spine1_05',
+    'spine1_head[5]_v' : 'v_vec_spine1_06',
+    'spine1_head[6]_v' : 'v_vec_spine1_07',
+    'spine1_head[7]_v' : 'v_vec_spine1_08',
+    'spine1_head[8]_v' : 'v_vec_spine1_09',
+    'spine1_head[9]_v' : 'v_vec_spine1_10',
+    'spine1_head[10]_v' : 'v_vec_spine1_11',
+    'spine2_head[0]_v' : 'v_vec_spine2_01',
+    'spine2_head[1]_v' : 'v_vec_spine2_02',
+    'spine2_head[2]_v' : 'v_vec_spine2_03',
+    'spine2_head[3]_v' : 'v_vec_spine2_04',
+    'spine2_head[4]_v' : 'v_vec_spine2_05',
+    'spine2_head[5]_v' : 'v_vec_spine2_06',
+    'theta1' : 'theta1',
+    'theta2' : 'theta2',
+    'theta3' : 'theta3',
+    'spine1_head[0]_cai' : 'cai_vec_spine1_01',
+    'spine1_head[1]_cai' : 'cai_vec_spine1_02',
+    'spine1_head[2]_cai' : 'cai_vec_spine1_03',
+    'spine1_head[3]_cai' : 'cai_vec_spine1_04',
+    'spine1_head[4]_cai' : 'cai_vec_spine1_05',
+    'spine1_head[5]_cai' : 'cai_vec_spine1_06',
+    'spine1_head[6]_cai' : 'cai_vec_spine1_07',
+    'spine1_head[7]_cai' : 'cai_vec_spine1_08',
+    'spine1_head[8]_cai' : 'cai_vec_spine1_09',
+    'spine1_head[9]_cai' : 'cai_vec_spine1_10',
+    'spine1_head[10]_cai' : 'cai_vec_spine1_11',
+    'spine2_head[0]_cai' : 'cai_vec_spine2_01',
+    'spine2_head[1]_cai' : 'cai_vec_spine2_02',
+    'spine2_head[2]_cai' : 'cai_vec_spine2_03',
+    'spine2_head[3]_cai' : 'cai_vec_spine2_04',
+    'spine2_head[4]_cai' : 'cai_vec_spine2_05',
+    'spine2_head[5]_cai' : 'cai_vec_spine2_06',
 }
 
-var recorded_vectors1 = {
-       'TIME' : 't',
-       'soma(0.5)' : 'v',
-       'branch[38](0.1)' : 'v_vec_base',
-       'spine1_head[0]_v' : 'v_vec_spine1_matrix[0]',
-       'spine1_head[1]_v' : 'v_vec_spine1_matrix[1]',
-       'spine1_head[2]_v' : 'v_vec_spine1_matrix[2]',
-       'spine1_head[3]_v' : 'v_vec_spine1_matrix[3]',
-       'spine1_head[4]_v' : 'v_vec_spine1_matrix[4]',
-       'spine1_head[5]_v' : 'v_vec_spine1_matrix[5]',
-       'spine1_head[6]_v' : 'v_vec_spine1_matrix[6]',
-       'spine1_head[7]_v' : 'v_vec_spine1_matrix[7]',
-       'spine1_head[8]_v' : 'v_vec_spine1_matrix[8]',
-       'spine1_head[9]_v' : 'v_vec_spine1_matrix[9]',
-       'spine1_head[10]_v' : 'v_vec_spine1_matrix[10]',
-       'spine2_head[0]_v' : 'v_vec_spine2_matrix[0]',
-       'spine2_head[1]_v' : 'v_vec_spine2_matrix[1]',
-       'spine2_head[2]_v' : 'v_vec_spine2_matrix[2]',
-       'spine2_head[3]_v' : 'v_vec_spine2_matrix[3]',
-       'spine2_head[4]_v' : 'v_vec_spine2_matrix[4]',
-       'spine2_head[5]_v' : 'v_vec_spine2_matrix[5]',
-       'theta1' : 'theta1',
-       'theta2' : 'theta2',
-       'theta3' : 'theta3',
-       'spine1_head[0]_cai' : 'cai_vec_spine1_matrix[0]',
-       'spine1_head[1]_cai' : 'cai_vec_spine1_matrix[1]',
-       'spine1_head[2]_cai' : 'cai_vec_spine1_matrix[2]',
-       'spine1_head[3]_cai' : 'cai_vec_spine1_matrix[3]',
-       'spine1_head[4]_cai' : 'cai_vec_spine1_matrix[4]',
-       'spine1_head[5]_cai' : 'cai_vec_spine1_matrix[5]',
-       'spine1_head[6]_cai' : 'cai_vec_spine1_matrix[6]',
-       'spine1_head[7]_cai' : 'cai_vec_spine1_matrix[7]',
-       'spine1_head[8]_cai' : 'cai_vec_spine1_matrix[8]',
-       'spine1_head[9]_cai' : 'cai_vec_spine1_matrix[9]',
-       'spine1_head[10]_cai' : 'cai_vec_spine1_matrix[10]',
-       'spine2_head[0]_cai' : 'cai_vec_spine2_matrix[0]',
-       'spine2_head[1]_cai' : 'cai_vec_spine2_matrix[1]',
-       'spine2_head[2]_cai' : 'cai_vec_spine2_matrix[2]',
-       'spine2_head[3]_cai' : 'cai_vec_spine2_matrix[3]',
-       'spine2_head[4]_cai' : 'cai_vec_spine2_matrix[4]',
-       'spine2_head[5]_cai' : 'cai_vec_spine2_matrix[5]'
-}
+var v_var = ['soma(0.5)', 'branch[38](0.1)', 'spine1_head[0]_v', 'spine1_head[1]_v',
+    'spine1_head[2]_v', 'spine1_head[3]_v', 'spine1_head[4]_v', 'spine1_head[5]_v',
+    'spine1_head[6]_v', 'spine1_head[7]_v', 'spine1_head[8]_v', 'spine1_head[9]_v',
+    'spine1_head[10]_v', 'spine2_head[0]_v', 'spine2_head[1]_v', 'spine2_head[2]_v',
+    'spine2_head[3]_v', 'spine2_head[4]_v', 'spine2_head[5]_v'] 
 
+var cai_var = ['theta1', 'theta2', 'theta3', 'spine1_head[0]_cai', 
+    'spine1_head[1]_cai', 'spine1_head[2]_cai', 'spine1_head[3]_cai',
+    'spine1_head[4]_cai', 'spine1_head[5]_cai', 'spine1_head[6]_cai', 
+    'spine1_head[7]_cai', 'spine1_head[8]_cai', 'spine1_head[9]_cai',
+    'spine1_head[10]_cai', 'spine2_head[0]_cai', 'spine2_head[1]_cai',
+    'spine2_head[2]_cai', 'spine2_head[3]_cai', 'spine2_head[4]_cai',
+    'spine2_head[5]_cai']
 
 var fadeinval = 1200;
 var fadeoutval = 600;
 
-
-
-console.log("document ready");
 $(document).ready(function () {
 
-	var gca = document.getElementById("gca");
-	var gkm = document.getElementById("gkm");
+    
+    $('#tstop').val(default_parameters['tstop']);
+    $('#nbpap').val(default_parameters['panel']['nBPAP']);
+    $('#nstim').val(default_parameters['panel']['nstim']);
 
-	var plotlyChart_01 = document.getElementById("plotlyChart_01");
-	var plotlyChart_02 = document.getElementById("plotlyChart_02");
+    $("#ltp11").click(function(){
+        set_default_params(250, 1, 70);
+    }); 
 
-	var plotdiv = document.getElementById("plots");
+    $("#ltp12").click(function(){
+        set_default_params(250, 2, 50);
+    }); 
 
-	var margin = {
-		l: 60,
-		r: 25,
-		b: 60,
-		t: 35,
-		pad: 15
-	}
+    $("#ltp14").click(function(){
+        set_default_params(250, 4, 25);
+    }); 
 
-	var layout_01= {
-		title: 'Voltage',
-		xaxis:{title:'t (ms)'}, 
-		yaxis:{title:'V (mV)'},
-		legend: { "orientation":"h", y:-0.2 },
-		showlegend:true,
-		margin: margin,
-	};
 
-	var layout_02= {
-		title: 'Cai',
-		xaxis:{title:'t (ms)'}, 
-		yaxis:{title:'Cai (mM)'},
-		legend: { "orientation":"h", y:-0.2 },
-		showlegend:true,
-		margin: margin,
-	};
+    var plotlyChart_01 = document.getElementById("plotlyChart_01");
+    var plotlyChart_02 = document.getElementById("plotlyChart_02");
 
-	$('#switch')[0].checked = false;
-	$('#switch_s_t')[0].checked=false;
-	$('#switch-lines')[0].checked=false;
+    var margin = {
+        l: 60,
+        r: 25,
+        b: 60,
+        t: 35,
+        pad: 15
+    }
 
-	gca.disabled = true;
-	gkm.disabled = true;
+    var layout_01= {
+        title: 'Voltage',
+        xaxis:{title:'t (ms)'}, 
+        yaxis:{title:'V (mV)'},
+        legend: { "orientation":"v"},
+        showlegend:true,
+        margin: margin,
+        autosize: false,
+        width: 1000,
+    };
 
-	gca.value = "0.6";
-	gkm.value = "0.005";
+    var layout_02= {
+        title: 'Cai',
+        xaxis:{title:'t (ms)'}, 
+        yaxis:{title:'Cai (mM)'},
+        legend: { "orientation":"v"},
+        showlegend:true,
+        margin: margin,
+        autosize: false,
+    };
 
-	Plotly.newPlot(plotlyChart_01, [{x:[], y:[]}], layout_01, {displayModeBar: false}, {responsive: true});
-	Plotly.newPlot(plotlyChart_02, [{x:[], y:[]}], layout_02, {displayModeBar: false}, {responsive: true});
 
-	resize_plots();
+    Plotly.newPlot(plotlyChart_01, [{x:[], y:[]}], layout_01, {displayModeBar: false}, {responsive: true});
+    Plotly.newPlot(plotlyChart_02, [{x:[], y:[]}], layout_02, {displayModeBar: false}, {responsive: true});
 
-	$(window).resize(function(){
-		resize_plots();
-	});
+    resize_plots();
+    $(window).resize(function(){
+        resize_plots();
+    });
 
-	$("#gca,#gkm").keyup(validate_parameters)
+    $("#tstop,#nbpap,#nstim").keyup(validate_parameters)
 
-	$("#gca,#gkm").on("change", validate_parameters);
+    $("#tstop,#nbpap,#nstim").on("change", validate_parameters);
 
-	$('#run').click(function() {
-		if ($('#switch_s_t').is(':checked')) {
-			$('#error-msg').animate({opacity: 0}, 0);
-			$('#plots').animate({opacity: 0}, fadeoutval);
-			$('#loader').animate({opacity: 1}, fadeinval);
-			title = "<h5>50hz train stimulus</h5>";
-			var xmin = 50;
-			var xmax = 550;
-			layout_01['xaxis']['autorange'] = false;
-			layout_01['xaxis']['range'] = [xmin, xmax];
-			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
-			ws.onerror = function(evt){ws_on_error(evt)}
+    $('#run').click(function() {
+            default_parameters['tstop'] = parseFloat($('#tstop').val());
+            default_parameters['panel']['nBPAP'] = parseFloat($('#nbpap').val());
+            default_parameters['panel']['nstim'] = parseFloat($('#nstim').val());
+            $('#error-msg').animate({opacity: 0}, 0);
+            $('#plots').animate({opacity: 0}, fadeoutval);
+            $('#loader').animate({opacity: 1}, fadeinval);
+            layout_01['xaxis']['autorange'] = true;
+            var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+            ws.onerror = function(evt){ws_on_error(evt)}
+            ws.onopen = function(){ws_on_open(ws, default_parameters)}
+            ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02)}
+    });    
 
-			ws.onopen = function(){ws_on_open(ws, default_parameters)}
-
-			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
-		}
-		else {
-			$('#error-msg').animate({opacity: 0}, 0);
-			$('#plots').animate({opacity: 0}, fadeoutval);
-			$('#loader').animate({opacity: 1}, fadeinval);
-			title = "<h5>Single AP stimulus</h5>";
-			var xmin=99;
-			var xmax=106;
-			layout_01['xaxis']['autorange'] = false;
-			layout_01['xaxis']['range'] = [xmin, xmax];
-			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
-			ws.onerror = function(evt){ws_on_error(evt)}
-
-			ws.onopen = function(){ws_on_open(ws, default_parameters)}
-
-			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
-		}
-	});    
-
-	$('#switch').on("change", function() {
-		if ($('#switch')[0].checked) { 
-			gca.disabled = false;
-			gkm.disabled = false;
-		} else {
-			gca.disabled = true;
-			gkm.disabled = true;
-			$("#message").hide();
-			gca.value = "0.6";
-			gkm.value = "0.005";
-		}
-	});
-
-	$("#run").click();
+    $("#run").click();
 });
 
 
 // open websocket connection
 
 function ws_on_open(ws, params){
-	ws.send(JSON.stringify({'cmd': 'set_url', 'data': model_url}));
-
-	ws.send(JSON.stringify({"cmd": 'set_params', "data": params}))
-	ws.send(JSON.stringify({'cmd': 'run_simulation', 'data': recorded_vectors}))
+    ws.send(JSON.stringify({'cmd': 'set_url', 'data': model_url}));
+    ws.send(JSON.stringify({"cmd": 'set_params', "data": params}))
+    ws.send(JSON.stringify({'cmd': 'run_simulation', 'data': recorded_vectors}))
 }
 
 // handle errors event
 
 function ws_on_error(evt){
     console.log("entered in on error");
-
-	$('#plots').animate({opacity: 0}, fadeoutval);
-	$('#loader').animate({opacity: 0}, fadeoutval);
-	const wait = time => new Promise(
-		res => setTimeout(() => res(), time)
-	);
-	wait(fadeinval + fadeoutval)
-		.then(() => $('#error-msg').animate({opacity: 1}, fadeinval));
+    $('#plots').animate({opacity: 0}, fadeoutval);
+    $('#loader').animate({opacity: 0}, fadeoutval);
+    const wait = time => new Promise(
+        res => setTimeout(() => res(), time)
+    );
+    wait(fadeinval + fadeoutval)
+        .then(() => $('#error-msg').animate({opacity: 1}, fadeinval));
 
 }
 // open websocket connection
-function ws_on_message(ws, evt, layout_01, layout_02, title) {
-	// handle received message
+function ws_on_message(ws, evt, layout_01, layout_02) {
+    // handle received message
 
-    console.log(evt)
+    //console.log(evt)
 
-	var received_msg = JSON.parse(evt.data);
-	var time = received_msg["data"]["TIME"];
-	var v = received_msg["data"]["v(0.5)"];
-	var cai = received_msg["data"]["cai(0.5)"];
-	var val_gca=$('#gca').val();
-	var val_gkm=$('#gkm').val();
+    var received_msg = JSON.parse(evt.data);
+    var time = received_msg["data"]["TIME"];
+    var v_traces = [];
+    //received_msg["data"]["branch[38](0.1)"];
+    var cai_traces = [];
+    //received_msg["data"]["soma(0.5)"];
 
-    
-    console.log(received_msg);
+    for (var i = 0; i < v_var.length; i++){
 
-	// read current data in plot
-	var datap1 = plotlyChart_01.data;
-	var datap2 = plotlyChart_02.data;
+        v_traces.push({x:time, y:received_msg["data"][v_var[i]], mode: 'lines', name:v_var[i]})
+    }
 
-	// create empty final data vector
-	var datafinalp1 = [];
-	var datafinalp2 = [];
+    for (var i = 0; i < cai_var.length; i++){
+        var crr_cai = []
+        if (cai_var[i]=="theta1" || cai_var[i]=="theta2" || cai_var[i] == "theta3"){
+            for (var j = 0; j < time.length; j++){
+                crr_cai.push(received_msg["data"][cai_var[i]][0]);
+            }
+        } else {
+            crr_cai = received_msg["data"][cai_var[i]]
+        }
+        cai_traces.push({x:time, y:crr_cai, mode: 'lines', name:cai_var[i]})
+    }
 
-	// if plot already present, copy plot data on final vectors
-	if (datap1 && !(datap1[0].x.length == 0)){
-		datafinalp1 = datap1;
-		datafinalp2 = datap2;
-	}
-
-	var flag = $('#switch-lines')[0].checked;
-
-	// if the "Keep line" checkbox is selected
-	if (!flag == false){
-		datafinalp1.push({x:time, y:v, name:'gkm_'+val_gkm+'_gca_'+val_gca});
-		datafinalp2.push({x:time, y:cai,name:'gkm_'+val_gkm+'_gca_'+val_gca}); 
-		Plotly.react(plotlyChart_01, datafinalp1, layout_01);
-		Plotly.react(plotlyChart_02, datafinalp2, layout_02);
-	} else {
-		Plotly.react(plotlyChart_01, [{x:time, y:v,name:'gkm_'+val_gkm+'_gca_'+val_gca}], layout_01);
-		Plotly.react(plotlyChart_02, [{x:time, y:cai,name:'gkm_'+val_gkm+'_gca_'+val_gca}], layout_02);
-	}
-	$('#plot-title')[0].innerHTML = title;
-	$('#error-msg').animate({opacity: 0}, 0);
-	$('#plots').animate({opacity: 1}, fadeinval);
-	$('#loader').animate({opacity: 0}, fadeoutval);
-	ws.close();
+    Plotly.react(plotlyChart_01, v_traces, layout_01);
+    Plotly.react(plotlyChart_02, cai_traces, layout_02);
+    $('#error-msg').animate({opacity: 0}, 0);
+    $('#plots').animate({opacity: 1}, fadeinval);
+    $('#loader').animate({opacity: 0}, fadeoutval);
+    ws.close();
 }
 
 function resize_plots(){
-	var plotdiv = document.getElementById("collapsetitle");
-	var plot_width = Math.trunc((plotdiv.offsetWidth-200)/2);
+    var plotdiv = document.getElementById("collapsetitle");
+    var plot_width = Math.trunc((plotdiv.offsetWidth-150)*0.75);
 
-	var plotlyChart_01 = document.getElementById("plotlyChart_01");
-	var plotlyChart_02 = document.getElementById("plotlyChart_02");
+    var plotlyChart_01 = document.getElementById("plotlyChart_01");
+    var plotlyChart_02 = document.getElementById("plotlyChart_02");
 
-	var layout_01 = plotlyChart_01.layout;
-	var layout_02= plotlyChart_02.layout;
+    var layout_01 = plotlyChart_01.layout;
+    var layout_02= plotlyChart_02.layout;
 
-	var data_01 = plotlyChart_01.data;
-	var data_02= plotlyChart_02.data;
+    var data_01 = plotlyChart_01.data;
+    var data_02= plotlyChart_02.data;
 
-	layout_01["width"] = plot_width; 
-	layout_02["width"] = plot_width;
+    layout_01["width"] = plot_width; 
+    layout_02["width"] = plot_width;
 
-	Plotly.react(plotlyChart_01, data_01, layout_01);
-	Plotly.react(plotlyChart_02, data_02, layout_02);
+    Plotly.react(plotlyChart_01, data_01, layout_01);
+    Plotly.react(plotlyChart_02, data_02, layout_02);
 }
 
 function validate_parameters(){
+    var val_tstop=$('#tstop').val();
+    var val_nbpap=$('#nbpap').val();
+    var val_nstim=$('#nstim').val();
+    if(val_tstop<0 || val_tstop>5000 || val_nbpap<0 || val_nbpap>500 || val_nstim<0 || val_nstim>500){
+        $("#message").show();
+        $("#run").attr("disabled", true);
+    }
+    else{
+        $("#message").hide();
+        $("#run").attr("disabled", false);
+    }
+}
 
-	var val_gca=$('#gca').val();
-	var val_gkm=$('#gkm').val();
-	if(val_gca<0 || val_gca>5 || val_gkm<0 || val_gkm>5 || val_gca=='' || val_gkm==''){
-		$("#message").show();
-		$("#run").attr("disabled", true);
-		$("#gca").css("background-color","#f8f8fa");
-		$("#gkm").css("background-color","#f8f8fa");
-	}
-	else{
-		$("#message").hide();
-		$("#run").attr("disabled", false);
-		$("#gca").css("background-color","#fff");
-		$("#gkm").css("background-color","#fff");
-	}
+function set_default_params(tstop=250, nbpap=1, nstim=70){
+    $("#tstop").val(tstop);
+    $("#nbpap").val(nbpap);
+    $("#nstim").val(nstim);
 }
