@@ -108,9 +108,23 @@
             Across the mammalian nervous system, neurotrophins control synaptic plasticity, neuromodulation, and neuronal growth. The neurotrophin Brain-Derived Neurotrophic Factor (BDNF) is known to promote structural and functional synaptic plasticity in the hippocampus, the cerebral cortex, and many other brain areas. In recent years, a wealth of data has been accumulated revealing the paramount importance of BDNF for neuronal function. BDNF signaling gives rise to multiple complex signaling pathways that mediate neuronal survival and differentiation during development, and formation of new memories. These different roles of BDNF for neuronal function have essential consequences if BDNF signaling in the brain is reduced. Thus, BDNF knock-out mice or mice that are deficient in BDNF receptor signaling via TrkB and p75 receptors show deficits in neuronal development, synaptic plasticity, and memory formation. Accordingly, BDNF signaling dysfunctions are associated with many neurological and neurodegenerative conditions including Alzheimer's and Huntington's disease. However, despite the widespread implications of BDNF-dependent signaling in synaptic plasticity in healthy and pathological conditions, the interplay of the involved different biochemical pathways at the synaptic level remained mostly unknown. In this paper, we investigated the role of BDNF/TrkB signaling in spike-timing dependent plasticity (STDP) in rodent hippocampus CA1 pyramidal cells, by implementing the first subcellular model of BDNF regulated, spike timing-dependent long-term potentiation (t-LTP). The model is based on previously published experimental findings on STDP and accounts for the observed magnitude, time course, stimulation pattern and BDNF-dependence of t-LTP. It allows interpreting the main experimental findings concerning specific biomolecular processes, and it can be expanded to take into account more detailed biochemical reactions. The results point out a few predictions on how to enhance LTP induction in such a way to rescue or improve cognitive functions under pathological conditions.
         </div>
         <h5>Resources</h5>
-        <p>Model: the model used in the paper is available for execution in the section below.
-        </p>
+        <p>Model and data: the model and the data used in the paper are available at the links reported in the sections below</p>
         <ul class="collapsible" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">settings_input_antenna</i>Data
+                </div>
+                <!-- option: folder_special, all_inclusive, transform -->
+                <div class="collapsible-body">
+                    <p>
+                    All electrophysiological experimental data were taken from
+                        <a target="_blank" href="https://www.cell.com/neuron/fulltext/S0896-6273(15)00336-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS08966273150033">
+                            <span class="color_link">Edelmann et al. 2015, Neuron.</span>
+                        </a>
+                   
+                    </p>
+                </div>
+            </li>
             <li>
 
                 <div id="collapsetitle" class="collapsible-header amber lighten-5">
@@ -138,46 +152,46 @@
                     <br>
                     <br>
                     <div style="position:relative; margin-left:25px; margin-right:25px">
-                    <div id="plots" class="plots">
-                    <div class="row">
-                        <div class="col s9" style="text-align:center">
-                            <br>
-                            <div id="plotlyChart_01"></div>
-                            <div id="plotlyChart_02"></div>
-                        </div>
-                        <div class="col s3">
-                            <div style="text-align:center">
-                                <h6><strong>Settings</strong></h6>
-                            </div>
-                            <div class="settings input-field col s12">
-                                Tstop
-                                <input type="number" id="tstop" step="1" min="0"/>
-                            </div>
-                            <br>
-                            <div class="settings input-field col s12">
-                                nBPAP
-                                <input type="number" id="nbpap" step="0.1" min="0"/>
-                            </div>
-                            <br>
-                            <div class="settings input-field col s12">
-                                nStim
-                                <input type="number" id="nstim" step="1" min="0"/>
-                            </div>
-                            <p style="text-align:center"><strong>Set defaults</strong></p>
-                                <div class="row justify-content-md-center">
-                                    <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp11">LTP11</button>
-                                    <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp12">LTP12</button>
-                                    <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp14">LTP14</button>
+                        <div id="plots" class="plots">
+                            <div class="row">
+                                <div class="col s9" style="text-align:center">
                                     <br>
-                                    <br>
-                                    <br>
-                                <button type="submit" style="margin:6px;" class="col s12 waves-effect waves-light btn" id="run">Run</button>
+                                    <div id="plotlyChart_01"></div>
+                                    <div id="plotlyChart_02"></div>
                                 </div>
+                                <div class="col s3">
+                                    <div style="text-align:center">
+                                        <h6><strong>Settings</strong></h6>
+                                    </div>
+                                    <div class="settings input-field col s12">
+                                        Tstop
+                                        <input type="number" id="tstop" step="1" min="0"/>
+                                    </div>
+                                    <br>
+                                    <div class="settings input-field col s12">
+                                        nBPAP
+                                        <input type="number" id="nbpap" step="0.1" min="0"/>
+                                    </div>
+                                    <br>
+                                    <div class="settings input-field col s12">
+                                        nStim
+                                        <input type="number" id="nstim" step="1" min="0"/>
+                                    </div>
+                                    <p style="text-align:center"><strong>Set defaults</strong></p>
+                                    <div class="row justify-content-md-center">
+                                        <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp11">LTP11</button>
+                                        <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp12">LTP12</button>
+                                        <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp14">LTP14</button>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <button type="submit" style="margin:6px;" class="col s12 waves-effect waves-light btn" id="run">Run</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <br>
-                    <br>
+                        <br>
+                        <br>
                         <div class="overlay" id="error-msg">
                             <div class="loader-class ">
                                 <div style="text-align:center" class="row">
