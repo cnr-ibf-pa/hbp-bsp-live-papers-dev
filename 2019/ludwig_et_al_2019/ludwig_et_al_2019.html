@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ludwig et al. 2019</title>
+    <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta name="author" content="Anastasia Ludwig">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/ngl"></script>
+    <meta charset="UTF-8">
+
+    <style>
+    /* Modals take up 85% of page in both directions */
+    .modal { width: 90% !important ; max-height: 90% !important; height: 80% !important; } 
+    /* class below stops occasional scroll when zooming in NGL because canvas resizes */
+    .ngl-modal {overflow-y: hidden;}
+    /* Leave 10% for modal footer containing close button */
+    .modal-content { width: 100% !important ; height: 90% !important ;}
+    /* Basic canvas can take up all of modal content */
+    .ngl-basic-canvas {width:100% !important ; height:100% !important ;}
+    /* When using checkboxes, leave space to right of canvas */
+    .ngl-checkbox-canvas {width:75% !important ; height:100% !important ;}
+    /* Fix strange bug in subscript in collapsible headers */
+    .collapsible-header sub {bottom:-1.5em !important;}
+    .tabs .tab a:focus.active {color:#000000; background-color: #ffb74d;}
+    .center-al {text-align:center;}
+    </style>
+        
+
+</head>
+
+<body class="container">
+    <br>
+   
+    <div class="box rounded centered">
+        <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                        </td>
+                        <td>
+                            <span class="title-style subtitle" style="padding-left:5px;">
+                                The Brain Simulation Platform "Live Papers"
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </a>
+        <h5 class="title-style">
+		Feasibility analysis of semiconductor voltage nanosensors for neuronal membrane potential sensing
+	</h5>
+    </div>
+    <div>
+        <p><strong>Authors: </strong>Anastasia Ludwig<sup>1,2*</sup>, 
+                    Pablo Serna<sup>1</sup>,    
+                    Lion Morgenstein<sup>3</sup>, 
+                    Gaoling Yang<sup>4</sup>, 
+                    Omri Bar-Elli<sup>4</sup>, 
+                    Gloria Ortiz<sup>5</sup>, 
+                    Evan Miller<sup>5</sup>,  
+                    Dan Oron<sup>4</sup>, 
+                    Asaf Grupi<sup>3</sup>, 
+                    Shimon Weiss<sup>6,3</sup>, and 
+                    Antoine Triller<sup>1</sup></p>
+        <p><strong>Author information:  </strong>
+                   <sup>1</sup> L'Ecole Normale Supérieure, Institute of Biology (IBENS), Paris Sciences et Lettres
+(PSL), CNRS UMR 8197, Inserm 1024, 46 Rue dUlm, Paris 75005, France. </br>
+                   <sup>2</sup> Current address: Neuroscience Center, Helsinki Institute of Life Science, University of
+Helsinki, FI-00014, Helsinki, Finland. </br>
+                   <sup>3</sup> Department of Physics, Institute for Nanotechnology and Advanced Materials, Bar-Ilan
+University, Ramat-Gan 52900, Israel </br>
+                   <sup>4</sup> Department of Physics of Complex Systems, Weizmann Institute of Science, Rehovot
+76100, Israel </br>
+                   <sup>5</sup> Departments of Chemistry, Molecular & Cell Biology, and Helen Wills Neuroscience
+Institute, 227 Hildebrand Berkeley, CA 94720-1460, United States </br>
+                   <sup>6</sup> Department of Chemistry and Biochemistry, Department of Physiology, and California
+NanoSystems Institute, University of California Los Angeles, Los Angeles, California
+90095, United States </br>
+                   </p><p>
+<p><strong>Corresponding authors: </strong>
+                    Anastasia Ludwig (<em><a href="mailto:anastasia.ludwig@helsinki.fi">anastasia.ludwig@helsinki.fi</a></em>),
+                    Antoine Triller (<em><a href="mailto:triller@biologie.ens.fr">triller@biologie.ens.fr</a></em>),
+        </p>
+    </div>
+    <div class="rainbow-row">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div>
+        <p><strong>Journal: </strong><i>Submitted</i></p>
+        <p><strong>Download Url: </strong><a href="https://www.biorxiv.org/content/10.1101/838342v1" target="_blank">BioRxiv. </a></p>
+        <p><strong>Citation: </strong> Ludwig <i>et al</i>, BioRxiv 838342 (2019)</p>
+        <p><strong>DOI: </strong><a href="https://doi.org/10.1101/838342" target="_blank">https://doi.org/10.1101/838342 </a></p>
+        <p>
+        <strong>Licence: </strong>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">CC BY 4.0 International license</span>
+            </a>
+        </p>
+    </div>
+    <div class="note rounded">
+        <h5>Abstract:</h5>
+        <p>
+                In the last decade, optical imaging methods have significantly improved our understanding of the information processing principles in the brain. Although many promising tools have been designed, sensors of membrane potential are lagging behind the rest. Semiconductor nanoparticles are an attractive alternative to classical voltage indicators, such as voltage-sensitive dyes and proteins. Such nanoparticles exhibit high sensitivity to external electric fields via the quantum-confined Stark effect. Here we report the development of lipid-coated semiconductor voltage-sensitive nanorods (vsNRs) that self-insert into the neuronal membrane. We describe a workflow to detect and process the photoluminescent signal of vsNRs after wide-field time-lapse recordings. We also present data indicating that vsNRs are feasible for sensing membrane potential in neurons at a single-particle level. This shows the potential of vsNRs for detection of neuronal activity with unprecedentedly high spatial and temporal resolution.
+                
+        </p>
+    </div>
+    <h5>Resources</h5>
+    <p>
+	Here you can find the resources referred to in the manuscript.
+    </p>
+
+    <ul class="collapsible" data-collapsible="expandable">
+        <!-- //////////////////// PDB Entries ////////////////////////////////////////////-->
+
+         <li>
+            <div class="collapsible-header amber lighten-5">
+               <i class="material-icons">note_add</i> Use Cases
+            </div>
+            <!-- option: folder_special, archive -->
+            <div class="collapsible-body">
+               <p>The following jupyter notebooks guide the user through the analysis protocols outlined in the manuscript.</p>
+               <div style="margin-left:25px">
+                  <table class="striped">
+                     <tbody>
+                        <tr>
+                           <td>
+				<p> Collab in HBP </p>
+                           </td>
+                           <td>
+                              <a href="https://collab.humanbrainproject.eu/#/collab/80389/nav/544284" target="_blank" class="waves-effect waves-light">
+                              <i class="material-icons left">dvr</i> Code
+                              </a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+				<p> Analysis signal of vsNRs</p>
+                           </td>
+                           <td>
+                              <a href="https://collab.humanbrainproject.eu/#/collab/80389/nav/546653" target="_blank" class="waves-effect waves-light">
+                              <i class="material-icons left">dvr</i> Code
+                              </a>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <br>
+            </div>
+         </li>
+         <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">note_add</i>Source Code
+                </div>
+                <!-- option: folder_special, archive -->
+                <div class="collapsible-body">
+                    <p>The source code is available on github at the following <a href="https://github.com/pabloserna/Nanorods" target="_blank">url</a>.
+                    Please refer to the README file for more details.
+                    </p>
+                </div>
+
+         </li>
+    </ul>
+    <br>
+    <div class="rainbow-row">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br>
+    <br>
+
+
+    <!-- Step 1: Modal windows:
+        - Create a modal with a unique id for every modal button you are creating.
+          This id is used in the corresponding link in the table above. 
+        - Give modal div ngl-modal class
+        - In the the modal content div, give a title in bold tags then create a
+          div, again with a unique id, for storing the canvas for NGL.
+        - Give canvas div ngl-basic-canvas class when there are no controls
+        - Give canvas div ngl-checkbox-canvas class to leave space on the right
+          for checkboxes
+    -->
+
+
+    <!-- Structure only modals -->
+    <div id="view_1azs" class="modal ngl-modal">
+      <div class="modal-content">
+        <!-- <b>PDB: 1AZS</b> -->
+        <div id="mol_1azs" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <div id="view_1cjk" class="modal ngl-modal">
+      <div class="modal-content">
+        <!-- <b>PDB: 1CJK</b> -->
+        <div id="mol_1cjk" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <!-- MD modals -->
+    <div id="view_MDapoACGolf" class="modal ngl-modal">
+      <div class="modal-content">
+        <div id="mol_MDapoACGolf" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <div id="view_MDapoACGi" class="modal ngl-modal">
+      <div class="modal-content">
+        <div id="mol_MDapoACGi" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <div id="view_MDapoACTern" class="modal ngl-modal">
+      <div class="modal-content">
+        <div id="mol_MDapoACTern" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <div id="view_MDholoACGolf" class="modal ngl-modal">
+      <div class="modal-content">
+        <div id="mol_MDholoACGolf" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <div id="view_MDholoACGi" class="modal ngl-modal">
+      <div class="modal-content">
+        <div id="mol_MDholoACGi" class="ngl-basic-canvas"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <div id="view_MDholoACTern" class="modal ngl-modal">
+        <div class="modal-content">
+          <div id="mol_MDholoACTern" class="ngl-basic-canvas"></div>
+        </div>
+        <div class="modal-footer">
+          <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+
+
+    <!-- Snap/grid modals -->
+    <!-- apo AC - Golf -->
+    <div id="view_GapoAC5_Golf1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Golf1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoAC5_Golf2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Golf2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoAC5_Golf3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Golf3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoAC5_Golf4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Golf4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+      
+    <!-- apo AC - Gi -->
+    <div id="view_GapoAC5_Gi1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GapoAC5_Gi2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GapoAC5_Gi3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GapoAC5_Gi4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GapoAC5_Gi5" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi5" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GapoAC5_Gi6" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi6" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+                    
+    <div id="view_GapoAC5_Gi7" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoAC5_Gi7" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>                        
+          
+    <!-- apo GiAC - Golf -->
+    <div id="view_GapoGiAC5_Golf1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGiAC5_Golf1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGiAC5_Golf2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGiAC5_Golf2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGiAC5_Golf3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGiAC5_Golf3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGiAC5_Golf4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGiAC5_Golf4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGiAC5_Golf5" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGiAC5_Golf5" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <!-- apo GolfAC - Gi -->
+    <div id="view_GapoGolfAC5_Gi1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGolfAC5_Gi1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGolfAC5_Gi2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGolfAC5_Gi2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGolfAC5_Gi3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGolfAC5_Gi3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGolfAC5_Gi4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGolfAC5_Gi4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GapoGolfAC5_Gi5" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GapoGolfAC5_Gi5" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <!-- holo AC - Golf -->
+    <div id="view_GholoAC5_Golf1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Golf1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoAC5_Golf2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Golf2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoAC5_Golf3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Golf3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+      
+    <!-- holo AC - Gi -->
+    <div id="view_GholoAC5_Gi1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Gi1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GholoAC5_Gi2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Gi2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GholoAC5_Gi3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Gi3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+    <div id="view_GholoAC5_Gi4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoAC5_Gi4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    
+          
+    <!-- holo GiAC - Golf -->
+    <div id="view_GholoGiAC5_Golf1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGiAC5_Golf1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoGiAC5_Golf2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGiAC5_Golf2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoGiAC5_Golf3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGiAC5_Golf3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoGiAC5_Golf4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGiAC5_Golf4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    
+    <!-- holo GolfAC - Gi -->
+    <div id="view_GholoGolfAC5_Gi1" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGolfAC5_Gi1" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoGolfAC5_Gi2" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGolfAC5_Gi2" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoGolfAC5_Gi3" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGolfAC5_Gi3" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <div id="view_GholoGolfAC5_Gi4" class="modal ngl-modal">
+        <div class="modal-content">
+            <div id="mol_GholoGolfAC5_Gi4" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+
+            
+    <!-- Modal test window -->
+    <div id="view_testTraj" class="modal ngl-modal">
+        <div class="modal-content">
+            <!-- <b>Test View</b> -->
+            <div id="mol_testTraj" class="ngl-basic-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+    <div id="view_testGrid" class="modal ngl-modal">
+        <div class="modal-content">
+            <!-- <b>Test View</b> -->
+            <div id="mol_testGrid" class="ngl-checkbox-canvas"></div>
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+      
+    
+    <!-- Javascript -->
+    <script>
+
+        var structColour1 = "peru";
+        var structColour2 = "teal";
+
+        // Step 2: Initialise materialize components and every modal window defined above.
+        //   - For each modal, define which function to call when opening or 
+        //     closing the modal
+        $(document).ready(function(){
+            // Materialized component classes
+            $('.collapsible').collapsible();
+            $('.tabs').tabs();
+            $('.modal').modal();
+
+            // Structure modals
+            $('#view_1azs').modal({
+                onOpenEnd: show_1azs,
+                onCloseEnd: clear_1azs
+            });
+
+            $('#view_1cjk').modal({
+                onOpenEnd : show_1cjk,
+                onCloseEnd : clear_1cjk
+            });
+           
+            // MD Modals
+            $('#view_MDapoACGolf').modal({
+                onOpenEnd : show_MDapoACGolf,
+                onCloseEnd : clear_MDapoACGolf
+            });
+           
+            $('#view_MDapoACGi').modal({
+                onOpenEnd : show_MDapoACGi,
+                onCloseEnd : clear_MDapoACGi
+            });
+           
+            $('#view_MDapoACTern').modal({
+                onOpenEnd : show_MDapoACTern,
+                onCloseEnd : clear_MDapoACTern
+            });
+           
+
+            $('#view_MDholoACGolf').modal({
+                onOpenEnd : show_MDholoACGolf,
+                onCloseEnd : clear_MDholoACGolf
+            });
+           
+            $('#view_MDholoACGi').modal({
+                onOpenEnd : show_MDholoACGi,
+                onCloseEnd : clear_MDholoACGi
+            });
+           
+            $('#view_MDholoACTern').modal({
+                onOpenEnd : show_MDholoACTern,
+                onCloseEnd : clear_MDholoACTern
+            });
+           
+            // apo AC - Golf
+            $('#view_GapoAC5_Golf1').modal({
+                onOpenEnd : show_GapoAC5_Golf1,
+                onCloseEnd : clear_GapoAC5_Golf1
+            });
+
+            $('#view_GapoAC5_Golf2').modal({
+                onOpenEnd : show_GapoAC5_Golf2,
+                onCloseEnd : clear_GapoAC5_Golf2
+            });
+
+            $('#view_GapoAC5_Golf3').modal({
+                onOpenEnd : show_GapoAC5_Golf3,
+                onCloseEnd : clear_GapoAC5_Golf3
+            });
+
+            $('#view_GapoAC5_Golf4').modal({
+                onOpenEnd : show_GapoAC5_Golf4,
+                onCloseEnd : clear_GapoAC5_Golf4
+            });
+            
+            // apo AC - Gi
+            $('#view_GapoAC5_Gi1').modal({
+                onOpenEnd : show_GapoAC5_Gi1,
+                onCloseEnd : clear_GapoAC5_Gi1
+            });
+            
+            $('#view_GapoAC5_Gi2').modal({
+                onOpenEnd : show_GapoAC5_Gi2,
+                onCloseEnd : clear_GapoAC5_Gi2
+            });
+            
+            $('#view_GapoAC5_Gi3').modal({
+                onOpenEnd : show_GapoAC5_Gi3,
+                onCloseEnd : clear_GapoAC5_Gi3
+            });
+            
+            $('#view_GapoAC5_Gi4').modal({
+                onOpenEnd : show_GapoAC5_Gi4,
+                onCloseEnd : clear_GapoAC5_Gi4
+            });
+            
+            $('#view_GapoAC5_Gi5').modal({
+                onOpenEnd : show_GapoAC5_Gi5,
+                onCloseEnd : clear_GapoAC5_Gi5
+            });
+            
+            $('#view_GapoAC5_Gi6').modal({
+                onOpenEnd : show_GapoAC5_Gi6,
+                onCloseEnd : clear_GapoAC5_Gi6
+            });
+            
+            $('#view_GapoAC5_Gi7').modal({
+                onOpenEnd : show_GapoAC5_Gi7,
+                onCloseEnd : clear_GapoAC5_Gi7
+            });
+            
+            // apo GiAC - Golf
+            $('#view_GapoGiAC5_Golf1').modal({
+                onOpenEnd : show_GapoGiAC5_Golf1,
+                onCloseEnd : clear_GapoGiAC5_Golf1
+            });
+
+            $('#view_GapoGiAC5_Golf2').modal({
+                onOpenEnd : show_GapoGiAC5_Golf2,
+                onCloseEnd : clear_GapoGiAC5_Golf2
+            });
+
+            $('#view_GapoGiAC5_Golf3').modal({
+                onOpenEnd : show_GapoGiAC5_Golf3,
+                onCloseEnd : clear_GapoGiAC5_Golf3
+            });
+
+            $('#view_GapoGiAC5_Golf4').modal({
+                onOpenEnd : show_GapoGiAC5_Golf4,
+                onCloseEnd : clear_GapoGiAC5_Golf4
+            });
+
+            $('#view_GapoGiAC5_Golf5').modal({
+                onOpenEnd : show_GapoGiAC5_Golf5,
+                onCloseEnd : clear_GapoGiAC5_Golf5
+            });
+
+            // apo GolfAC - Gi
+            $('#view_GapoGolfAC5_Gi1').modal({
+                onOpenEnd : show_GapoGolfAC5_Gi1,
+                onCloseEnd : clear_GapoGolfAC5_Gi1
+            });
+
+            $('#view_GapoGolfAC5_Gi2').modal({
+                onOpenEnd : show_GapoGolfAC5_Gi2,
+                onCloseEnd : clear_GapoGolfAC5_Gi2
+            });
+
+            $('#view_GapoGolfAC5_Gi3').modal({
+                onOpenEnd : show_GapoGolfAC5_Gi3,
+                onCloseEnd : clear_GapoGolfAC5_Gi3
+            });
+
+            $('#view_GapoGolfAC5_Gi4').modal({
+                onOpenEnd : show_GapoGolfAC5_Gi4,
+                onCloseEnd : clear_GapoGolfAC5_Gi4
+            });
+
+            $('#view_GapoGolfAC5_Gi5').modal({
+                onOpenEnd : show_GapoGolfAC5_Gi5,
+                onCloseEnd : clear_GapoGolfAC5_Gi5
+            });
+
+            // holo AC - Golf
+            $('#view_GholoAC5_Golf1').modal({
+                onOpenEnd : show_GholoAC5_Golf1,
+                onCloseEnd : clear_GholoAC5_Golf1
+            });
+
+            $('#view_GholoAC5_Golf2').modal({
+                onOpenEnd : show_GholoAC5_Golf2,
+                onCloseEnd : clear_GholoAC5_Golf2
+            });
+
+            $('#view_GholoAC5_Golf3').modal({
+                onOpenEnd : show_GholoAC5_Golf3,
+                onCloseEnd : clear_GholoAC5_Golf3
+            });
+
+            // holo AC - Gi
+            $('#view_GholoAC5_Gi1').modal({
+                onOpenEnd : show_GholoAC5_Gi1,
+                onCloseEnd : clear_GholoAC5_Gi1
+            });
+            
+            $('#view_GholoAC5_Gi2').modal({
+                onOpenEnd : show_GholoAC5_Gi2,
+                onCloseEnd : clear_GholoAC5_Gi2
+            });
+            
+            $('#view_GholoAC5_Gi3').modal({
+                onOpenEnd : show_GholoAC5_Gi3,
+                onCloseEnd : clear_GholoAC5_Gi3
+            });
+            
+            $('#view_GholoAC5_Gi4').modal({
+                onOpenEnd : show_GholoAC5_Gi4,
+                onCloseEnd : clear_GholoAC5_Gi4
+            });
+            
+            // holo GiAC - Golf
+            $('#view_GholoGiAC5_Golf1').modal({
+                onOpenEnd : show_GholoGiAC5_Golf1,
+                onCloseEnd : clear_GholoGiAC5_Golf1
+            });
+
+            $('#view_GholoGiAC5_Golf2').modal({
+                onOpenEnd : show_GholoGiAC5_Golf2,
+                onCloseEnd : clear_GholoGiAC5_Golf2
+            });
+
+            $('#view_GholoGiAC5_Golf3').modal({
+                onOpenEnd : show_GholoGiAC5_Golf3,
+                onCloseEnd : clear_GholoGiAC5_Golf3
+            });
+
+            $('#view_GholoGiAC5_Golf4').modal({
+                onOpenEnd : show_GholoGiAC5_Golf4,
+                onCloseEnd : clear_GholoGiAC5_Golf4
+            });
+
+            // holo GolfAC - Gi
+            $('#view_GholoGolfAC5_Gi1').modal({
+                onOpenEnd : show_GholoGolfAC5_Gi1,
+                onCloseEnd : clear_GholoGolfAC5_Gi1
+            });
+
+            $('#view_GholoGolfAC5_Gi2').modal({
+                onOpenEnd : show_GholoGolfAC5_Gi2,
+                onCloseEnd : clear_GholoGolfAC5_Gi2
+            });
+
+            $('#view_GholoGolfAC5_Gi3').modal({
+                onOpenEnd : show_GholoGolfAC5_Gi3,
+                onCloseEnd : clear_GholoGolfAC5_Gi3
+            });
+
+            $('#view_GholoGolfAC5_Gi4').modal({
+                onOpenEnd : show_GholoGolfAC5_Gi4,
+                onCloseEnd : clear_GholoGolfAC5_Gi4
+            });
+
+
+            // Test Modals
+            $('#view_testComp').modal({
+                onOpenEnd : showTestComplex,
+                onCloseEnd : clear_TestComplex
+            });
+           
+            $('#view_testGrid').modal({
+                onOpenEnd : show_TestGrid,
+                onCloseEnd : clear_TestGrid
+            });
+
+            $('#view_testTraj').modal({
+                onOpenEnd : show_TestTraj,
+                onCloseEnd : clear_TestTraj
+            });
+
+        });
+
+
+        // Step 3: Common functions for NGL views //////////////////////////////////
+        // These are general functions for showing certain data type.
+        // Here I have 4 for:
+        //      Single structure
+        //      Two structures with checkboxes to show hide
+        //      Two structures and grids with checkboxes to show hide
+        //      MD trajectory - currently needs to be in a single file format 
+        //                      eg gro traj or pdb traj
+
+
+        // General function to remove canvas element from from molview  
+        // Need to do this or you get new canvas when you reopen a modal
+        function clearCanvas(molview){
+            $(molview).find('canvas').remove();
+        }
+      
+        // Open simple structure view  ///////////////////////////////////////////////
+        function showStructure(options){
+            var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+            stage.handleResize();
+            stage.tooltip.remove();
+
+            window.addEventListener( "resize", function(event){
+                stage.handleResize();
+            }, false );
+
+            stage.loadFile(options.file).then(function(o){
+                o.addRepresentation("cartoon", { 
+                    color: "chainid",
+                    sele: "polymer" });
+                o.addRepresentation("spacefill", { 
+                    color: "element",
+                    sele: "not polymer and not water"});
+                o.autoView();
+            });
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+
+        ///////////////// Open view of two reactant species w. toggle /////////////////////
+        function showComplex(options){
+            var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+            stage.handleResize();
+            stage.tooltip.remove();
+            //stage.removeAllComponents();
+
+            window.addEventListener( "resize", function(event){
+                stage.handleResize();
+            }, false );
+
+            var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR";
+
+            function addElement (el) {
+                Object.assign(el.style, {
+                    position: "absolute",
+                    zIndex: 10
+                })
+                stage.viewer.container.appendChild(el)
+            }
+
+            function createElement (name, properties, style) {
+                var el = document.createElement(name)
+                Object.assign(el, properties)
+                Object.assign(el.style, style)
+                return el
+            }
+
+
+            // Load both structures
+            Promise.all([
+                stage.loadFile(options.file1).then(function(o){
+                    return o
+                }),
+
+                stage.loadFile(options.file2).then(function(o){
+                    return o
+                })
+
+            ]).then(function(ol){
+
+                // Show first structure
+                ol[0].addRepresentation("cartoon", { 
+                    color: structColour1,
+                    name: "str1",
+                    sele: "polymer", 
+                    visible: struct1CheckBox.checked,
+                });
+                
+                ol[0].addRepresentation("spacefill", { 
+                    color: "element",
+                    name: "str1sm",
+                    sele: ligSele,
+                    visible: struct1CheckBox.checked
+                });
+
+                //Show second structure
+                ol[1].addRepresentation("cartoon", { 
+                    color: structColour2,
+                    name: "str2",
+                    sele: "polymer", 
+                    visible: struct2CheckBox.checked
+                });
+                
+                ol[1].addRepresentation("spacefill", { 
+                    color: "element",
+                    name: "str2sm",
+                    sele: ligSele,
+                    visible: struct2CheckBox.checked
+                });
+
+                stage.autoView()
+
+            })
+
+            // With Materialize, checkbox must be wrapped in a label tag with
+            // label text in a span tag
+            var struct1Lab =  createElement("label", {}, {
+                zIndex: "20",
+                top: "15%", left: "77%"
+            })
+            
+            addElement(struct1Lab)
+            
+            // Create first checkbox
+            var struct1CheckBox = createElement("input", {
+                type: "checkbox",
+                id: "str1check",
+                className: "filled-in",
+                checked: true,
+                onchange: function (e) {
+                    stage.getRepresentationsByName("str1").setVisibility(e.target.checked);
+                    stage.getRepresentationsByName("str1sm").setVisibility(e.target.checked)
+                }
+            }, { top: "0px", left: "0px" })
+
+            struct1CheckBox.setAttribute("class", "filled-in")
+            struct1Lab.appendChild(struct1CheckBox)
+
+            // Object for label text
+            var struct1InText = createElement("span", {
+                innerHTML: options.strDesc1,
+                for: "str1check",
+            }, { top: "0px", left: "0px" })
+
+            struct1Lab.appendChild(struct1InText)
+            
+    
+            var struct2CheckBox = createElement("input", {
+                type: "checkbox",
+                id: "str2check",
+                className: "filled-in",
+                checked: true,
+                onchange: function (e) {
+                    stage.getRepresentationsByName("str2").setVisibility(e.target.checked);
+                    stage.getRepresentationsByName("str2sm").setVisibility(e.target.checked)
+                }
+            }, { top: "0px", left: "0px" })
+
+            struct2CheckBox.setAttribute("class", "filled-in")
+            
+            var struct2InText = createElement("span", {
+                innerHTML: options.strDesc1,
+                for: "str2check",
+            }, { top: "0px", left: "0px" })
+
+            var struct2Lab =  createElement("label", {}, {
+                zIndex: "20",
+                top: "25%", left: "77%"
+            })
+
+                struct2Lab.appendChild(struct2CheckBox)
+                struct2Lab.appendChild(struct2InText)
+                addElement(struct2Lab)
+            
+        }
+
+
+        function showTestComplex(){
+            showComplex({
+                file1: "files/AC5ch.pqr", 
+                strDesc1: "AC5 Structure",
+                file2: "files/Golfch.pqr", 
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                molview: "mol_testComp"
+            });
+        }
+
+        function clear_TestComplex(){
+            clearCanvas("#mol_testComp");
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////
+
+
+        /////////////// Open view of two reactant species and their grids
+        function showComplexGrids(options){
+            var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+            stage.handleResize();
+            //stage.removeAllComponents();
+
+            window.addEventListener( "resize", function(event){
+                stage.handleResize();
+            }, false );
+
+            var ligSele = "ATP or GTP";
+            var ionSele = "MG2";
+            var myrSele = "MYR";
+
+
+            // Internal functions
+            function addElement (el) {
+                Object.assign(el.style, {
+                    position: "absolute",
+                    zIndex: 10
+                })
+                stage.viewer.container.appendChild(el)
+            }
+
+            function createElement (name, properties, style) {
+                var el = document.createElement(name)
+                Object.assign(el, properties)
+                Object.assign(el.style, style)
+                return el
+            }
+
+
+            // Load structures and grids
+            Promise.all([
+                stage.loadFile(options.strFile1).then(function(o){
+                    return o
+                }),
+
+                stage.loadFile(options.strFile2).then(function(o){
+                    return o
+                }),
+                    
+                stage.loadFile(options.grdFile1).then(function(o){
+                    return o
+                }),
+
+                stage.loadFile(options.grdFile2).then(function(o){
+                    return o
+                })
+
+                   
+                
+            // Set representations for files
+            ]).then(function(ol){
+
+                // Show first structure
+                ol[0].addRepresentation("cartoon", { 
+                    color: structColour1,
+                    name: "str1",
+                    sele: "polymer", 
+                    visible: struct1CheckBox.checked,
+                });
+                ol[0].addRepresentation("spacefill", { 
+                    color: "pink",
+                    name: "str1ion",
+                    sele: ionSele,
+                    visible: struct1CheckBox.checked
+                });
+                ol[0].addRepresentation("ball+stick", { 
+                    color: "element",
+                    name: "str1lig",
+                    sele: ligSele,
+                    visible: struct1CheckBox.checked
+                });
+                ol[0].addRepresentation("spacefill", { 
+                    color: "element",
+                    name: "str1myr",
+                    sele: myrSele,
+                    visible: struct1CheckBox.checked
+                });
+
+                //Show second structure
+                ol[1].addRepresentation("cartoon", { 
+                    color: structColour2,
+                    name: "str2",
+                    sele: "polymer", 
+                    visible: struct2CheckBox.checked
+                });
+                ol[1].addRepresentation("spacefill", { 
+                    color: "pink",
+                    name: "str2ion",
+                    sele: ionSele,
+                    visible: struct2CheckBox.checked
+                });
+                ol[1].addRepresentation("ball+stick", { 
+                    color: "element",
+                    name: "str2lig",
+                    sele: ligSele,
+                    visible: struct2CheckBox.checked
+                });
+                ol[1].addRepresentation("spacefill", { 
+                    color: "element",
+                    name: "str2myr",
+                    sele: myrSele,
+                    visible: struct2CheckBox.checked
+                });
+
+                // Show first grid
+                ol[2].addRepresentation("surface", {
+                    isolevelType: "value",
+                    isolevel: 1.0,
+                    color: "blue",
+                    opacity: 1,
+                    opaqueBack: false,
+                    name: "posGrd1",
+                    sele: "polymer", 
+                    visible: grd1CheckBox.checked
+                });
+                
+                ol[2].addRepresentation("surface", {
+                    isolevelType: "value",
+                    isolevel: -1.0,
+                    color: "red",
+                    opacity: 1,
+                    opaqueBack: false,
+                    name: "negGrd1",
+                    sele: "polymer", 
+                    visible: grd1CheckBox.checked
+                });
+
+                // Show second grid
+                ol[3].addRepresentation("surface", {
+                    isolevelType: "value",
+                    isolevel: 1.0,
+                    color: "blue",
+                    opacity: 1,
+                    opaqueBack: false,
+                    name: "posGrd2",
+                    sele: "polymer", 
+                    visible: grd2CheckBox.checked
+                });
+
+                ol[3].addRepresentation("surface", {
+                    isolevelType: "value",
+                    isolevel: -1.0,
+                    color: "red",
+                    opacity: 1,
+                    opaqueBack: false,
+                    name: "negGrd2",
+                    sele: "polymer", 
+                    visible: grd2CheckBox.checked
+                });
+
+                stage.autoView()
+
+            })
+
+
+            //////// Create checkboxes /////////////////////////////
+            // With Materialize, checkbox must be wrapped in a label tag with
+            // label text in a span tag
+
+            //// First structure
+            var struct1Lab =  createElement("label", {}, {
+                zIndex: "20",
+                top: "15%", left: "77%"
+            })
+            
+            addElement(struct1Lab)
+            
+            // Create first checkbox
+            var struct1CheckBox = createElement("input", {
+                type: "checkbox",
+                id: "str1check",
+                className: "filled-in",
+                checked: true,
+                onchange: function (e) {
+                    stage.getRepresentationsByName("str1").setVisibility(e.target.checked);
+                    stage.getRepresentationsByName("str1lig").setVisibility(e.target.checked)
+                    stage.getRepresentationsByName("str1ion").setVisibility(e.target.checked)
+                    stage.getRepresentationsByName("str1myr").setVisibility(e.target.checked)
+                }
+            }, { top: "0px", left: "0px" })
+
+            struct1CheckBox.setAttribute("class", "filled-in")
+            struct1Lab.appendChild(struct1CheckBox)
+
+            // Object for label text
+            var struct1InText = createElement("span", {
+                innerHTML: options.strDesc1,
+                for: "str1check",
+            }, { top: "0px", left: "0px" })
+
+            struct1Lab.appendChild(struct1InText)
+            
+            //// Second structure
+            var struct2CheckBox = createElement("input", {
+                type: "checkbox",
+                id: "str2check",
+                className: "filled-in",
+                checked: true,
+                onchange: function (e) {
+                    stage.getRepresentationsByName("str2").setVisibility(e.target.checked);
+                    stage.getRepresentationsByName("str2lig").setVisibility(e.target.checked)
+                    stage.getRepresentationsByName("str2ion").setVisibility(e.target.checked)
+                    stage.getRepresentationsByName("str2myr").setVisibility(e.target.checked)
+                }
+            }, { top: "0px", left: "0px" })
+
+            struct2CheckBox.setAttribute("class", "filled-in")
+                    
+            var struct2InText = createElement("span", {
+                innerHTML: options.strDesc2,
+                for: "str2check",
+                }, { top: "0px", left: "0px" })
+
+            var struct2Lab =  createElement("label", {}, {
+                zIndex: "20",
+                top: "35%", left: "77%"
+            })
+
+            struct2Lab.appendChild(struct2CheckBox)
+            struct2Lab.appendChild(struct2InText)
+            addElement(struct2Lab)
+    
+            //// First grid
+            var grd1Lab =  createElement("label", {}, {
+                zIndex: "20",
+                top: "25%", left: "77%"
+            })
+            
+            addElement(grd1Lab)
+            
+            // Create first grid checkbox
+            var grd1CheckBox = createElement("input", {
+                type: "checkbox",
+                id: "grd1check",
+                className: "filled-in",
+                checked: true,
+                onchange: function (e) {
+                    stage.getRepresentationsByName("posGrd1").setVisibility(e.target.checked);
+                    stage.getRepresentationsByName("negGrd1").setVisibility(e.target.checked)
+                }
+            }, { top: "0px", left: "0px" })
+
+            grd1CheckBox.setAttribute("class", "filled-in")
+            grd1Lab.appendChild(grd1CheckBox)
+
+            // Object for label text
+            var grd1InText = createElement("span", {
+                innerHTML: options.grdDesc1,
+                for: "grd1check",
+            }, { top: "0px", left: "0px" })
+
+            grd1Lab.appendChild(grd1InText)
+            
+            //// Second grid
+            var grd2Lab =  createElement("label", {}, {
+                zIndex: "20",
+                top: "45%", left: "77%"
+            })
+                    
+            addElement(grd2Lab)
+            
+            // Create first grid checkbox
+            var grd2CheckBox = createElement("input", {
+                type: "checkbox",
+                id: "grd2check",
+                className: "filled-in",
+                checked: true,
+                onchange: function (e) {
+                    stage.getRepresentationsByName("posGrd2").setVisibility(e.target.checked);
+                    stage.getRepresentationsByName("negGrd2").setVisibility(e.target.checked)
+                }
+            }, { top: "0px", left: "0px" })
+
+            grd2CheckBox.setAttribute("class", "filled-in")
+            grd2Lab.appendChild(grd2CheckBox)
+
+            // Object for label text
+            var grd2InText = createElement("span", {
+                innerHTML: options.grdDesc2,
+                for: "grd2check",
+            }, { top: "0px", left: "0px" })
+
+            grd2Lab.appendChild(grd2InText)
+        }
+
+        ///////////////// Open trajectory view ////////////////////////////////////////
+        function showTrajectory(options){
+            /* NGL.DatasourceRegistry.add(
+                "data", new NGL.StaticDatasource( "" )
+            ); */
+            var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+            stage.handleResize();
+            stage.tooltip.remove();
+
+            window.addEventListener( "resize", function(event){
+                stage.handleResize();
+            }, false );
+
+            var ionSele = "MG";
+            var cofactorSele = "GTP or ATP";
+            var myrSele = "MYR";
+
+
+            /* stage.loadFile(options.strFile).then(function(o){
+                o.addRepresentation("cartoon", { 
+                    color: "chainid",
+                    sele: "polymer" });
+                o.addRepresentation("spacefill", { 
+                    color: "element",
+                    sele: cofactorSele });
+                o.autoView();
+
+                NGL.autoLoad(options.trjFile).then(function (frames) {
+                    o.addTrajectory(frames)
+                })
+
+                var traj = o.trajList[0].trajectory;
+                var player = new NGL.TrajectoryPlayer( traj, {
+                    step: 1,
+                    timeout: 500,
+                    //interpolateStep: 5,
+                    start: 0,
+                    end: traj.numframes,
+                    //interpolateType: "linear"
+                });
+
+                player.play();
+
+            }) */
+            stage.loadFile(options.trjFile, {
+                asTrajectory: true
+            }).then(function(o){
+                o.addTrajectory()
+                o.addRepresentation("cartoon", { 
+                    color: "chainid",
+                    sele: "polymer" });
+                o.addRepresentation("spacefill", { 
+                    color: "pink",
+                    sele: ionSele});
+                o.addRepresentation("ball+stick", { 
+                    color: "element",
+                    sele: cofactorSele});
+                o.addRepresentation("ball+stick", { 
+                    color: "element",
+                    sele: myrSele});
+                o.autoView();
+
+                var traj = o.trajList[0].trajectory;
+                var player = new NGL.TrajectoryPlayer( traj, {
+                    step: 1,
+                    timeout: 200,
+                    //interpolateStep: 1,
+                    start: 0,
+                    end: traj.numframes,
+                    mode: "loop",
+                    direction: "forward"
+                    //interpolateType: ""
+                });
+
+                player.play();
+
+            })
+        }
+
+
+
+        ////////// Step 4: Specific functions for each modal //////////////////////////////
+        
+        // functions to open and close single structure modals
+        function show_1azs(){
+            showStructure({
+                file: "rcsb://1AZS", 
+                molview: "mol_1azs"
+            });
+        }
+
+        function clear_1azs(){
+            clearCanvas("#mol_1azs");
+        }
+
+
+        function show_1cjk(){
+            showStructure({
+                file: "rcsb://1CJK", 
+                molview: "mol_1cjk"
+            });
+        }
+
+        function clear_1cjk(){
+            clearCanvas("#mol_1cjk");
+        }
+
+        // Functions to open and close modals with two structures with hide/show checkboxes
+        function showTestComplex(){
+            showComplex({
+                file1: "files/AC5ch.pqr", 
+                strDesc1: "AC5 Structure",
+                file2: "files/Golfch.pqr", 
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                molview: "mol_testComp"
+            });
+        }
+
+        function clear_TestComplex(){
+            clearCanvas("#mol_testComp");
+        }
+
+
+        // Functions to open and close modals with two structures and grids with hide/show checkboxes
+        function show_TestGrid(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/", 
+                strDesc1: "AC5 Structure",
+                strFile2: "files/Gich.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "files/AC5.apbs.cut.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "files/Gi.apbs.cut.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_testGrid"
+            });
+        }
+
+        function clear_TestGrid(){
+            clearCanvas("#mol_TestGrid");
+        }
+
+        // apo AC Golf
+        function show_GapoAC5_Golf1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_1/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_1/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_1/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_1/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Golf1"
+            });
+        }
+        
+        function clear_GapoAC5_Golf1(){
+            clearCanvas("#mol_GapoAC5_Golf1");
+        }
+
+        function show_GapoAC5_Golf2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_2/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_2/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_2/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_2/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Golf2"
+            });
+        }
+
+        function clear_GapoAC5_Golf2(){
+            clearCanvas("#mol_GapoAC5_Golf2");
+        }
+
+        function show_GapoAC5_Golf3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_3/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_3/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_3/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_3/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Golf3"
+            });
+        }
+      
+        function clear_GapoAC5_Golf3(){
+            clearCanvas("#mol_GapoAC5_Golf3");
+        }
+
+        function show_GapoAC5_Golf4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_4/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_4/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_4/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf1_AC5_Golf/snap_4/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Golf4"
+            });
+        }
+
+        function clear_GapoAC5_Golf4(){
+            clearCanvas("#mol_GapoAC5_Golf4");
+        }
+
+        // apo AC Gi
+        function show_GapoAC5_Gi1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_1/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_1/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_1/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_1/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi1"
+            });
+        }
+        
+        function clear_GapoAC5_Gi1(){
+            clearCanvas("#mol_GapoAC5_Gi1");
+        }
+
+        function show_GapoAC5_Gi2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_2/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_2/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_2/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_2/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi2"
+            });
+        }
+        
+        function clear_GapoAC5_Gi2(){
+            clearCanvas("#mol_GapoAC5_Gi2");
+        }
+
+        function show_GapoAC5_Gi3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_3/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_3/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_3/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_3/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi3"
+            });
+        }
+        
+        function clear_GapoAC5_Gi3(){
+            clearCanvas("#mol_GapoAC5_Gi3");
+        }
+
+        function show_GapoAC5_Gi4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_4/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_4/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_4/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_4/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi4"
+            });
+        }
+        
+        function clear_GapoAC5_Gi4(){
+            clearCanvas("#mol_GapoAC5_Gi4");
+        }
+
+        function show_GapoAC5_Gi5(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_5/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_5/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_5/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_5/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi5"
+            });
+        }
+        
+        function clear_GapoAC5_Gi5(){
+            clearCanvas("#mol_GapoAC5_Gi5");
+        }
+
+        function show_GapoAC5_Gi6(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_6/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_6/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_6/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_6/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi6"
+            });
+        }
+        
+        function clear_GapoAC5_Gi6(){
+            clearCanvas("#mol_GapoAC5_Gi6");
+        }
+
+        function show_GapoAC5_Gi7(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_7/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_7/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_7/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf2_AC5_Gi/snap_7/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoAC5_Gi7"
+            });
+        }
+        
+        function clear_GapoAC5_Gi7(){
+            clearCanvas("#mol_GapoAC5_Gi7");
+        }
+
+        // apo GiAC Golf
+        function show_GapoGiAC5_Golf1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_1/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_1/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_1/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_1/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGiAC5_Golf1"
+            });
+        }
+        
+        function clear_GapoGiAC5_Golf1(){
+            clearCanvas("#mol_GapoGiAC5_Golf1");
+        }
+
+        function show_GapoGiAC5_Golf2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_2/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_2/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_2/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_2/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGiAC5_Golf2"
+            });
+        }
+        
+        function clear_GapoGiAC5_Golf2(){
+            clearCanvas("#mol_GapoGiAC5_Golf2");
+        }
+
+        function show_GapoGiAC5_Golf3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_3/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_3/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_3/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_3/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGiAC5_Golf3"
+            });
+        }
+        
+        function clear_GapoGiAC5_Golf3(){
+            clearCanvas("#mol_GapoGiAC5_Golf3");
+        }
+
+        function show_GapoGiAC5_Golf4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_4/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_4/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_4/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_4/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGiAC5_Golf4"
+            });
+        }
+        
+        function clear_GapoGiAC5_Golf4(){
+            clearCanvas("#mol_GapoGiAC5_Golf4");
+        }
+
+        function show_GapoGiAC5_Golf5(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_5/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_5/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_5/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf4_AC5-Gi_Golf/snap_5/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGiAC5_Golf5"
+            });
+        }
+        
+        function clear_GapoGiAC5_Golf5(){
+            clearCanvas("#mol_GapoGiAC5_Golf5");
+        }
+
+        // apo GolfAC Gi
+        function show_GapoGolfAC5_Gi1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_1/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_1/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_1/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_1/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGolfAC5_Gi1"
+            });
+        }
+        
+        function clear_GapoGolfAC5_Gi1(){
+            clearCanvas("#mol_GapoGolfAC5_Gi1");
+        }
+
+        function show_GapoGolfAC5_Gi2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_2/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_2/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_2/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_2/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGolfAC5_Gi2"
+            });
+        }
+        
+        function clear_GapoGolfAC5_Gi2(){
+            clearCanvas("#mol_GapoGolfAC5_Gi2");
+        }
+
+        function show_GapoGolfAC5_Gi3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_3/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_3/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_3/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_3/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGolfAC5_Gi3"
+            });
+        }
+        
+        function clear_GapoGolfAC5_Gi3(){
+            clearCanvas("#mol_GapoGolfAC5_Gi3");
+        }
+
+        function show_GapoGolfAC5_Gi4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_4/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_4/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_4/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_4/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGolfAC5_Gi4"
+            });
+        }
+        
+        function clear_GapoGolfAC5_Gi4(){
+            clearCanvas("#mol_GapoGolfAC5_Gi4");
+        }
+
+        function show_GapoGolfAC5_Gi5(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_5/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_5/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_5/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/apo_kf3_AC5-Golf_Gi/snap_5/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GapoGolfAC5_Gi5"
+            });
+        }
+        
+        function clear_GapoGolfAC5_Gi5(){
+            clearCanvas("#mol_GapoGolfAC5_Gi5");
+        }
+
+
+        // holo AC Golf
+        function show_GholoAC5_Golf1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_1/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_1/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_1/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_1/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Golf1"
+            });
+        }
+        
+        function clear_GholoAC5_Golf1(){
+            clearCanvas("#mol_GholoAC5_Golf1");
+        }
+
+        function show_GholoAC5_Golf2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_2/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_2/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_2/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_2/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Golf2"
+            });
+        }
+
+        function clear_GholoAC5_Golf2(){
+            clearCanvas("#mol_GholoAC5_Golf2");
+        }
+
+        function show_GholoAC5_Golf3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_3/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_3/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_3/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf1_AC5_Golf/snap_3/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Golf3"
+            });
+        }
+      
+        function clear_GholoAC5_Golf3(){
+            clearCanvas("#mol_GholoAC5_Golf3");
+        }
+
+        // holo AC Gi
+        function show_GholoAC5_Gi1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_1/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_1/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_1/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_1/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Gi1"
+            });
+        }
+        
+        function clear_GholoAC5_Gi1(){
+            clearCanvas("#mol_GholoAC5_Gi1");
+        }
+
+        function show_GholoAC5_Gi2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_2/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_2/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_2/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_2/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Gi2"
+            });
+        }
+        
+        function clear_GholoAC5_Gi2(){
+            clearCanvas("#mol_GholoAC5_Gi2");
+        }
+
+        function show_GholoAC5_Gi3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_3/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_3/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_3/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_3/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Gi3"
+            });
+        }
+        
+        function clear_GholoAC5_Gi3(){
+            clearCanvas("#mol_GholoAC5_Gi3");
+        }
+
+        function show_GholoAC5_Gi4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_4/AC5.pqr", 
+                strDesc1: "AC5 Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_4/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_4/AC5.vis.ep.dx", 
+                grdDesc1: "AC5 Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf2_AC5_Gi/snap_4/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoAC5_Gi4"
+            });
+        }
+        
+        function clear_GholoAC5_Gi4(){
+            clearCanvas("#mol_GholoAC5_Gi4");
+        }
+
+
+        // holo GiAC Golf
+        function show_GholoGiAC5_Golf1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_1/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_1/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_1/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_1/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGiAC5_Golf1"
+            });
+        }
+        
+        function clear_GholoGiAC5_Golf1(){
+            clearCanvas("#mol_GholoGiAC5_Golf1");
+        }
+
+        function show_GholoGiAC5_Golf2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_2/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_2/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_2/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_2/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGiAC5_Golf2"
+            });
+        }
+        
+        function clear_GholoGiAC5_Golf2(){
+            clearCanvas("#mol_GholoGiAC5_Golf2");
+        }
+
+        function show_GholoGiAC5_Golf3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_3/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_3/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_3/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_3/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGiAC5_Golf3"
+            });
+        }
+        
+        function clear_GholoGiAC5_Golf3(){
+            clearCanvas("#mol_GholoGiAC5_Golf3");
+        }
+
+        function show_GholoGiAC5_Golf4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_4/GiAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_4/Golf.pqr",
+                strDesc2: "G&alpha;<sub>olf</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_4/GiAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf4_AC5-Gi_Golf/snap_4/Golf.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGiAC5_Golf4"
+            });
+        }
+        
+        function clear_GholoGiAC5_Golf4(){
+            clearCanvas("#mol_GholoGiAC5_Golf4");
+        }
+
+        // holo GolfAC Gi
+        function show_GholoGolfAC5_Gi1(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_1/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_1/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_1/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_1/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGolfAC5_Gi1"
+            });
+        }
+        
+        function clear_GholoGolfAC5_Gi1(){
+            clearCanvas("#mol_GholoGolfAC5_Gi1");
+        }
+
+        function show_GholoGolfAC5_Gi2(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_2/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_2/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_2/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_2/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGolfAC5_Gi2"
+            });
+        }
+        
+        function clear_GholoGolfAC5_Gi2(){
+            clearCanvas("#mol_GholoGolfAC5_Gi2");
+        }
+
+        function show_GholoGolfAC5_Gi3(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_3/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_3/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_3/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_3/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGolfAC5_Gi3"
+            });
+        }
+        
+        function clear_GholoGolfAC5_Gi3(){
+            clearCanvas("#mol_GholoGolfAC5_Gi3");
+        }
+
+        function show_GholoGolfAC5_Gi4(){
+            showComplexGrids({
+                strFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_4/GolfAC5.pqr", 
+                strDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Structure",
+                strFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_4/Gi.pqr",
+                strDesc2: "G&alpha;<sub>i</sub> Structure",
+                grdFile1: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_4/GolfAC5.vis.ep.dx", 
+                grdDesc1: "AC5&sdot;G&alpha;<sub>olf</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                grdFile2: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/snapGrids/holo_kf3_AC5-Golf_Gi/snap_4/Gi.vis.ep.dx", 
+                grdDesc2: "G&alpha;<sub>i</sub> Grid (&plusmn; 1 k<sub>B</sub>T&sol;e)",
+                molview: "mol_GholoGolfAC5_Gi4"
+            });
+        }
+        
+        function clear_GholoGolfAC5_Gi4(){
+            clearCanvas("#mol_GholoGolfAC5_Gi4");
+        }
+
+
+        function show_MDapoACTern(){
+            showTrajectory({
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/apo/ternary/apo-ternary.vis.gro",
+                molview: "mol_MDapoACTern"
+            })
+        }
+
+        function clear_MDapoACTern(){
+            clearCanvas("#mol_MDapoACTern");
+        }
+
+        function show_MDapoACGolf(){
+            showTrajectory({
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/apo/AC5-Golf/apo-AC5-Golf.vis.gro",
+                molview: "mol_MDapoACGolf"
+            })
+        }
+
+        function clear_MDapoACGolf(){
+            clearCanvas("#mol_MDapoACGolf");
+        }
+
+        function show_MDapoACGi(){
+            showTrajectory({
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/apo/AC5-Gi/apo-AC5-Gi.vis.gro",
+                molview: "mol_MDapoACGi"
+            })
+        }
+
+        function clear_MDapoACGi(){
+            clearCanvas("#mol_MDapoACGi");
+        }
+
+        function show_MDholoACTern(){
+            showTrajectory({
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/holo/ternary/holo-ternary.vis.gro",
+                molview: "mol_MDholoACTern"
+            })
+        }
+
+        function clear_MDholoACTern(){
+            clearCanvas("#mol_MDholoACTern");
+        }
+
+        function show_MDholoACGolf(){
+            showTrajectory({
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/holo/AC5-Golf/holo-AC5-Golf.vis.gro",
+                molview: "mol_MDholoACGolf"
+            })
+        }
+
+        function clear_MDholoACGolf(){
+            clearCanvas("#mol_MDholoACGolf");
+        }
+
+        function show_MDholoACGi(){
+            showTrajectory({
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/holo/AC5-Gi/holo-AC5-Gi.vis.gro",
+                molview: "mol_MDholoACGi"
+            })
+        }
+
+        function clear_MDholoACGi(){
+            clearCanvas("#mol_MDholoACGi");
+        }
+
+        function show_TestTraj(){
+            showTrajectory({
+                // Use gro trajectory, so only pass one file
+                //strFile: "files/Gi-AC-Gs_atp_OctahedronBox_d16.xtrasmall.gro",
+                trjFile: "https://projects.h-its.org/mcmsoft/hbpdata/bruce_et_al_2019/livepaper/MD/holo/ternary/holo-ternary.vis.gro",
+                molview: "mol_testTraj"
+            })
+        }
+
+        function clear_TestTraj(){
+            clearCanvas("#mol_testTraj");
+        }
+    </script>
+
+</body>
+
+</html>
