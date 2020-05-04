@@ -19,7 +19,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
-      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
 
     </head>
@@ -190,7 +190,7 @@ function onclickHandler(evt) {
   }
   sbaInterface.send(sbaCommand);
 
-  sbaCommand = {
+  sbaCommand2 = {
     "method": "Composer.scene",
     "params": {
       "name": "dorsal striatum, STRd",
@@ -199,7 +199,7 @@ function onclickHandler(evt) {
       }
     }
   }
-  sbaInterface.send(sbaCommand);
+  sbaInterface.send(sbaCommand2);
 
 }
 </script>
@@ -580,7 +580,7 @@ function onclickHandler(evt) {
                 </div>
                 <div class="collapsible-body">
                     <p>
-                    Making striatal microcircuit using <em>Snudda</em> software (see <em>Source code</em> below) is illustrated in a Jupyter notebook with step-by-step instructions for simulation and analysis of the outputs. For demonstration purpose, a tiny piece of the dorsal striatum containg only 100 neurons is simulated.
+                    Making striatal microcircuit using <em>Snudda</em> software (see <em>Source code</em> below) is illustrated in a Jupyter notebook with step-by-step instructions for simulation and analysis of the outputs. For demonstration purpose, a tiny piece of the dorsal striatum containing only 100 neurons is simulated.
                     </p>
                     <p>
                     Jupyter notebook <a target="_blank" href="https://github.com/Hjorthmedh/Snudda/blob/master/snudda/examples/StriatumScaffoldExample-tiny.ipynb">StriatumScaffoldExample-tiny</a> on GitHub.com.
