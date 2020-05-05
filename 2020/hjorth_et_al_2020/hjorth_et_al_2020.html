@@ -19,6 +19,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
 
     </head>
@@ -93,19 +94,19 @@
         </div>
         <div>
             <p><strong>Journal:</strong> 
-            <a href="https://www.pnas.org/" target="_blank"> <span class="color_link">Proc Natl Acad Sci U S A</span> </a>
+            <a href="https://www.pnas.org/" target="_blank"> <span class="color_link">Proc. Natl. Acad. Sci. USA</span> </a>
             </p>
             <p><strong>Download Url:</strong> 
-            <a href="https://www.pnas.org/" target="_blank"> <span class="color_link">https://www.pnas.org/</span></a> (N/A)
+            <a href="https://www.pnas.org/content/early/2020/04/21/2000671117" target="_blank"> <span class="color_link">https://www.pnas.org/content/early/2020/04/21/2000671117</span></a>
             </p>
             <p><strong>Citation:</strong> 
             Hjorth J, Kozlov A, Carannante I, Frost Nylén J, Lindroos
             R, Johansson Y, Tokarska A, Dorst MC, Suryanarayana SM,
             Silberberg G, Hellgren Kotaleski J, Grillner S (2020) The
-            microcircuits of striatum <em>in silico</em>. <em>Proc Natl Acad Sci U S A</em> (accepted).
+            microcircuits of striatum <em>in silico</em>. <em>Proc Natl Acad Sci USA 2020</em>.
             </p>
             <p><strong>DOI:</strong>
-            <a href="https://doi.org/" target="_blank"> <span class="color_link">https://doi.org/</span></a> (N/A)
+            <a href="https://doi.org/10.1073/pnas.2000671117" target="_blank"> <span class="color_link">https://doi.org/10.1073/pnas.2000671117</span></a>
             </p>
             <p><strong>Licence:</strong>
             the
@@ -189,7 +190,7 @@ function onclickHandler(evt) {
   }
   sbaInterface.send(sbaCommand);
 
-  sbaCommand = {
+  sbaCommand2 = {
     "method": "Composer.scene",
     "params": {
       "name": "dorsal striatum, STRd",
@@ -198,7 +199,7 @@ function onclickHandler(evt) {
       }
     }
   }
-  sbaInterface.send(sbaCommand);
+  sbaInterface.send(sbaCommand2);
 
 }
 </script>
@@ -579,7 +580,7 @@ function onclickHandler(evt) {
                 </div>
                 <div class="collapsible-body">
                     <p>
-                    Making striatal microcircuit using <em>Snudda</em> software (see <em>Source code</em> below) is illustrated in a Jupyter notebook with step-by-step instructions for simulation and analysis of the outputs. For demonstration purpose, a tiny piece of the dorsal striatum containg only 100 neurons is simulated.
+                    Making striatal microcircuit using <em>Snudda</em> software (see <em>Source code</em> below) is illustrated in a Jupyter notebook with step-by-step instructions for simulation and analysis of the outputs. For demonstration purpose, a tiny piece of the dorsal striatum containing only 100 neurons is simulated.
                     </p>
                     <p>
                     Jupyter notebook <a target="_blank" href="https://github.com/Hjorthmedh/Snudda/blob/master/snudda/examples/StriatumScaffoldExample-tiny.ipynb">StriatumScaffoldExample-tiny</a> on GitHub.com.
