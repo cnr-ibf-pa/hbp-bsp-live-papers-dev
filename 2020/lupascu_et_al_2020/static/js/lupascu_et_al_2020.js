@@ -351,32 +351,27 @@ function validate_parameters(){
 function openCollapsible(el){
     var el_text = document.getElementById(el.id + "_text");
     var parent_ul = $(el).closest('ul');
-    console.log(parent_ul);
     var parent_ul_id = parent_ul[0]["attributes"].id;
     var closest_li = $(el).closest('li');
     var closest_li_id = closest_li[0].id;
     var parent_ul_obj = document.getElementById(parent_ul_id.nodeValue);
     var instance = M.Collapsible.getInstance(parent_ul_obj);
-    console.log(parent_ul_id)
 
     for (var j = 0; j < parent_ul[0].childNodes.length; j++){
         var crr_child = parent_ul[0].childNodes[j];
-        console.log(j);
-        console.log(crr_child);
         if (crr_child["attributes"] != undefined){
             var crr_child_id = crr_child["attributes"].id;
-            console.log(crr_child_id)
-            console.log(crr_child["attributes"])
             var child_id = crr_child_id.nodeValue
             if (child_id == closest_li_id){
                 var substract = Math.floor(j/2);
                 if(el_text.innerText == "View"){
                     el_text.innerText = "Hide";
                     instance.open(j-1-substract);
-                }else{
+                } else {
                     el_text.innerText = "View";
                     instance.close(j-1-substract);
                 }
+                break;
             }
         }
     }
