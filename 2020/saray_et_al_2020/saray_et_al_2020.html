@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Sáray et al. 2020</title>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    </head>
+
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">Systematic comparison and automated validation of <br/>detailed models of hippocampal neurons</h5>
+        </div>
+        <div>
+            <p><strong>Authors: </strong>
+            Sára Sáray <sup>1,2</sup>,
+            Christian A. Rössert <sup>3</sup>,
+            Shailesh Appukuttan <sup>4</sup>,
+            Rosanna Migliore <sup>5</sup>,
+            Paola Vitale <sup>5</sup>,
+            Carmen A. Lupascu <sup>5</sup>,
+            Luca L. Bologna <sup>5</sup>,
+            Werner Van Geit <sup>3</sup>,
+            Armando Romani <sup>3</sup>,
+            Andrew P. Davison <sup>4</sup>,
+            Eilif Muller <sup>3</sup>,
+            Tamás F. Freund <sup>1,2</sup>,
+            Szabolcs Káli <sup>1,2</sup>
+            </p>
+            <p><strong>Author information: </strong>
+            <sup>1</sup> Faculty of Information Technology and Bionics, Pázmány Péter Catholic University, Budapest, Hungary,
+            <sup>2</sup> Institute of Experimental Medicine, Budapest, Hungary,
+            <sup>3</sup> Blue Brain Project, École Polytechnique Fédérale de Lausanne, Geneva, Switzerland,
+            <sup>4</sup> Paris-Saclay Institute of Neuroscience, Centre National de la Recherche Scientifique/Université Paris-Sud, Gif-sur-Yvette, France,
+            <sup>5</sup> Institute of Biophysics, National Research Council, Palermo, Italy.
+            </p>
+            <p><strong>Corresponding author: </strong>Szabolcs Káli ( <em><a href="mailto:kali.szabolcs@koki.mta.hu">kali.szabolcs@koki.mta.hu</a></em> ) </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p><strong>Journal: </strong><i>Not Available</i></p>
+            <p><strong>Download Url: </strong><i>Not Available</i></p>
+            <p><strong>Citation: </strong><i>Not Available</i></p>
+            <p><strong>DOI: </strong><i>Not Available</i></p>
+            <p><strong>Licence: </strong><i>Not Available</i></p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            Anatomically and biophysically detailed data-driven neuronal models can be useful tools in understanding and predicting the behavior and function of neurons. Due to the increasing availability of experimental data from anatomical and electrophysiological measurements as well as the growing number of computational and software tools that enable accurate neuronal modeling, there are now a large number of different models of many cell types available in the literature. These models were usually built to capture a few important or interesting properties of the given neuron type, and it is often unknown how they would behave outside their original context. This limits the re-use and further development of the existing models, and thus prevents the building of consensus “community models” that could capture an increasing proportion of the electrophysiological properties of the given cell type. We addressed this problem for the representative case of the CA1 pyramidal cell of the rat hippocampus by developing an open-source Python test suite, which makes it possible to automatically and systematically test the generalization properties of models by making quantitative comparisons between the models and electrophysiological data. The tests cover various aspects of somatic behavior, and signal propagation and integration in apical dendrites. To demonstrate the utility of our approach, we applied our validation tests to compare the behavior of several different hippocampal CA1 pyramidal cell models from the ModelDB database against electrophysiological data available in the literature, and concluded that all of these models perform well in some domains but badly in others. We also show how we employed the test suite to aid the development of models within the European Human Brain Project (HBP), and describe the integration of the tests into the validation framework developed in the HBP, with the aim of facilitating more reproducible and transparent community model building.
+        </div>
+        <h5>Resources</h5>
+        <p>All info related to models, tests used in the paper are available at the links provided below, grouped into the following categories:
+        </p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li class="active">
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">chrome_reader_mode</i>Models from literature
+                </div>
+                <div class="collapsible-body ">
+                    <div style="margin-left:25px">
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4c62cb9a-d1c5-41ab-ab6d-29a5ed28fa4d" target=”_blank”>
+                                        CA1_Bianchi_2012
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4c62cb9a-d1c5-41ab-ab6d-29a5ed28fa4d" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a0bce86e-fd89-4ebe-bc6c-9f4bd4459d6f" target=”_blank”>
+                                        CA1_Gomez_2011
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a0bce86e-fd89-4ebe-bc6c-9f4bd4459d6f" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.550e3476-4f4f-4f1d-b9cf-8691fa3ad586" target=”_blank”>
+                                        Golding_et_al_2001
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.550e3476-4f4f-4f1d-b9cf-8691fa3ad586" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.71192c8c-e46e-4b8b-b874-6eecd03df336" target=”_blank”>
+                                        Katz_et_al_2009
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.71192c8c-e46e-4b8b-b874-6eecd03df336" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.af2a0180-7857-406c-84e5-8efc550bc46e" target=”_blank”>
+                                        Migliore_et_al_2011
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.af2a0180-7857-406c-84e5-8efc550bc46e" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2fc841a2-c5f8-4e47-900e-ff35dfdb7af4" target=”_blank”>
+                                        Poirazi_et_al_2003
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2fc841a2-c5f8-4e47-900e-ff35dfdb7af4" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">local_play</i>Models from Migliore et al. 2018
+                </div>
+                <div class="collapsible-body">
+                    <p>
+                    The original version of the models reported in Migliore et al. 2018 can be found
+                    <a href="https://humanbrainproject.github.io/hbp-bsp-live-papers/2018/migliore_et_al_2018/migliore_et_al_2018.html">here</a>.
+                    <br/>Below we list the modified version (v4) of these models employed in the current study.
+                    </p>
+                    <div style="margin-left:25px">
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3fb15710-4207-4ad2-abcc-e9685d9b4141" target=”_blank”>
+                                        CA1_pyr_cACpyr_mpg141017_a1-2_idC_20190328143405
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3fb15710-4207-4ad2-abcc-e9685d9b4141" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.43413229-e418-44d9-96d4-4be83b1150fe" target=”_blank”>
+                                        CA1_pyr_cACpyr_mpg141208_B_idA_20190328144006
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.43413229-e418-44d9-96d4-4be83b1150fe" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3add1b40-c4b7-4916-8ed9-f0fbb138f418" target=”_blank”>
+                                        CA1_pyr_cACpyr_mpg141209_A_idA_20190328144646
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3add1b40-c4b7-4916-8ed9-f0fbb138f418" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.166428b3-ef8c-4f34-a194-b611b182f60a" target=”_blank”>
+                                        CA1_pyr_cACpyr_mpg141216_A_idA_20190305133333
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.166428b3-ef8c-4f34-a194-b611b182f60a" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.492f5b9c-1c94-4eb2-84a9-f7b5386c3640" target=”_blank”>
+                                        CA1_pyr_cACpyr_mpg141217_A_idB_20190305112803
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.492f5b9c-1c94-4eb2-84a9-f7b5386c3640" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.62456c13-b508-41f9-989e-9091c1cf484c" target=”_blank”>
+                                        CA1_pyr_cACpyr_mpg150305_A_idB_20190305112012
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.62456c13-b508-41f9-989e-9091c1cf484c" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.144f8e4a-e939-4a57-ae51-1055654e7349" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idA_20190305112828
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.144f8e4a-e939-4a57-ae51-1055654e7349" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6e5a7e4c-b31b-4a0d-b3ba-00cfffe02b07" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idB_20190305105211
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6e5a7e4c-b31b-4a0d-b3ba-00cfffe02b07" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a7cfb81b-2b22-453d-beaf-a898127b6416" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idC_20190305103627
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a7cfb81b-2b22-453d-beaf-a898127b6416" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9e4f8e06-989b-4fc6-b1f7-a7518c17791f" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idF_20190305115459
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9e4f8e06-989b-4fc6-b1f7-a7518c17791f" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.055557a5-1bc6-4f7e-9816-981813596f9c" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idG_20190328143451
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.055557a5-1bc6-4f7e-9816-981813596f9c" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7f885fbb-f31b-4145-8291-0697486e4b5b" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idH_20190328143152
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7f885fbb-f31b-4145-8291-0697486e4b5b" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b4664b94-79bc-48ce-a91d-8c3965f69e50" target=”_blank”>
+                                        CA1_pyr_cACpyr_oh140807_A0_idJ_20190328142723
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.b4664b94-79bc-48ce-a91d-8c3965f69e50" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.316b4456-e724-407f-baf9-f89830b1b28f" target=”_blank”>
+                                        CA1_int_bAC_011017HP2_20190329115307
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.316b4456-e724-407f-baf9-f89830b1b28f" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.64ed7b16-5ce5-4671-ab7d-dd0e7ad60eb9" target=”_blank”>
+                                        CA1_int_bAC_011023HP2_20190329115556
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.64ed7b16-5ce5-4671-ab7d-dd0e7ad60eb9" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.36179491-0438-4ab3-813c-2be328da5584" target=”_blank”>
+                                        CA1_int_bAC_011127HP1_20190329115610
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.36179491-0438-4ab3-813c-2be328da5584" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.46238bb6-9ee5-4f6c-bff9-388a0bc5e069" target=”_blank”>
+                                        CA1_int_bAC_060314AM2_20190329115909
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.46238bb6-9ee5-4f6c-bff9-388a0bc5e069" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4ec19bfe-582a-47b2-82dc-e59bc0f85b31" target=”_blank”>
+                                        CA1_int_bAC_971114B_20190329120113
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4ec19bfe-582a-47b2-82dc-e59bc0f85b31" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7e5c4be8-9548-46b0-9279-9d2ffae001ff" target=”_blank”>
+                                        CA1_int_bAC_980120A_20190329120234
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7e5c4be8-9548-46b0-9279-9d2ffae001ff" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.e2eed7cb-5dcc-4c7c-84d4-be3a705bc8db" target=”_blank”>
+                                        CA1_int_cAC_010710HP2_20190328145252
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.e2eed7cb-5dcc-4c7c-84d4-be3a705bc8db" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.62f50e7e-67d7-4fbd-82a6-d51315790c30" target=”_blank”>
+                                        CA1_int_cAC_011017HP2_20190328145524
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.62f50e7e-67d7-4fbd-82a6-d51315790c30" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4cece68e-751e-416b-9a8b-681fd0d17846" target=”_blank”>
+                                        CA1_int_cAC_031031AM1_20190328150015
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4cece68e-751e-416b-9a8b-681fd0d17846" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.07d0f26f-c954-458a-b183-01e78db8cc62" target=”_blank”>
+                                        CA1_int_cAC_970627BHP1_20190328160727
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.07d0f26f-c954-458a-b183-01e78db8cc62" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.1608f6ba-e487-4393-95d6-ca99e209e5bf" target=”_blank”>
+                                        CA1_int_cAC_980120A_20190328160925
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.1608f6ba-e487-4393-95d6-ca99e209e5bf" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.74b83271-0ec5-46d0-ae8b-fde3133e725f" target=”_blank”>
+                                        CA1_int_cAC_980513B_20190328161527
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.74b83271-0ec5-46d0-ae8b-fde3133e725f" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.48664ecc-9e8b-4f95-82c5-87e059434134" target=”_blank”>
+                                        CA1_int_cAC_990611HP2_20190328162145
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.48664ecc-9e8b-4f95-82c5-87e059434134" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.140aada0-3b50-409c-968c-0ae3b70a1b88" target=”_blank”>
+                                        CA1_int_cNAC_010710HP2_20190328163258
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.140aada0-3b50-409c-968c-0ae3b70a1b88" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.5fe3b17e-3d0d-4374-b02b-ebf1ffc1e3db" target=”_blank”>
+                                        CA1_int_cNAC_011017HP2_20190328164612
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.5fe3b17e-3d0d-4374-b02b-ebf1ffc1e3db" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6ee5cd8f-00e5-4679-beb4-4e87827e5545" target=”_blank”>
+                                        CA1_int_cNAC_011023HP2_20190328164923
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6ee5cd8f-00e5-4679-beb4-4e87827e5545" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.62da25dc-656f-4225-aa59-b671f2aff8bd" target=”_blank”>
+                                        CA1_int_cNAC_060314AM2_20190328165336
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.62da25dc-656f-4225-aa59-b671f2aff8bd" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6dc33598-de6e-49cf-a91d-0ee031972692" target=”_blank”>
+                                        CA1_int_cNAC_970509HP2_20190305115627
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.6dc33598-de6e-49cf-a91d-0ee031972692" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.d48dc016-ab57-4935-b3de-6f0bc5f34798" target=”_blank”>
+                                        CA1_int_cNAC_970627BHP1_20190306162834
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.d48dc016-ab57-4935-b3de-6f0bc5f34798" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7179dfdc-7a40-409c-89d5-a6d30a35e433" target=”_blank”>
+                                        CA1_int_cNAC_970717D_20190307182510
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.7179dfdc-7a40-409c-89d5-a6d30a35e433" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3b063c1c-a490-43d9-9aa1-991c50d4b360" target=”_blank”>
+                                        CA1_int_cNAC_970911C_20190305120404
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.3b063c1c-a490-43d9-9aa1-991c50d4b360" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.39f3bd7a-b971-4418-91a2-246cf7175a31" target=”_blank”>
+                                        CA1_int_cNAC_971114B_20190329154607
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.39f3bd7a-b971-4418-91a2-246cf7175a31" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9d50ab4f-5a7a-4675-8e1e-7e3b118674d5" target=”_blank”>
+                                        CA1_int_cNAC_980120A_20190329155034
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.9d50ab4f-5a7a-4675-8e1e-7e3b118674d5" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.89be734b-212e-4678-986a-3593eb07f87e" target=”_blank”>
+                                        CA1_int_cNAC_980513B_20190329155523
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.89be734b-212e-4678-986a-3593eb07f87e" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2923901b-f687-4273-8e5c-4710a27c5031" target=”_blank”>
+                                        CA1_int_cNAC_990111HP2_20190329155703
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2923901b-f687-4273-8e5c-4710a27c5031" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a0a183b3-33d9-4ead-856f-2f13aa203986" target=”_blank”>
+                                        CA1_int_cNAC_990611HP2_20190328165521
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a0a183b3-33d9-4ead-856f-2f13aa203986" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">iso</i>HippoUnit validation tests
+                </div>
+                <div class="collapsible-body">
+                    <p>The following tests are part of the HippoUnit test suite. They have been registered on the HBP validation framework, where further details can be accessed.</p>
+                    <div style="margin-left:25px">
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.100abccb-6d30-4c1e-a960-bc0489e0d82d" target="_blank" class="waves-effect waves-light">
+                                        Somatic Features Test: CA1_pyr_cACpyr
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.100abccb-6d30-4c1e-a960-bc0489e0d82d" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.4bfa8342-226b-4a65-8385-49942d576020" target="_blank" class="waves-effect waves-light">
+                                        Somatic Features Test: CA1_Pyr_PatchClamp
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.4bfa8342-226b-4a65-8385-49942d576020" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.52443043-b79e-44c8-bda6-2d16e6a2e02e" target="_blank" class="waves-effect waves-light">
+                                        Somatic Features Test: CA1_int_cNAC
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.52443043-b79e-44c8-bda6-2d16e6a2e02e" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.9b8f350f-1089-42d0-a953-289bf20e0f96" target="_blank" class="waves-effect waves-light">
+                                        Somatic Features Test: CA1_int_bAC
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.9b8f350f-1089-42d0-a953-289bf20e0f96" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.c0f52baf-53fc-45e5-8ac6-7bfa626e5f99" target="_blank" class="waves-effect waves-light">
+                                        Somatic Features Test: CA1_int_cAC
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.c0f52baf-53fc-45e5-8ac6-7bfa626e5f99" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.ec94d91b-323c-4199-a800-d04bed79bc08" target="_blank" class="waves-effect waves-light">
+                                        Depolarization Block Test: CA1
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.ec94d91b-323c-4199-a800-d04bed79bc08" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.4d1210a6-e674-4cb6-a9cd-981a11d31175" target="_blank" class="waves-effect waves-light">
+                                        Backpropagating AP Test: CA1
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.4d1210a6-e674-4cb6-a9cd-981a11d31175" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.dd0842c0-c016-42be-98a6-18d32c2e9a3b" target="_blank" class="waves-effect waves-light">
+                                        PSP Attenuation Test: CA1
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.dd0842c0-c016-42be-98a6-18d32c2e9a3b" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.e316f735-42d5-43f8-8729-6ac2e626353d" target="_blank" class="waves-effect waves-light">
+                                        Oblique Integration Test: CA1
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/376165?state=test.e316f735-42d5-43f8-8729-6ac2e626353d" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">book</i>Jupyter Notebooks
+                </div>
+                <div class="collapsible-body">
+                    <p>The following Jupyter notebooks help demonstrate how the tests available in HippoUnit can be used to validate computational models.</p>
+                    <div style="margin-left:25px">
+                        <table class="striped">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/384254" target="_blank" class="waves-effect waves-light">Validation of models from literature</a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/384254" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/568732" target="_blank" class="waves-effect waves-light">Validation of models from Migliore et al. 2018</a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/568732" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/385838" target="_blank" class="waves-effect waves-light">Summary of score for all models validated with HippoUnit</a>
+                                    </td>
+                                    <td>
+                                        <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/385838" target="_blank" class="waves-effect waves-light">
+                                        <i class="material-icons left">pageview</i>View
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+
+</html>
