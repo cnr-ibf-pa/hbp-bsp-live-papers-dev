@@ -139,7 +139,7 @@ function ws_on_message(ws, evt, layout_01, title) {
 	}
 
 	if (!flag == false){
-		datafinalp1.push({x:time, y:v, name:'taur: '+val_taur+' wNMDA: '+val_wNMDA});
+		datafinalp1.push({x:time, y:v, name:'taur: '+val_taur+' - wNMDA: '+val_wNMDA});
         console.log(datafinalp1)
 		Plotly.react(plotlyChart_01, datafinalp1, layout_01);
 	} else {
