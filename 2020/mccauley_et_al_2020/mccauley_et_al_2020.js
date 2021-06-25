@@ -65,7 +65,7 @@ $(document).ready(function () {
 		var xmax = 200;
 		layout_01['xaxis']['autorange'] = false;
 		layout_01['xaxis']['range'] = [xmin, xmax];
-		var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+		var ws = new WebSocket('wss://blue-naas-svc-bsp-epfl.apps.hbp.eu/ws');
 		ws.onerror = function(evt){ws_on_error(evt)}
 		ws.onopen = function(){ws_on_open(ws, default_parameters, wNMDA, taur)}
 		ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01,  title)}
