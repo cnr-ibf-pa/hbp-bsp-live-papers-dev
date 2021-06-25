@@ -92,7 +92,7 @@ $(document).ready(function () {
 			var xmax = 550;
 			layout_01['xaxis']['autorange'] = false;
 			layout_01['xaxis']['range'] = [xmin, xmax];
-			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+			var ws = new WebSocket('wss://blue-naas-svc-bsp-epfl.apps.hbp.eu/ws');
 			ws.onerror = function(evt){ws_on_error(evt)}
 			ws.onopen = function(){ws_on_open(ws, default_parameters_train, gkm, gca)}
 			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
@@ -106,7 +106,7 @@ $(document).ready(function () {
 			var xmax=106;
 			layout_01['xaxis']['autorange'] = false;
 			layout_01['xaxis']['range'] = [xmin, xmax];
-			var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+			var ws = new WebSocket('wss://blue-naas-svc-bsp-epfl.apps.hbp.eu/ws');
 			ws.onerror = function(evt){ws_on_error(evt)}
 			ws.onopen = function(){ws_on_open(ws, default_parameters_ap, gkm, gca)}
 			ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02, title)}
