@@ -141,7 +141,7 @@ $(document).ready(function () {
 			layout_01['xaxis']['range'] = [xmin, xmax];
 			layout_02['xaxis']['autorange'] = false;
 			layout_02['xaxis']['range'] = [xmin, xmax];
-            var ws = new WebSocket('wss://blue-naas-svc.humanbrainproject.eu/ws');
+            var ws = new WebSocket('wss://blue-naas-svc-bsp-epfl.apps.hbp.eu/ws');
             ws.onerror = function(evt){ws_on_error(evt)}
             ws.onopen = function(){ws_on_open(ws, default_parameters)}
             ws.onmessage = function(evt){ws_on_message(ws, evt, layout_01, layout_02)}
