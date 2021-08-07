@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <title>Amsalem et al. Neuron_Reduce</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <meta name="generator" content="Google Web Designer 5.0.2.0115">
+        <link href="./static/css/gwdiframe_style.css" rel="stylesheet" data-version="5" data-exports-type="gwd-iframe">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+        <script data-source="./static/js/googbase_min.js" data-version="4" data-exports-type="googbase" src="./static/js/googbase_min.js"></script>
+        <script data-source="./static/js/gwd_webcomponents_min.js" data-version="6" data-exports-type="gwd_webcomponents" src="./static/js/gwd_webcomponents_min.js"></script>
+        <script data-source="./static/js/gwdiframe_min.js" data-version="5" data-exports-type="gwd-iframe" src="./static/js/gwdiframe_min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./static/css/amsalem_et_al_2020.css">
+        </style>
+        <style type="text/css">
+        </style>
+    </head>
+
+    <!--<body class="htmlNoPages container">-->
+    <body class="container">
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">An efficient analytical reduction of detailed nonlinear neuron models</h5>
+        </div>
+        <div>
+            <p><strong>Authors: </strong>
+
+            Oren Amsalem<sup>1</sup>, 
+            Guy Eyal<sup>1</sup>, 
+            Noa Rogozinski<sup>1</sup>, 
+            Michael Gevaert <sup>3</sup>, 
+            Pramod Kumbhar<sup>3</sup>, 
+            Felix Schürmann<sup>3</sup>, 
+            Idan Segev<sup>1,2</sup>
+
+            <p><strong>Author information:  </strong>
+            <sup>1</sup>Department of Neurobiology, 
+            <sup>2</sup>Edmond and Lily Safra Center for Brain Sciences, the Hebrew University of Jerusalem, Israel
+            <sup>3</sup> Blue Brain Project, École Polytechnique Fédérale de Lausanne, Campus Biotech, Geneva, Switzerland</span>
+            </p>
+
+            <p><strong>Corresponding authors: </strong>
+            Oren Amsalem (
+            <em>
+                <a href="mailto:oren.amsalem1@mail.huji.ac.il">oren.amsalem1@mail.huji.ac.il</a>
+            </em>)
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p><strong>Journal: </strong><a href="https://www.nature.com/ncomms/" target="_blank">Nature Communications</a></p>
+            <p><strong>Download Url: </strong><a href="https://www.nature.com/articles/s41467-019-13932-6" target="_blank">https://www.nature.com/articles/s41467-019-13932-6</a></p>
+            <p><strong>Citation: </strong> 
+            Amsalem, O., Eyal, G., Rogozinski, N., Gevaert, M., Kumbhar, P., Schürmann, F., and Segev, I. (2020). An efficient analytical reduction of detailed nonlinear neuron models. Nat. Commun. 2020 111 11, 1–13.
+            </p>
+            <p><strong>DOI: </strong>
+            <a href="https://doi.org/10.1038/s41467-019-13932-6" target="_blank">https://doi.org/10.1038/s41467-019-13932-6</a></p>
+        </div>
+
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            <p>
+            Detailed conductance-based nonlinear neuron models consisting of 
+            thousands of synapses are key for understanding of the computational 
+            properties of single neurons and large neuronal networks, and for 
+            interpreting experimental results. Simulations of these models are 
+            computationally expensive, considerably curtailing their utility. 
+            <i>Neuron_Reduce</i> is a new analytical approach to reduce the 
+            morphological complexity and computational time of nonlinear neuron 
+            models. Synapses and active membrane channels are mapped to the reduced 
+            model preserving their transfer impedance to the soma; synapses with 
+            identical transfer impedance are merged into one NEURON process still 
+            retaining their individual activation times. <i>Neuron_Reduce</i> 
+            accelerates the simulations by 40-250 fold for a variety of cell types 
+            and realistic number (10,000-100,000) of synapses while closely 
+            replicating voltage dynamics and specific dendritic computations. 
+            The reduced neuron-models will enable realistic simulations of neural 
+            networks at unprecedented scale, including networks emerging from 
+            micro-connectomics efforts and biologically-inspired “deep networks”. 
+            <i>Neuron_Reduce</i> is publicly available and is straightforward to 
+            implement.</span>
+            </p>
+        </div>
+        <div class="" style="text-align:center; display:block; overflow:auto">
+            <div class="col-md-5" style="text-align:center">
+                <gwd-iframe id="gwd-iframe_1-llb" 
+                            source="./morphs/detailed_model/cell1.html" 
+                            class="gwd-iframe-1ixy-llb" scrolling="no"></gwd-iframe>
+                        <p>
+                        <a target="_blank" href="https://blue-naas.humanbrainproject.eu/#/url/neuron_reduce/detailed.zip?dt=0.025&tstop=2500&dur=0&amp=0&celsius=37">
+                            Click here to run simulation 
+                        </a>
+                        </p>
+            </div>
+            <div class="col-md-2" style="text-align:center;padding: 10% 0">
+                <div class="gwd-p-1ae8-llb gwd-span-1qfx" style="text-align:center;">→</div>
+                <div class="gwd-span-1skk-llb" style="text-align:center">Neuron Reduce</div>
+            </div>
+            <div class="col-md-5" style="text-align:center">
+                <gwd-iframe id="gwd-iframe_2-llb" source="./morphs/simplified_model/cell1_reduced.html" class="gwd-iframe-1ixy-llb" scrolling="no"></gwd-iframe>
+                <p>
+                <a target="_blank" href="https://blue-naas.humanbrainproject.eu/#/url/neuron_reduce/simplified.zip?dt=0.025&tstop=2500&dur=0&amp=0&celsius=37"> 
+                    Click here to run simulation 
+                </a> 
+                </p>
+            </div>
+        </div>
+        <div class="" style="text-align:center;">
+            <div style="padding: 3px 0">
+                <div class="col-md-offset-3 col-md-2 gwd-left-arrow-llb gwd-span-1qfx" scrolling="no" style="text-align:center;">→</div>
+            </div>
+            <div style="padding: 9px 0">
+                <div class="col-md-offset-2 col-md-2 gwd-right-arrow-llb gwd-span-1qfx" scrolling="no" style="text-align:center;">→</div>
+            </div>
+        </div>
+
+        <div class="" style="text-align:center; display:block; overflow:auto;width:100%">
+            <gwd-iframe id="ccfedb82-4def-4711-8f43-7e5561c54dd0" source="./traces/test133.html" class="gwd-visualizer-view-1iw1-llb" scrolling="no"></gwd-iframe>
+        </div>
+        <br>
+        <div class="">Detailed instruction and source code is available on GitHub: <a target="_blank" href=https://github.com/orena1/neuron_reduce>https://github.com/orena1/neuron_reduce</div>
+        <br>
+        <br>
+    </body>
+</html>

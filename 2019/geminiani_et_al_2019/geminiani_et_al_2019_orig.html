@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Geminiani et al. 2019</title>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
+    </head>
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">Response Dynamics in an Olivocerebellar Spiking Neural Network With Non-linear Neuron Properties</h5>
+        </div>
+        <div>
+            <p>
+            <strong>Authors: </strong>Alice Geminiani
+            <sup>1,2</sup>, Alessandra Pedrocchi
+            <sup>2</sup>, Egidio D'Angelo
+            <sup>1,3</sup>, Claudia Casellato
+            <sup>1</sup>
+            </p>
+            <p>
+            <strong>Author information: </strong>
+            <sup>1</sup> Department of Brain and Behavioral Sciences, University of Pavia, Via Forlanini 6, I-27100, Pavia, Italy,
+            <sup>2</sup> NEARLab, Department of Electronics, Information and Bioengineering, Politecnico di Milano, via Ponzio, 34, 20133, Milan, Italy,
+            <sup>3</sup> Brain Connectivity Center, IRCCS Mondino Foundation, Pavia, Italy,
+            </p>
+            <p>
+            <strong>Corresponding authors: </strong>Alice Geminiani (
+            <em>
+                <a href="mailto:alice.geminiani@unipv.it">alice.geminiani@unipv.it</a>
+            </em> )
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p>
+            <strong>Journal: </strong>
+            <a href="https://www.frontiersin.org/journals/neuroinformatics" target="_blank">
+                <span class="color_link">Frontiers in Neuroinformatics</span>
+            </a>
+            </p>
+            <p>
+            <strong>Download Url: </strong>
+            <a href="https://www.frontiersin.org/articles/10.3389/fncom.2019.00068/full" target="_blank">
+                <span class="color_link">https://www.frontiersin.org/articles/10.3389/fncom.2019.00068/full</span>
+            </a>
+            </p>
+            <p>
+            <strong>Citation: </strong>  Geminiani A, Pedrocchi A, D’Angelo E and Casellato C (2019) Response Dynamics in an Olivocerebellar Spiking Neural Network With Non-linear Neuron Properties. Front. Comput. Neurosci. 13:68.
+            </p>
+            <p>
+            <strong>DOI: </strong>
+            <a href="https://doi.org/10.3389/fncom.2019.00068" target="_blank">
+                <span class="color_link">https://doi.org/10.3389/fncom.2019.00068</span>
+            </a>
+            </p>
+            <p>
+            <strong>Licence: </strong>the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp;may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.
+            </p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            Sensorimotor signals are integrated and processed by the cerebellar circuit to predict accurate control of actions. In order to investigate how single neuron dynamics and geometrical modular connectivity affect cerebellar processing, we have built an olivocerebellar Spiking Neural Network (SNN) based on a novel simplification algorithm for single point models (Extended Generalized Leaky Integrate and Fire, EGLIF) capturing essential non-linear neuronal dynamics (e.g., pacemaking, bursting, adaptation, oscillation and resonance). EGLIF models specifically tuned for each neuron type were embedded into an olivocerebellar scaffold reproducing realistic spatial organization and physiological convergence and divergence ratios of connections. In order to emulate the circuit involved in an eye blink response to two associated stimuli, we modeled two adjacent olivocerebellar microcomplexes with a common mossy fiber input but different climbing fiber inputs (either on or off). EGLIF-SNN model simulations revealed the emergence of fundamental response properties in Purkinje cells (burst-pause) and deep nuclei cells (pause-burst) similar to those reported in vivo. The expression of these properties depended on the specific activation of climbing fibers in the microcomplexes and did not emerge with scaffold models using simplified point neurons. This result supports the importance of embedding SNNs with realistic neuronal dynamics and appropriate connectivity and anticipates the scale-up of EGLIF-SNN and the embedding of plasticity rules required to investigate cerebellar functioning at multiple scales.
+        </div>
+        <h5>Resources</h5>
+        <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
+        </p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">note_add</i>Source Code
+                </div>
+                <!-- option: folder_special, archive -->
+                <div class="collapsible-body">
+                    <p>The source code, used for the simulations described in paper, can be accessed and downloaded at the following github <a href="https://github.com/AliceGem/E-GLIF" target="_blank">link</a>.
+                    <br>
+                    <br>
+                    Please refer to the README file of the github repository for more details.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">local_play</i>Test Simulations
+                </div>
+                <!-- option: folder_special, all_inclusive, transform -->
+                <div class="collapsible-body">
+                    <p>
+                    <span class="txt_style1">The simulations of the olivocerebellar microcircuit presented in the paper, are available among the
+                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/28538" target="_blank">
+                            <span class="color_link">Brain Simulation Platform</span></a> Online Use Cases, in a python Jupyter Notebook.
+                        <br>
+                        <br>
+                        Select the "Cerebellum" panel in the <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66856" target="_blank">"Brain Area Circuit In Silico Experiments"</a> item of the Online Use Cases. Successively, click on the "Functional Simulation with Advanced Point Neurons (E-GLIF)" panel and follow the instructions to run the Jupyter Notebook.
+                        <br>
+                        <br>
+
+                        Please refer to the python code and the inline comments in the notebook, for details on how to reproduce raster plots and spike histograms reported in Figs. 2 to 7 of the paper, for glomeruli, Granule cells, Golgi cells, Purkinje cells, Molecular Layer Interneurons and Deep Cerebellar Nuclei neurons.
+                    </span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+</html>

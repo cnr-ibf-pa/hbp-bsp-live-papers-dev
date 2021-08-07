@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <title>Hjorth et al. 2020</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
+
+    </head>
+
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">
+                The microcircuits of striatum <em>in silico</em>
+            </h5>
+        </div>
+        <div>
+            <p><strong>Authors:</strong> 
+            Johannes Hjorth<sup>2,</sup>*,
+            Alexander Kozlov<sup>1,2,</sup>*,
+            Ilaria Carannante<sup>2,</sup>**,
+            Johanna Frost Nylén<sup>1,</sup>**, 
+            Robert Lindroos<sup>1,2,</sup>**, 
+            Yvonne Johansson<sup>1,</sup>***, 
+            Anna Tokarska<sup>1,</sup>***, 
+            Matthijs C. Dorst<sup>1,</sup>***, 
+            Shreyas M Suryanarayana<sup>1</sup>, 
+            Gilad Silberberg<sup>1</sup>, 
+            Jeanette Hellgren Kotaleski<sup>2,</sup>****, 
+            Sten Grillner<sup>1,</sup>****
+            </p>
+            <p><strong>Author information:</strong> 
+                <sup>1</sup>Department of Neuroscience, Karolinska Institutet, SE 17165
+                Stockholm and <sup>2</sup>Science for Life Laboratory, School of Computer
+                Science and Communication, KTH Royal Institute of Technology, SE-10044,
+                Stockholm, Sweden.
+            </p>
+            <p>
+                *JH and AK, overall design of the striatal simulation (equal
+                contribution); **IC, JFN and RL contributed equally in simulating
+                different subtypes of neurons and reconstructing their morphology and
+                the dopaminergic input; ***YJ, AT and MD recorded experimentally subtypes
+                of neurons and their connectivity that were modelled by the other team
+                (equal contribution); SMS contributed with overall implementation; GS
+                supervised the experimental part; ****JHK and SG supervised all aspects
+                of the project (equal contribution).
+            </p>
+            <p><strong>Corresponding author:</strong> 
+            Sten Grillner (<em><a href="mailto:sten.grillner@ki.se">sten.grillner@ki.se</a></em>)
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p><strong>Journal:</strong> 
+            <a href="https://www.pnas.org/" target="_blank"> <span class="color_link">Proc. Natl. Acad. Sci. USA</span> </a>
+            </p>
+            <p><strong>Download Url:</strong> 
+            <a href="https://www.pnas.org/content/early/2020/04/21/2000671117" target="_blank"> <span class="color_link">https://www.pnas.org/content/early/2020/04/21/2000671117</span></a>
+            </p>
+            <p><strong>Citation:</strong> 
+            Hjorth J, Kozlov A, Carannante I, Frost Nylén J, Lindroos
+            R, Johansson Y, Tokarska A, Dorst MC, Suryanarayana SM,
+            Silberberg G, Hellgren Kotaleski J, Grillner S (2020) The
+            microcircuits of striatum <em>in silico</em>. <em>Proc Natl Acad Sci USA 2020</em>.
+            </p>
+            <p><strong>DOI:</strong>
+            <a href="https://doi.org/10.1073/pnas.2000671117" target="_blank"> <span class="color_link">https://doi.org/10.1073/pnas.2000671117</span></a>
+            </p>
+            <p><strong>Licence:</strong>
+            the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>
+            applies for all files.&nbsp;Under this Open Access license
+            anyone may copy, distribute, or reuse the files as long
+            as the authors and the original source are properly cited.
+            </p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5> 
+                The basal ganglia play an important role in decision-making and
+                selection of action primarily based on input from cortex, thalamus and
+                the dopamine system. Their main input structure, striatum, is central
+                to this process. It consists of two types of projection neurons,
+                together representing 95% of the neurons, and 5% of interneurons,
+                among which are the cholinergic, fastspiking and low threshold spiking
+                subtypes. The membrane-properties, soma-dendritic shape and intrastriatal-
+                and extrastriatal synaptic interactions of these neurons are quite
+                well described in the mouse, and therefore they can be simulated in
+                sufficient detail to capture their intrinsic properties, as well as the
+                connectivity. We focus on simulation at the striatal cellular/microcircuit
+                level, in which the molecular/subcellular and systems levels meet. We
+                present for the first time a nearly full-scale model of the mouse striatum
+                using available data on synaptic connectivity, cellular morphology and
+                electrophysiological properties to create a microcircuit mimicking the
+                real network. A striatal volume is populated with reconstructed neuronal
+                morphologies with appropriate cell densities, and then we connect
+                neurons together based on appositions between neurites as possible
+                synapses and constrain them further with available connectivity data.
+                Moreover, we simulate a subset of the striatum involving 10 000 neurons,
+                with input from cortex, thalamus and the dopamine system, as a proof
+                of principle. Simulation at this biological scale should serve as an
+                invaluable tool to understand the mode of operation of this complex
+                structure. This platform will be updated with new data and expanded to
+                simulate the entire striatum.
+        </div>
+        <h5>Resources</h5>
+        <p>Data and models used in the paper are available at the links reported below.</p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li class="active">
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">description</i>Striatum anatomy
+                </div>
+                <div class="collapsible-body ">
+                    <p>
+                    Location of the striatum within the mouse brain, cell composition and neuron circuitry
+                    </p>
+                    <ul>
+                        <li> Dorsal striatum (transparent light blue) and reference volume (500 &mu;m cube, red) are shown
+using SBA Composer (<a href="https://sba-dev.incf.org/composer/?template=ABA_v3">Scalable Brain Atlas Composer</a>, INCF):
+
+<script type="text/javascript" src="https://scalablebrainatlas.incf.org/js/sba-interface.js"></script>
+<script type="text/javascript">
+
+var sbaInterface;
+
+function onclickHandler(evt) {
+  const sbaUrl = 'https://scalablebrainatlas.incf.org/composer-dev/?template=ABA_v3';
+  sbaInterface = sbaInterface || new sbaInterface_class(sbaUrl);
+
+  const x3dFileContents = '<X3D profile="Interchange" version="3.3" xmlns:xsd="http://www.web3d.org/specifications/x3d-3.3.xsd">'+
+  '<Scene>'+
+  '  <Transform translation="-2.0 0.5 1.0">'+
+  '  <Shape>'+
+  '    <Appearance><Material diffuseColor="#FF0000"></Material></Appearance>'+
+  '    <Box size="0.5 0.5 0.5"></Box>'+
+  '  </Shape>'+
+  '  </Transform>'+
+  '</Scene>'+
+  '</X3D>';
+  const sbaCommand = {
+    "method": "Composer.import",
+    "params": {
+      "name": "Region of interest, 500 um cube",
+      "mime": "model/x3d+xml",
+      "contents": x3dFileContents
+    }
+  }
+  sbaInterface.send(sbaCommand);
+
+  sbaCommand2 = {
+    "method": "Composer.scene",
+    "params": {
+      "name": "dorsal striatum, STRd",
+      "regions": {
+        "STRd": ["#98D6F9", 0.9]
+      }
+    }
+  }
+  sbaInterface.send(sbaCommand2);
+
+}
+</script>
+
+<br>
+<br>
+<button class="btn waves-effect waves-light" onclick="onclickHandler()">View<i class="material-icons right">3d_rotation</i></button>
+&nbsp;&nbsp;&nbsp; 
+<button class="btn waves-effect waves-light" onclick="window.open('./images/striatum_roi.png')">View<i class="material-icons right">bubble_chart</i></button>
+
+                        </li>
+                        <li><br>
+                        Striatal microcircuit structure
+                        <p>
+                        The C57BL/7J mouse striatum is around 21.5 mm<sup>3</sup> (Allen Mouse Brain) with a total of 1.72 million neurons,
+                        which corresponds to a density of 80,500 neurons/mm<sup>3</sup>. The cell populations are subdivided as follows assuming 95% of striatal projection neurons, in equal proportion for the direct pathway and indirect pathway (dSPN and iSPN, respectively), 1.3% fast-spiking interneurons (FS), 1.1% cholinergic interneurons (ChIN) and 0.8% low threshold-spiking interneurons (LTS). The striatal circuitry is generic for the entire structure.
+                        </p>
+<button class="btn waves-effect waves-light" onclick="window.open('./images/circuitry.png')">View<i class="material-icons right">bubble_chart</i></button>
+
+
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">settings_input_antenna</i>Single-cell models
+                </div>
+                <div class="collapsible-body">
+                    <div ng-app="neo-visualizer">
+                        <div class="collapsible">
+                            <div class="row">
+                                <div class="col s12">
+                                    <ul class="tabs">
+                                        <li class="tab col s3">
+                                            <a href="#SPN">SPN</a>
+                                        </li>
+                                        <li class="tab col s3">
+                                            <a href="#FS">FS</a>
+                                        </li>
+                                        <li class="tab col s3">
+                                            <a href="#LTS">LTS</a>
+                                        </li>
+                                        <li class="tab col s3">
+                                            <a href="#ChIN">ChIN</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="SPN" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">str-dspn-e150602_c1_D1-mWT-0728MSN01-v20190508</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150602_c1_D1-mWT-0728MSN01-v20190508.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150602_c1_D1-mWT-0728MSN01-v20190508.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150602_c1_2_D1_D2/ECall_IV_ch3_354.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150602_c1_2_D1_D2/ECall_IV_ch3_358.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150602_c1_2_D1_D2/ECall_IDthresh_ch3_397.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150602_c1_2_D1_D2/ECall_IDthresh_ch3_399.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150602_c1_2_D1_D2/ECall_IDthresh_ch3_400.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150602_c1_2_D1_D2/ECall_IDthresh_ch3_409.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-dspn-e150917_c10_D1-mWT-P270-20-v20190521</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150917_c10_D1-mWT-P270-20-v20190521.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150917_c10_D1-mWT-P270-20-v20190521.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IV_ch3_505.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IV_ch3_509.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch3_547.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch3_548.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch3_549.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch3_550.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-dspn-e150917_c6_D1-m21-6-DE-v20190503</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150917_c6_D1-m21-6-DE-v20190503.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150917_c6_D1-m21-6-DE-v20190503.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c6_D1/ECBL_IV_ch5_499.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c6_D1/ECBL_IV_ch5_502.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c6_D1/ECBL_IDthresh_ch5_541.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c6_D1/ECBL_IDthresh_ch5_543.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c6_D1/ECBL_IDthresh_ch5_544.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c6_D1/ECBL_IDthresh_ch5_553.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-dspn-e150917_c9_d1-mWT-1215MSN03-v20190521</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150917_c9_d1-mWT-1215MSN03-v20190521.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/dspn/str-dspn-e150917_c9_d1-mWT-1215MSN03-v20190521.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IV_ch1_505.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IV_ch1_509.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_547.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_549.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_550.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/dspn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_560.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-ispn-e150908_c4_D2-m51-5-DE-v20190611</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e150908_c4_D2-m51-5-DE-v20190611.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e150908_c4_D2-m51-5-DE-v20190611.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150908_c4_5_D2_D1/ECall_IV_ch1_508.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150908_c4_5_D2_D1/ECall_IDthresh_ch1_543.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150908_c4_5_D2_D1/ECall_IDthresh_ch1_545.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150908_c4_5_D2_D1/ECall_IDthresh_ch1_546.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150908_c4_5_D2_D1/ECall_IDthresh_ch1_547.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150908_c4_5_D2_D1/ECall_IDthresh_ch1_548.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-ispn-e150917_c11_D2-mWT-MSN1-v20190603</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e150917_c11_D2-mWT-MSN1-v20190603.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e150917_c11_D2-mWT-MSN1-v20190603.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150917_c9_11_D1_D1_D2/ECBL_IV_ch5_505.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150917_c9_11_D1_D1_D2/ECBL_IV_ch5_509.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_548.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_549.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_550.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/150917_c9_11_D1_D1_D2/ECBL_IDthresh_ch1_560.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-ispn-e151123_c1_D2-mWT-P270-09-v20190527</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e151123_c1_D2-mWT-P270-09-v20190527.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e151123_c1_D2-mWT-P270-09-v20190527.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/151123_c1_2_D2_D1/ECall_IV_ch1_497.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/151123_c1_2_D2_D1/ECall_IV_ch1_503.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/151123_c1_2_D2_D1/ECall_IDthresh_ch1_537.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/151123_c1_2_D2_D1/ECall_IDthresh_ch1_539.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/151123_c1_2_D2_D1/ECall_IDthresh_ch1_540.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/151123_c1_2_D2_D1/ECall_IDthresh_ch1_552.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-ispn-e160118_c10_D2-m46-3-DE-v20190529</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e160118_c10_D2-m46-3-DE-v20190529.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/model/2020Q1/ispn/str-ispn-e160118_c10_D2-m46-3-DE-v20190529.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/160118_c9_11_D1_D2_D2/ECall_IV_ch3_498.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/160118_c9_11_D1_D2_D2/ECall_IV_ch3_502.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/160118_c9_11_D1_D2_D2/ECall_IDthresh_ch3_537.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/160118_c9_11_D1_D2_D2/ECall_IDthresh_ch3_539.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/160118_c9_11_D1_D2_D2/ECall_IDthresh_ch3_540.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.1.6/msn/ephys/2019Q3/ispn/original/160118_c9_11_D1_D2_D2/ECall_IDthresh_ch3_553.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="FS" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">str-fs-e160628_FS2-mMTC180800A-IDB-v20190226</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e160628_FS2-mMTC180800A-IDB-v20190226.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e160628_FS2-mMTC180800A-IDB-v20190226.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IV_ch5_483.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IV_ch5_487.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IV_ch5_494.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IDthresh_ch5_525.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IDthresh_ch5_528.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IDthresh_ch5_531.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IDthresh_ch5_535.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/160628_FS2/ECall_IDthresh_ch5_542.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-fs-e161024_FS16-mDR-rat-Mar-13-08-1-536-R-v20190225</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e161024_FS16-mDR-rat-Mar-13-08-1-536-R-v20190225.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e161024_FS16-mDR-rat-Mar-13-08-1-536-R-v20190225.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IV_ch1_479.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IV_ch1_483.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IV_ch1_489.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IDthresh_ch1_518.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IDthresh_ch1_520.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IDthresh_ch1_524.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IDthresh_ch1_530.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161024_FS16/ECall_IDthresh_ch1_538.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-fs-e161205_FS1-mMTC180800A-IDB-v20190312</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e161205_FS1-mMTC180800A-IDB-v20190312.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e161205_FS1-mMTC180800A-IDB-v20190312.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IV_ch3_583.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IV_ch3_587.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IV_ch3_593.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IDthresh_ch3_714.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IDthresh_ch3_716.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IDthresh_ch3_720.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IDthresh_ch3_726.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/161205_FS1/ECall_IDthresh_ch3_733.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header">str-fs-e180418_FS5-mMTC251001A-IDB-v20190301</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model &nbsp; &nbsp; 
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://blue-naas.humanbrainproject.eu/#/url/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e180418_FS5-mMTC251001A-IDB-v20190301.zip')">Run<i class="material-icons right">play_arrow</i></button> 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/model/2020Q1/fs/str-fs-e180418_FS5-mMTC251001A-IDB-v20190301.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/180418_FS5/ECall_IV_ch7_1855.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/180418_FS5/ECall_IDrest_ch7_1917.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/180418_FS5/ECall_IDthresh_ch7_1932.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/180418_FS5/ECall_IDthresh_ch7_1936.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/180418_FS5/ECall_IDthresh_ch7_1940.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/fs/original/180418_FS5/ECall_IDthresh_ch7_1945.ibw" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="LTS" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">str-lts-Experiment-9862_20181211</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model parameters &nbsp; &nbsp; 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/optim/2020Q1/lts/str-lts-Experiment-9862_20181211.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    20181211_7_8_slice_L4_long.pxp (478 MB) <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/original/Experiment-9862/20181211_7_8_slice_L4_long.pxp')">Download<i class="material-icons right">save_alt</i></button>
+                                                </span>
+                                                &nbsp; <br> &nbsp;
+                                                <p>Selected traces</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/derived/Experiment-9862/ECall_IV_ch3_641.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/derived/Experiment-9862/ECall_IV_ch3_644.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/derived/Experiment-9862/ECall_IV_ch3_648.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/derived/Experiment-9862/ECalllong_IV_ch3_755.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/derived/Experiment-9862/ECalllong_IV_ch3_757.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/lts/derived/Experiment-9862/ECalllong_IV_ch3_760.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                            <div id="ChIN" class="col s12">
+                                <div style="margin-left:25px; margin-right:25px;">
+                                    <ul class="collapsible" data-collapsible="expandable">
+                                        <li>
+                                            <div class="collapsible-header">str-chin-sbj4-170614_cell6-v20190816</div>
+                                            <div class="collapsible-body">
+                                                <p>
+                                                Model parameters &nbsp; &nbsp; 
+                                                &nbsp; &nbsp;
+                                                <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/optim/2020Q1/chin/str-chin-sbj4-170614_cell6-v20200221.zip')">Download<i class="material-icons right">save_alt</i></button>
+                                                </p>
+                                                <p>Experimental data</p>
+                                                <span>
+                                                    sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN.pxp (81 MB) <button class="btn waves-effect waves-light" onclick="window.open('https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/chin/original/sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN.pxp')">Download<i class="material-icons right">save_alt</i></button>
+                                                </span>
+                                                &nbsp; <br> &nbsp;
+                                                <p>Selected traces</p>
+                                                <span>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/chin/derived/sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN/EC2_IV_ch3_623.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/chin/derived/sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN/EC2_IV_ch3_628.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/chin/derived/sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN/EC2_IV_ch3_633.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/chin/derived/sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN/EC2_IDthresh_ch3_670.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                    <visualizer-view source="https://object.cscs.ch:443/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/Grillner_SGA2_T6.2.4/striatum/interneurons/ephys/2019Q3/chin/derived/sbj4-170614_cell6_original__md_20170614_cell_5_6_ChIN/EC2_IDthresh_ch3_679.txt" height=300 downsamplefactor=4></visualizer-view>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">timeline</i>Simulation and analysis
+                </div>
+                <div class="collapsible-body">
+                    <p>
+                    Making striatal microcircuit using <em>Snudda</em> software (see <em>Source code</em> below) is illustrated in a Jupyter notebook with step-by-step instructions for simulation and analysis of the outputs. For demonstration purpose, a tiny piece of the dorsal striatum containing only 100 neurons is simulated.
+                    </p>
+                    <p>
+                    Jupyter notebook <a target="_blank" href="https://github.com/Hjorthmedh/Snudda/blob/master/snudda/examples/StriatumScaffoldExample-tiny.ipynb">StriatumScaffoldExample-tiny</a> on GitHub.com.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">code</i>Source code
+                </div>
+                <div class="collapsible-body">
+                    <p>
+                    The complete source code of the model building software <a href="https://github.com/Hjorthmedh/Snudda/" target="_blank"><em>Snudda</em></a> is available on GitHub.com.
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+
+</html>

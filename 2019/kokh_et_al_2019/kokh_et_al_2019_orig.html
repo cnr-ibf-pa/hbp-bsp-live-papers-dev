@@ -1,0 +1,1521 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Kokh et al. 2019</title>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <meta name="author" content="Daria B.Kokh">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="https://unpkg.com/ngl"></script>
+        <meta charset="UTF-8">
+
+        <style>
+/* Modals take up 3/4 of page in both directions */
+.modal { width: 75% !important ; height: 75% !important; } 
+/* class below stops occasional scroll when zooming in NGL because canvas resizes */
+.ngl-modal {overflow-y: hidden;}
+/* Leave 10% for modal footer containing close button */
+.modal-content { width: 100% !important ; height: 90% !important ;}
+/* Basic canvas can take up all of modal content */
+.ngl-basic-canvas {width:100% !important ; height:100% !important ;}
+/* When using checkboxes, leave space to right of canvas */
+.ngl-checkbox-canvas {width:75% !important ; height:100% !important ;}
+/* Fix strange bug in subscript in collapsible headers */
+.collapsible-header sub {bottom:-1.5em !important;}
+.tabs .tab a:focus.active {color:#000000; background-color: #ffb74d;}
+.center-al {text-align:center;}
+        </style>
+
+
+        <script src='/tracker.min.js'></script></HEAD><noscript><p><img src='http://piwik.h-its.org/piwik.php?idsite=5&rec=1&bots=1' style='border:0' alt='' /></p></noscript>
+
+        <body class="container">
+            <br>
+            <div class="box rounded centered">
+                <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                                </td>
+                                <td>
+                                    <span class="title-style subtitle" style="padding-left:5px;">
+                                        The Brain Simulation Platform "Live Papers"
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+                <h5 style="font-family: 'Merriweather', serif; text-align:center; line-height: 1.25;">Machine Learning Analysis of τRAMD Trajectories to Decipher Molecular Determinants of Drug-Target Residence Times</h5>
+            </div>
+            <div>
+                <p><strong>Authors: </strong> 
+                Kokh DB<sup>1</sup>, 
+                Kaufmann T<sup>1,2</sup>, 
+                Kister B<sup>1,3</sup>, 
+                Wade RC<sup>1,3,4,5</sup>. 
+                </p>
+                <p><strong>Author information: </strong> 
+                <sup>1</sup> Molecular and Cellular Modeling Group, Heidelberg Institute for Theoretical Studies (HITS), Heidelberg, Germany.  
+                <sup>2</sup> Department of Physics, Heidelberg University, Heidelberg, Germany.
+                <sup>3</sup> Department of Biosciences, Heidelberg University, Heidelberg, Germany.  
+                <sup>4</sup> Zentrum f&uuml;r Molekulare Biologie der Universit&auml;t Heidelberg, DKFZ-ZMBH Alliance, Heidelberg University, Heidelberg, Germany.  
+                <sup>5</sup> Interdisciplinary Center for Scientific Computing (IWR), Heidelberg University, Heidelberg, Germany.  
+                </p>
+                <p><strong>Corresponding author: </strong> 
+                Rebecca C. Wade(<em><a href="mailto:rebecca.wade@h-its.org">Rebecca.Wade@h-its.org</a></em>)
+                Daria B. Kokh(<em><a href="mailto:rdaria.kokh@h-its.org">Daria.Kokh@h-its.org</a></em>)
+                </p>
+                <div class="rainbow-row">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div>
+                    <p><strong>Journal: </strong> 
+                    <a href="https://www.frontiersin.org/articles/10.3389/fmolb.2019.00036/full" target="_blank"> <span class="color_link">Frontiers in Molecular Bioscience</span> </a>
+                    </p>
+                    <p><strong>Download Url: </strong> 
+                    <a href="https://doi.org/10.3389/fmolb.2019.00036" target="_blank"> <span class="color_link">https://doi.org/10.3389/fmolb.2019.00036</span></a>
+                    </p>
+                    <p><strong>Citation: </strong> 
+                    Kokh DB, Kaufmann T, Kister B, Wade RC(2019) Machine Learning Analysis of &tau;RAMD Trajectories to Decipher Molecular Determinants of Drug-Target Residence Times
+                    <em>
+                        Front. Mol. Biosci. (2019) </em>.
+                    </p>
+                    <p><strong>DOI: </strong>
+                    <a href="https://doi.org/10.3389/fmolb.2019.00036" target="_blank"> <span class="color_link">https://doi.org/10.3389/fmolb.2019.00036</span> </a>
+                    </p>
+                    <p><strong>Licence: </strong>
+                    the
+                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                        <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+                    </a>
+                    applies for all files.&nbsp;Under this Open Access license
+                    anyone may copy, distribute, or reuse the files as long
+                    as the authors and the original source are properly cited.
+                    </p>
+                </div>
+                <div class="note rounded">
+                    <h5>Abstract:</h5> 
+                    Drug-target residence times can impact drug efficacy and safety, and are therefore increasingly being considered during lead optimization. For this purpose, computational methods to predict residence times, &tau;, for drug-like compounds and to derive structure-kinetic relationships are desirable. A challenge for approaches based on molecular dynamics (MD) simulation is the fact that drug residence times are typically orders of magnitude longer than computationally feasible simulation times. Therefore, enhanced sampling methods are required. We recently reported one such approach: the &tau;RAMD procedure for estimating relative residence times by performing a large number of random acceleration MD (RAMD) simulations in which ligand dissociation occurs in times of about a nanosecond due to the application of an additional randomly oriented force to the ligand. The length of the RAMD simulations is used to deduce &tau;. The RAMD simulations also provide information on ligand egress pathways and dissociation mechanisms. Here, we describe a machine learning approach to systematically analyze protein-ligand binding contacts in the RAMD trajectories in order to derive regression models for estimating &tau; and to decipher the molecular features leading to longer &tau; values. We demonstrate that the regression models built on the protein-ligand interaction fingerprints of the dissociation trajectories result in robust estimates of &tau; for a set of 94 drug-like inhibitors of heat shock protein 90 (HSP90), even for the compounds for which the length of the RAMD trajectories does not provide a good estimation of &tau;. Thus, we find that machine learning helps to overcome inaccuracies in the modeling of protein-ligand complexes due to incomplete sampling or force field deficiencies. Moreover, the approach facilitates the identification of features important for residence time. In particular, we observed that interactions of the ligand with the sidechain of F138, which is located on the border between the ATP binding pocket and a hydrophobic transient sub-pocket, play a key role in slowing compound dissociation. We expect that the combination of the &tau;RAMD simulation procedure with machine learning analysis will be generally applicable as an aid to target-based lead optimization.
+                </div>
+                <h5>Resources</h5>
+                <p>
+                Here you can find the data used and generated in this work, along with the visualization of the main results produced.
+                </p>
+
+                <ul class="collapsible" data-collapsible="expandable">
+                    <li>
+                        <div class="collapsible-header amber lighten-5">
+                            <i class="material-icons">settings_input_antenna</i>Structural data
+                        </div>
+                        <div class="collapsible-body ">
+                            <p><b>Representative 3D experimental structural data:</b></p>
+                            <div style="margin-left:5px">
+                                <table class="striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Complex of HSP90 with a resorcinol-type compound bound to loop-type conformation (shown in Fig.1A)
+                                            </td>
+                                            <td>
+                                                PDB<br><a href="https://www.rcsb.org/structure/5J2X">5J2X</a>
+                                            </td>
+                                            <td>
+                                                <a href="https://files.rcsb.org/download/5J2X.pdb" class="waves-effect waves-light center-al">
+                                                    <i class="material-icons">archive</i><br>Download
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="waves-effect waves-light modal-trigger center-al" href="#view_5j2x" >
+                                                    <i class="material-icons">3d_rotation</i><br>View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Complex of HSP90 with a recorcinol-type compound bound to the helix-type conformation of the binding site (shown in Fig.1B)
+                                            </td>
+                                            <td>
+                                                PDB<br><a href="https://www.rcsb.org/structure/5J9X">5J9X</a>
+                                            </td>
+                                            <td>
+                                                <a href="https://files.rcsb.org/download/5J9X.pdb" class="waves-effect waves-light center-al">
+                                                    <i class="material-icons">archive</i><br>Download
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="waves-effect waves-light modal-trigger center-al" href="#view_5j9x" >
+                                                    <i class="material-icons">3d_rotation</i><br>View
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <td>
+                                            Complex of HSP90 with a tricyclic compound bound to helix-type conformation of the binding site (shown in Fig.1D)
+                                        </td>
+                                        <td>
+                                            PDB<br><a href="https://www.rcsb.org/structure/2YKI">2YKI</a>
+                                        </td>
+                                        <td>
+                                            <a href="https://files.rcsb.org/download/2YKI.pdb" class="waves-effect waves-light center-al">
+                                                <i class="material-icons">archive</i><br>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="waves-effect waves-light modal-trigger" href="#view_2yki" >
+                                                <i class="material-icons">3d_rotation</i><br>View
+                                            </a>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p><b>1D/2D structure data of molecular compound used in the study:</b></p>
+                            <div style="margin-left:5px">
+                                <table class="striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                1D structures (SMILES format):
+                                            </td>
+                                            <td class="right">
+                                                <a href="data/HSP90-94.smi" class="waves-effect waves-light modal-trigger center-al">
+                                                    <i class="material-icons">archive</i><br>Download
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <td>
+                                            2D structures (sdf format):
+                                        </td>
+                                        <td class="right">
+                                            <a href="data/HSP90-94-maestro.sdf" class="waves-effect waves-light modal-trigger center-al">
+                                                <i class="material-icons">archive</i><br>Download
+                                            </a>
+                                        </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header amber lighten-5">
+                            <i class="material-icons">timeline</i>Experimental data
+                        </div>
+                        <div class="collapsible-body ">
+                            <p><b>Kinetic rates of protein-ligand binding:</b></p>
+                            <div style="margin-left:5px">
+                                <table class="striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Experimental Kinetics data
+                                            </td>
+                                            <td class="right">
+                                                <a href="data/exp-kinetics.xlsx" class="waves-effect waves-light center-al">
+                                                    <i class="material-icons">archive</i><br>Download
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p><b>References:</b></p>
+                            <p>
+                            [1] &nbsp; Amaral, M., Kokh, D. B., Bomke, J., Wegener, A., Buchstaller, H. P., Eggenweiler, H. M., et al. (2017). Protein conformational flexibility modulates kinetics and thermodynamics of drug binding. Nat. Commun. 8, 2276.
+                            <br>
+                            <br>
+                            [2] &nbsp; Kokh, D., Amaral, M., Bomke, J., Graedler, U., Musil, D., Buchstaller, H., et al. (2018). Estimation of Drug-Target Residence Times by τ- Random Acceleration Molecular Dynamics Simulations. J. Chem. Theory Comput 14, 3859–3869.
+                            <br>
+                            <br>
+                            [3] &nbsp; Schuetz, D. A., Richter, L., Grandits, M., Graedler, U., Buchstaller, H., Eggenweiler, H., et al. (2018b). Ligand Desolvation steers on-rate and impacts Drug Residence Time of Heat shock protein 90 ( Hsp90 ) Inhibitors. J. Med. Chem. 90, 4397–4411.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="collapsible-header amber lighten-5">
+                            <i class="material-icons">repeat</i>Models
+                        </div>
+                        <!-- option: waves, show_chart, multiline_chart -->
+                        <div class="collapsible-body ">
+                            <ul class="collapsible" data-collapsible="expandable">
+                                <li>
+                                    <div class="collapsible-header amber lighten-5"> 
+                                        <p><b>Exploring clustering of dissociation trajectories by the overall protein-ligand contact similarity</b></p>
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <div style="margin-left:5px">
+                                            <table class="striped">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <b>All compounds<br>(Fig. 5)</b>
+                                                        </td>
+                                                        <td>
+                                                            <a href="Plots/ModelA/ALL/Cluster_IF.png" target="_blank">
+                                                                <img src="Plots/ModelA/ALL/Cluster_IF.png" style="width:430px;height:130px;border:0;">
+                                                            </a>
+                                                            <br>
+                                                            Claster composition
+                                                        </td>
+                                                        <td>
+                                                            Helix-binding compounds (PDB 5J9X)
+                                                        </td>
+                                                        <td>
+                                                            <a class="waves-effect waves-light modal-trigger center-al" href="#view_check_5j9x" >
+                                                                <i class="material-icons">3d_rotation</i><br>View
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            Loop-binding compounds (PDB 5J2X)
+                                                        </td>
+                                                        <td>
+                                                            <a class="waves-effect waves-light modal-trigger center-al" href="#view_check_5j2x" >
+                                                                <i class="material-icons">3d_rotation</i><br>View
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>Indazole-type compounds<br>(Fig. 6)</b>
+                                                        </td>
+                                                        <td>
+                                                            <a href="Plots/ModelA/In/Cluster_IF.png" target="_blank">
+                                                                <img src="Plots/ModelA/In/Cluster_IF.png" style="width:430px;height:130px;border:0;">
+                                                            </a>
+                                                            <br>
+                                                            Claster composition
+                                                        </td>
+                                                        <td>
+                                                            Indazole-type compounds  (PDB 5LNZ)
+                                                        </td>
+                                                        <td>
+                                                            <a class="waves-effect waves-light modal-trigger center-al" href="#view_check_5lnz" >
+                                                                <i class="material-icons">3d_rotation</i><br>View
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    </tobody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="collapsible" data-collapsible="expandable">
+                                <li>
+                                    <div class="collapsible-header amber lighten-5"> 
+                                        <p><b>Exploring Regression Models for prediction of unbinding rates</b></p>
+                                    </div>
+                                    <div class="collapsible-body">
+                                        <div style="margin-left:5px">
+                                            <div ng-app="neo-visualizer">
+                                                <div class="collapsible">
+                                                    <div class="row">
+                                                        <div class="col s12">
+                                                            <ul class="tabs">
+                                                                <li class="tab col s3">
+                                                                    <a href="#modelA">MODEL A</a>
+                                                                </li>
+                                                                <li class="tab col s3">
+                                                                    <a href="#modelB">MODEL B</a>
+                                                                </li>
+                                                                <li class="tab col s3">
+                                                                    <a href="#modelC">MODEL C</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div id="modelA" class="col s12">
+                                                        <div style="margin-left:25px; margin-right:25px;">
+                                                            <ul class="collapsible" data-collapsible="expandable">
+                                                                <li>
+                                                                    <table class="striped">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <b>All compounds</b>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Model evaluation (Fig.8)
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="Plots/ModelA/ALL/RM_evaluation.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td class="right">
+                                                                                    Residue contribution to the Linear Regression model
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="Plots/ModelA/ALL/LR_coef.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Residues with a large contribution to the LR model
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a class="waves-effect waves-light modal-trigger center-al" href="#view_A_5j9x" >
+                                                                                        <i class="material-icons">3d_rotation</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </li>
+                                                                <li>
+                                                                    <table class="striped">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <b>Outliers excluded</b>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Model evaluation (Fig.8)
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="Plots/ModelA/noOut/RM_evaluation.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Residue contribution to the Linear Regression model
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="Plots/ModelA/noOut/LR_coef.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Residues with a large contribution to the LR model
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a class="waves-effect waves-light modal-trigger center-al" href="#view_O_5j9x" >
+                                                                                        <i class="material-icons">3d_rotation</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </li>
+                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <div id="modelB" class="col s12">
+                                                        <div style="margin-left:25px; margin-right:25px;">
+                                                            <ul class="collapsible" data-collapsible="expandable">
+                                                                <li>
+                                                                    <table class="striped">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <b>All compounds</b>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Model evaluation
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="Plots/ModelB/RM_evaluation.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Residue contribution to the Linear Regression model
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a href="Plots/ModelB/LR_coef.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons left">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Position of residues with a large contribution to Linear Regression model
+                                                                                </td>
+                                                                                <td>
+                                                                                    <a class="waves-effect waves-light modal-trigger center-al" href="#view_B_5j9x" >
+                                                                                        <i class="material-icons left">3d_rotation</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                    <div id="modelC" class="col s12">
+                                                        <div style="margin-left:25px; margin-right:25px;">
+                                                            <ul class="collapsible" data-collapsible="expandable">
+                                                                <li>
+                                                                    <table class="striped">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <b>All compounds</b>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Model evaluation (Fig.8)
+                                                                                </td>
+                                                                                <td class="center">
+                                                                                    <a href="Plots/ModelC/RM_evaluation.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Residue contribution to the Linear Regression model
+                                                                                </td>
+                                                                                <td class="center">
+                                                                                    <a href="Plots/ModelC/LR_coef.png" target="_blank" class="waves-effect waves-light center-al">
+                                                                                        <i class="material-icons">timeline</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Position of residues with a large contribution to Linear Regression model
+                                                                                </td>
+                                                                                <td class="center">
+                                                                                    <a class="waves-effect waves-light modal-trigger center-al" href="#view_C_5j9x" >
+                                                                                        <i class="material-icons">3d_rotation</i><br>View
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header amber lighten-5">
+                                <i class="material-icons">note_add</i>Source code and data archive
+                            </div>
+                            <div class="collapsible-body">
+                                <p><b>Complete archive incuding source codes and data:</b></p>
+                                <div style="margin-left:5px">
+                                    <table class="striped">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Zenodo archive
+                                                </td>
+                                                <td class="right">
+                                                    <a href="https://zenodo.org/record/3240554#.XWaCim5uKbg" target="_blank" class="waves-effect waves-light center-al">
+                                                        <i class="material-icons">archive</i><br>Open
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+            <br>
+            <div class="rainbow-row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <br>
+            <br>
+
+
+            <!-- Step 1: Modal windows:
+                - Create a modal with a unique id for every modal button you are creating.
+                This id is used in the corresponding link in the table above. 
+                - Give modal div ngl-modal class
+                - In the the modal content div, give a title in bold tags then create a
+                div, again with a unique id, for storing the canvas for NGL.
+                - Give canvas div ngl-basic-canvas class when there are no controls
+                - Give canvas div ngl-checkbox-canvas class to leave space on the right
+                for checkboxes
+            -->
+
+
+            <!-- Structure only modals -->
+            <div id="view_5j2x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J2X</b> -->
+                    <div id="mol_5j2x" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_A_5j9x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J9X</b> -->
+                    <div id="mol_A_5j9x" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_O_5j9x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J9X</b> -->
+                    <div id="mol_O_5j9x" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_B_5j9x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J9X</b> -->
+                    <div id="mol_B_5j9x" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_C_5j9x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J9X</b> -->
+                    <div id="mol_C_5j9x" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_5j9x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J9X</b> -->
+                    <div id="mol_5j9x" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+
+            <div id="view_2yki" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 2YKI</b> -->
+                    <div id="mol_2yki" class="ngl-basic-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <!--- Model with selection  --->
+            <div id="view_check_5lnz" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5LNZ</b> -->
+                    <div id="mol_check_5lnz" class="ngl-checkbox-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_check_5j2x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J2X</b> -->
+                    <div id="mol_check_5j2x" class="ngl-checkbox-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+            <div id="view_check_5j9x" class="modal ngl-modal">
+                <div class="modal-content">
+                    <!-- <b>PDB: 5J2X</b> -->
+                    <div id="mol_check_5j9x" class="ngl-checkbox-canvas"></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:void(0);" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                </div>
+            </div>
+
+
+
+            <!-- Javascript -->
+            <script>
+
+
+                // Step 2: Initialise materialize components and every modal window defined above.
+                //   - For each modal, define which function to call when opening or 
+                //     closing the modal
+                $(document).ready(function(){
+                    // Materialized component classes
+                    $('.collapsible').collapsible();
+                    $('.tabs').tabs();
+                    $('.modal').modal();
+
+                    // Structure modals
+                    $('#view_5j2x').modal({
+                        onOpenEnd: show_5j2x,
+                        onCloseEnd: clear_5j2x
+                    });
+
+                    $('#view_A_5j9x').modal({
+                        onOpenEnd: show_A_5j9x,
+                        onCloseEnd: clear_A_5j9x
+                    });
+
+                    $('#view_O_5j9x').modal({
+                        onOpenEnd: show_O_5j9x,
+                        onCloseEnd: clear_O_5j9x
+                    });
+
+                    $('#view_B_5j9x').modal({
+                        onOpenEnd: show_B_5j9x,
+                        onCloseEnd: clear_B_5j9x
+                    });
+
+                    $('#view_C_5j9x').modal({
+                        onOpenEnd: show_C_5j9x,
+                        onCloseEnd: clear_C_5j9x
+                    });
+
+                    $('#view_5j9x').modal({
+                        onOpenEnd : show_5j9x,
+                        onCloseEnd : clear_5j9x
+                    });
+
+                    $('#view_2yki').modal({
+                        onOpenEnd : show_2yki,
+                        onCloseEnd : clear_2yki
+                    });
+
+                    $('#view_check_5lnz').modal({
+                        onOpenEnd : show_check_5lnz,
+                        onCloseEnd : clear_check_5lnz
+                    });
+
+                    $('#view_check_5j2x').modal({
+                        onOpenEnd : show_check_5j2x,
+                        onCloseEnd : clear_check_5j2x
+                    });
+
+                    $('#view_check_5j9x').modal({
+                        onOpenEnd : show_check_5j9x,
+                        onCloseEnd : clear_check_5j9x
+                    });
+
+
+
+                });
+
+
+// Step 3: Common functions for NGL views //////////////////////////////////
+// These are general functions for showing certain data type.
+// Here I have 4 for:
+//      Single structure
+//      Two structures with checkboxes to show hide
+//      Two structures and grids with checkboxes to show hide
+//      MD trajectory - currently needs to be in a single file format 
+//                      eg gro traj or pdb traj
+
+
+// General function to remove canvas element from from molview  
+// Need to do this or you get new canvas when you reopen a modal
+function clearCanvas(molview){
+    $(molview).find('canvas').remove();
+}
+
+// Open simple structure view  ///////////////////////////////////////////////
+function showStructure(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    stage.tooltip.remove();
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    // Internal functions
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el);
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and _C";
+
+    stage.loadFile(options.file).then(function(o){
+        o.addRepresentation("cartoon", { 
+            color: "residueindex",
+            sele: "polymer" });
+        o.addRepresentation("surface", { 
+            color: "lightgray",
+            sele: "polymer" ,
+            opacity: 0.8});
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele});
+        o.addRepresentation("ball+stick", { 
+            color: "cyan",
+            sele: ligCSele});
+        o.autoView();
+    });
+}
+
+
+/////////////////////  show resuidues from LR on all compounds
+function showStructureA(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    stage.tooltip.remove();
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    // Internal functions
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el);
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and _C";
+    var resiSele = " ( 51 ,  54 , 58 , 96 , 102 , 133 , 135 , 137 , 138 , 139 , 150 , 162 , 170 , 102 , 152 ) and  not _H";
+    var resiSeleR = " ( 51 ,  54 , 58 , 96 , 102 , 133 , 135 , 137 , 138 , 139 , 150 , 162 , 170 , 102 , 152 ) and  _C";
+
+    stage.loadFile(options.file).then(function(o){
+        o.addRepresentation("cartoon", { 
+            color: "residueindex",
+            sele: "polymer" });
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: resiSele});
+        o.addRepresentation("ball+stick", { 
+            color: "red",
+            sele: resiSeleR});
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele});
+        o.addRepresentation("ball+stick", { 
+            color: "cyan",
+            sele: ligCSele});
+        o.autoView();
+    });
+}
+/////////////////////  show resuidues from LR on all compounds
+function showStructureO(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    stage.tooltip.remove();
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    // Internal functions
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el);
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and _C";
+    var resiSele = " ( 51 ,  54 , 58 , 96 , 98, 102 , 106, 107, 133 , 135 , 137, 138 , 139 , 150 , 162 ,  154 ) and  not _H";
+    var resiSeleR = " ( 51 ,  54 , 58 , 96 , 98, 102 , 106, 107, 133 , 135 , 137, 138 , 139 , 150 , 162 ,  154 ) and  _C";
+
+    stage.loadFile(options.file).then(function(o){
+        o.addRepresentation("cartoon", { 
+            color: "residueindex",
+            sele: "polymer" });
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: resiSele});
+        o.addRepresentation("ball+stick", { 
+            color: "red",
+            sele: resiSeleR});
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele});
+        o.addRepresentation("ball+stick", { 
+            color: "cyan",
+            sele: ligCSele});
+        o.autoView();
+    });
+}
+/////////////////////  show resuidues from LR on all compounds
+function showStructureB(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    stage.tooltip.remove();
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    // Internal functions
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el);
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and _C";
+    var resiSele = " ( 51 ,  54 , 58 , 98 , 102 , 103 , 106 ,110 , 133, 135 ,  138 , 139 , 150 , 162 , 170 , 184 , 61, 97 , 20, 154, 132 ) and  not _H";
+    var resiSeleR = " ( 51 ,  54 , 58 , 98 , 102 , 103 , 106 ,110 , 133, 135 ,  138 , 139 , 150 , 162 , 170 , 184 , 61, 97 , 20, 154, 132 ) and  _C";
+
+    stage.loadFile(options.file).then(function(o){
+        o.addRepresentation("cartoon", { 
+            color: "residueindex",
+            sele: "polymer" });
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: resiSele});
+        o.addRepresentation("ball+stick", { 
+            color: "red",
+            sele: resiSeleR});
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele});
+        o.addRepresentation("ball+stick", { 
+            color: "cyan",
+            sele: ligCSele});
+        o.autoView();
+    });
+}
+
+/////////////////////  show resuidues from LR on all compounds
+function showStructureC(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    stage.tooltip.remove();
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    // Internal functions
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el);
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and _C";
+    var resiSele = " ( 20, 51 ,  54 , 58 ,  102 , 110 , 133, 134 , 135 , 136 , 138 , 139 , 150 , 162 , 170 , 184 , 61, 97 , 154, 132 ) and  not _H";
+    var resiSeleR = " ( 20, 51 ,  54 , 58 ,  102 , 110 , 133, 134 , 135 , 136 , 138 , 139 , 150 , 162 , 170 , 184 , 61, 97 , 154, 132 ) and  _C";
+
+    stage.loadFile(options.file).then(function(o){
+        o.addRepresentation("cartoon", { 
+            color: "residueindex",
+            sele: "polymer" });
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: resiSele});
+        o.addRepresentation("ball+stick", { 
+            color: "red",
+            sele: resiSeleR});
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele});
+        o.addRepresentation("ball+stick", { 
+            color: "cyan",
+            sele: ligCSele});
+        o.autoView();
+    });
+}
+
+
+function showStructureB(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    stage.tooltip.remove();
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    // Internal functions
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el);
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and _C";
+    var resiSele = " (  20 , 51 ,  54 , 96 ,  102 , 110 , 103, 106 , 135 ,  138 , 139 , 150 ,  170 , 184 ,  154 ) and  not _H";
+    var resiSeleR = " ( 20 , 51 ,  54 , 96 ,  102 , 110 , 103, 106 , 135 ,  138 , 139 , 150 ,  170 , 184 ,  154 ) and  _C";
+
+    stage.loadFile(options.file).then(function(o){
+        o.addRepresentation("cartoon", { 
+            color: "residueindex",
+            sele: "polymer" });
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: resiSele});
+        o.addRepresentation("ball+stick", { 
+            color: "red",
+            sele: resiSeleR});
+        o.addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele});
+        o.addRepresentation("ball+stick", { 
+            color: "cyan",
+            sele: ligCSele});
+        o.autoView();
+    });
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+///-------------- func. helix-type for compounds
+
+function showComplex(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    ///stage.tooltip.remove();
+    //stage.removeAllComponents();
+
+    ///-showing atom/residue name/number
+    var tooltip = document.createElement("div");
+    Object.assign(tooltip.style, {
+        display: "none",
+        position: "absolute",
+        zIndex: 10,
+        pointerEvents: "none",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        color: "lightgrey",
+        padding: "0.5em",
+        fontFamily: "sans-serif"
+    });
+    stage.viewer.container.appendChild(tooltip);
+    ///----- -------------
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        });
+        stage.viewer.container.appendChild(el)
+    }
+
+    function createElement (name, properties, style) {
+        var el = document.createElement(name)
+        Object.assign(el, properties)
+        Object.assign(el.style, style)
+        return el
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and  _C";
+    var resiSeleHe = " ( 51 ,  54 , 58 , 93, 93 , 96 , 102 , 107 , 108 , 110 , 135, 136, 138 , 139 , 150 , 154 , 162 , 170, 184 , 186 ) and not _H";
+    var resiSeleHeO = " ( 51 ,  54 , 58  ) and  _C";
+    var resiSeleHeY = " ( 107 , 108 , 110 ) and  _C";
+    var resiSeleHeR = " (  135, 136 ,  138 , 139 ) and  _C";
+    var resiSeleHeC = " (  102 , 154) and  _C";
+    var resiSeleHeB = " (  96  ) and  _C";
+    var resiSeleHeM = " ( 150 , 162,  170 ) and  _C";
+    var resiSeleHeG = " (  184 , 186 ) and  _C";
+    var resiSeleHeW = " (  93  ) and  _C";
+
+    // Load both structures
+    Promise.all([
+        stage.loadFile(options.file1).then(function(o){
+            return o
+        }),
+
+    ]).then(function(ol){
+
+        // Show first structure
+
+        ol[0].addRepresentation("cartoon", { 
+            color: "white",
+            sele: "polymer"
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "element",
+            name: "str1lig",
+            sele: resiSeleHe,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "white",
+            name: "str1lig",
+            sele: resiSeleHeW,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "orange",
+            name: "str1lig",
+            sele: resiSeleHeO,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "yellow",
+            name: "str1lig",
+            sele: resiSeleHeY,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "cyan",
+            name: "str1lig",
+            sele: resiSeleHeC,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "blue",
+            name: "str1lig",
+            sele: resiSeleHeB,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "magenta",
+            name: "str1lig",
+            sele: resiSeleHeM,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "gray",
+            name: "str1lig",
+            sele: resiSeleHeG,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "red",
+            name: "str1lig",
+            sele: resiSeleHeR,
+            visible: struct1CheckBox.checked
+        });
+
+        ol[0].addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele
+        });
+
+        ///-showing atom/residue name/number
+        stage.signals.hovered.add(function (pickingProxy) {
+            if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)){
+                var atom = pickingProxy.atom || pickingProxy.closestBondAtom;
+                var cp = pickingProxy.canvasPosition;
+                tooltip.innerText = "ATOM: " + atom.qualifiedName();
+                tooltip.style.bottom = cp.y + 3 + "px";
+                tooltip.style.left = cp.x + 3 + "px";
+                tooltip.style.display = "block";
+            }else{
+                tooltip.style.display = "none";
+            }
+        });             
+        ///----------------------------
+        stage.autoView()
+
+    })
+
+
+    // With Materialize, checkbox must be wrapped in a label tag with
+    // label text in a span tag
+    var struct1Lab =  createElement("label", {}, {
+        zIndex: "20",
+        top: "15%", left: "77%"
+    })
+
+    addElement(struct1Lab)
+
+    // Create first checkbox
+    var struct1CheckBox = createElement("input", {
+        type: "checkbox",
+        id: "str1check",
+        className: "filled-in",
+        checked: true,
+        onchange: function (e) {
+            stage.getRepresentationsByName("str1lig").setVisibility(e.target.checked)
+        }
+    }, { top: "0px", left: "0px" })
+
+    struct1CheckBox.setAttribute("class", "filled-in")
+    struct1Lab.appendChild(struct1CheckBox)
+
+    // Object for label text
+    var struct1InText = createElement("span", {
+        innerHTML: options.strDesc1,
+        for: "str1check",
+    }, { top: "0px", left: "0px" })
+
+    struct1Lab.appendChild(struct1InText)
+
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+///-------------- func. loop-type for compounds
+function showComplex1(options){
+    var stage = new NGL.Stage(options.molview, {backgroundColor: "white"});
+    stage.handleResize();
+    //stage.tooltip.remove();
+    //stage.removeAllComponents();
+
+    ///-showing atom/residue name/number
+    var tooltip = document.createElement("div");
+    Object.assign(tooltip.style, {
+        display: "none",
+        position: "absolute",
+        zIndex: 10,
+        pointerEvents: "none",
+        backgroundColor: "rgba(0, 0, 0, 0.6)",
+        color: "lightgrey",
+        padding: "0.5em",
+        fontFamily: "sans-serif"
+    });
+    stage.viewer.container.appendChild(tooltip);
+    ///----- -------------
+
+    window.addEventListener( "resize", function(event){
+        stage.handleResize();
+    }, false );
+
+
+    function addElement (el) {
+        Object.assign(el.style, {
+            position: "absolute",
+            zIndex: 10
+        })
+        stage.viewer.container.appendChild(el)
+    }
+
+    function createElement (name, properties, style) {
+        var el = document.createElement(name)
+        Object.assign(el, properties)
+        Object.assign(el.style, style)
+        return el
+    }
+
+    var ligSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and not _H";
+    var ligCSele = "not polymer and not water and not ACE and not NME and not NHE and not CTR and not NTR and not DMS and  _C";
+    var resiSeleHe = " ( 51 ,  54 , 58 , 93, 93 , 96 , 102 , 107 , 108 , 110 , 135, 136, 138  , 150 ,   184 , 186 ) and not _H";
+    var resiSeleHeO = " ( 51 ,  54 , 58  ) and  _C";
+    var resiSeleHeY = " ( 107 , 108 , 110 ) and  _C";
+    var resiSeleHeR = " (  135, 136 ,  138  ) and  _C";
+    var resiSeleHeC = " (  102 ) and  _C";
+    var resiSeleHeB = " (  96  ) and  _C";
+    var resiSeleHeM = " ( 150  ) and  _C";
+    var resiSeleHeG = " (  184 , 186 ) and  _C";
+    var resiSeleHeW = " (  93  ) and  _C";
+
+    // Load both structures
+    Promise.all([
+        stage.loadFile(options.file2).then(function(o){
+            return o
+        }),
+
+    ]).then(function(ol){
+
+        // Show first structure
+
+        ol[0].addRepresentation("cartoon", { 
+            color: "white",
+            sele: "polymer"
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "element",
+            name: "str1lig",
+            sele: resiSeleHe,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "white",
+            name: "str1lig",
+            sele: resiSeleHeW,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "orange",
+            name: "str1lig",
+            sele: resiSeleHeO,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "yellow",
+            name: "str1lig",
+            sele: resiSeleHeY,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "cyan",
+            name: "str1lig",
+            sele: resiSeleHeC,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "blue",
+            name: "str1lig",
+            sele: resiSeleHeB,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "magenta",
+            name: "str1lig",
+            sele: resiSeleHeM,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "gray",
+            name: "str1lig",
+            sele: resiSeleHeG,
+            visible: struct1CheckBox.checked
+        });
+        ol[0].addRepresentation("ball+stick", { 
+            color: "red",
+            name: "str1lig",
+            sele: resiSeleHeR,
+            visible: struct1CheckBox.checked
+        });
+
+        ol[0].addRepresentation("ball+stick", { 
+            color: "element",
+            sele: ligSele
+        });
+
+        ///-showing atom/residue name/number
+        stage.signals.hovered.add(function (pickingProxy) {
+            if (pickingProxy && (pickingProxy.atom || pickingProxy.bond)){
+                var atom = pickingProxy.atom || pickingProxy.closestBondAtom;
+                var cp = pickingProxy.canvasPosition;
+                tooltip.innerText = "ATOM: " + atom.qualifiedName();
+                tooltip.style.bottom = cp.y + 3 + "px";
+                tooltip.style.left = cp.x + 3 + "px";
+                tooltip.style.display = "block";
+            }else{
+                tooltip.style.display = "none";
+            }
+        });             
+
+        stage.autoView()
+
+    })
+
+
+    // With Materialize, checkbox must be wrapped in a label tag with
+    // label text in a span tag
+    var struct1Lab =  createElement("label", {}, {
+        zIndex: "20",
+        top: "15%", left: "77%"
+    })
+
+    addElement(struct1Lab)
+
+    // Create first checkbox
+    var struct1CheckBox = createElement("input", {
+        type: "checkbox",
+        id: "str1check",
+        className: "filled-in",
+        checked: true,
+        onchange: function (e) {
+            stage.getRepresentationsByName("str1lig").setVisibility(e.target.checked)
+        }
+    }, { top: "0px", left: "0px" })
+
+    struct1CheckBox.setAttribute("class", "filled-in")
+    struct1Lab.appendChild(struct1CheckBox)
+
+    // Object for label text
+    var struct1InText = createElement("span", {
+        innerHTML: options.strDesc2,
+        for: "str1check",
+    }, { top: "0px", left: "0px" })
+
+    struct1Lab.appendChild(struct1InText)
+
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+////////// Step 4: Specific functions for each modal //////////////////////////////
+
+// functions to open and close single structure modals
+function show_5j2x(){
+    showStructure({
+        file: "rcsb://5J2X", 
+        molview: "mol_5j2x"
+    });
+}
+
+function clear_5j2x(){
+    clearCanvas("#mol_5j2x");
+}
+
+
+
+function show_A_5j9x(){
+    showStructureA({
+        file: "rcsb://5J9X", 
+        molview: "mol_A_5j9x"
+    });
+}
+function clear_A_5j9x(){
+    clearCanvas("#mol_A_5j9x");
+}
+
+
+function show_O_5j9x(){
+    showStructureO({
+        file: "rcsb://5J9X", 
+        molview: "mol_O_5j9x"
+    });
+}
+
+function clear_O_5j9x(){
+    clearCanvas("#mol_O_5j9x");
+}
+
+function show_C_5j9x(){
+    showStructureA({
+        file: "rcsb://5J9X", 
+        molview: "mol_C_5j9x"
+    });
+}
+function clear_C_5j9x(){
+    clearCanvas("#mol_C_5j9x");
+}
+
+function show_B_5j9x(){
+    showStructureB({
+        file: "rcsb://5J9X", 
+        molview: "mol_B_5j9x"
+    });
+}
+function clear_B_5j9x(){
+    clearCanvas("#mol_B_5j9x");
+}
+
+
+function show_5j9x(){
+    showStructure({
+        file: "rcsb://5J9X", 
+        molview: "mol_5j9x"
+    });
+}
+
+function clear_5j9x(){
+    clearCanvas("#mol_5j9x");
+}
+
+
+function show_check_5lnz(){
+    showComplex({
+        file1: "rcsb://5LNZ",
+        strDesc1: "View contact residues",
+        molview: "mol_check_5lnz"
+    });
+}
+
+function clear_check_5lnz(){
+    clearCanvas("#mol_check_5lnz");
+}
+
+function show_check_5j2x(){
+    showComplex1({
+        file2: "rcsb://5J2X",
+        strDesc2: "View contact residues",
+        molview: "mol_check_5j2x"
+    });
+}
+
+function clear_check_5j2x(){
+    clearCanvas("#mol_check_5j2x");
+}
+
+function show_check_5j9x(){
+    showComplex({
+        file1: "rcsb://5J9X",
+        strDesc1: "View contact residues",
+        molview: "mol_check_5j9x"
+    });
+}
+
+function clear_check_5j9x(){
+    clearCanvas("#mol_check_5j9x");
+}
+
+function show_2yki(){
+    showStructure({
+        file: "rcsb://2YKI", 
+        molview: "mol_2yki"
+    });
+}
+
+function clear_2yki(){
+    clearCanvas("#mol_2yki");
+}
+
+
+
+            </script>
+
+
+</html>

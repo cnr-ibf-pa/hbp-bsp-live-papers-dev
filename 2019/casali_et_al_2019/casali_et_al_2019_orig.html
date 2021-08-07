@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Casali et al. 2019</title>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
+    </head>
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">Reconstruction and Simulation of a Scaffold Model of the Cerebellar Network</h5>
+        </div>
+        <div>
+            <p>
+            <strong>Authors: </strong>Stefano Casali
+            <sup>1</sup>, Elisa Marenzi
+            <sup>1</sup>, Chaitanya Medini
+            <sup>1</sup>, Claudia Casellato
+            <sup>1</sup>, Egidio D'Angelo
+            <sup>1,2</sup>
+            </p>
+            <p>
+            <strong>Author information: </strong>
+            <sup>1</sup> Department of Brain and Behavioral Sciences, University of Pavia, Via Forlanini 6, I-27100, Pavia, Italy,
+            <sup>2</sup> Brain Connectivity Center, IRCCS Mondino Foundation, Pavia, Italy,
+            </p>
+            <p>
+            <strong>Corresponding authors: </strong>Egidio D'Angelo (
+            <em>
+                <a href="mailto:dangelo@unipv.it">dangelo@unipv.it</a>
+            </em> ),
+            </strong>Claudia Casellato (
+            <em>
+                <a href="mailto:claudia.casellato@unipv.it">claudia.casellato@unipv.it</a>
+            </em> )
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p>
+            <strong>Journal: </strong>
+            <a href="https://www.frontiersin.org/journals/neuroinformatics" target="_blank">
+                <span class="color_link">Frontiers in Neuroinformatics</span>
+            </a>
+            </p>
+            <p>
+            <strong>Download Url: </strong>
+            <a href="https://www.frontiersin.org/articles/10.3389/fninf.2019.00037/full" target="_blank">
+                <span class="color_link">https://www.frontiersin.org/articles/10.3389/fninf.2019.00037/full</span>
+            </a>
+            </p>
+            <p>
+            <strong>Citation: </strong> Casali S., Marenzi E., Medini C., Casellato C., D’Angelo E. Reconstruction and Simulation of a Scaffold Model of the Cerebellar Network. Front. Neuroinf. 13:37. 2019.
+            </p>
+            <p>
+            <strong>DOI: </strong>
+            <a href="https://doi.org/10.3389/fninf.2019.00037" target="_blank">
+                <span class="color_link">https://doi.org/10.3389/fninf.2019.00037</span>
+            </a>
+            </p>
+            <p>
+            <strong>Licence: </strong>the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp;may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.
+            </p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            Reconstructing neuronal microcircuits through computational models is fundamental to
+            simulate local neuronal dynamics. Here a scaffold model of the cerebellum has been
+            developed in order to flexibly place neurons in space, connect them synaptically, and
+            endow neurons and synapses with biologically-grounded mechanisms. The scaffold
+            model can keep neuronal morphology separated from network connectivity, which can
+            in turn be obtained from convergence/divergence ratios and axonal/dendritic field 3D
+            geometries. We first tested the scaffold on the cerebellar microcircuit, which presents
+            a challenging 3D organization, at the same time providing appropriate datasets to
+            validate emerging network behaviors. The scaffold was designed to integrate the
+            cerebellar cortex with deep cerebellar nuclei (DCN), including different neuronal types:
+            Golgi cells, granule cells, Purkinje cells, stellate cells, basket cells, and DCN principal
+            cells. Mossy fiber inputs were conveyed through the glomeruli. An anisotropic volume
+            (0.077 mm<sup>3</sup>) of mouse cerebellum was reconstructed, in which point-neuron models
+            were tuned toward the specific discharge properties of neurons and were connected
+            by exponentially decaying excitatory and inhibitory synapses. Simulations using both
+            pyNEST and pyNEURON showed the emergence of organized spatio-temporal patterns
+            of neuronal activity similar to those revealed experimentally in response to background
+            noise and burst stimulation of mossy fiber bundles. Different configurations of granular
+            and molecular layer connectivity consistently modified neuronal activation patterns,
+            revealing the importance of structural constraints for cerebellar network functioning. The
+            scaffold provided thus an effective workflow accounting for the complex architecture of
+            the cerebellar network. In principle, the scaffold can incorporate cellular mechanisms at
+            multiple levels of detail and be tuned to test different structural and functional hypotheses.
+            A future implementation using detailed 3D multi-compartment neuron models and
+            dynamic synapses will be needed to investigate the impact of single neuron properties
+            on network computation.
+        </div>
+        <h5>Resources</h5>
+        <p>Data and models: all data and models used in the paper are available at the links reported below, grouped into the following categories:
+        </p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">note_add</i>Source Code
+                </div>
+                <!-- option: folder_special, archive -->
+                <div class="collapsible-body">
+                    <p>The complete source code, used for the reconstruction and simulations described in paper, and compliant with the SONATA format, can be accessed and downloaded at the following github <a href="https://github.com/SelezioneCasuale/scaffold_model_cerebellum" target="_blank">link</a>.
+                    <br>
+                    <br>
+                    Please refer to the README file of the github repository for more details.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">local_play</i>Test Simulations
+                </div>
+                <!-- option: folder_special, all_inclusive, transform -->
+                <div class="collapsible-body">
+                    <p>
+                    <span class="txt_style1">The reconstruction and the functional simulations of the cerebellar microcircuit procedures, presented in the paper, are available among the 
+                        <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/28538" target="_blank">
+                            <span class="color_link">Brain Simulation Platform</span></a> Online Use Cases, as python Jupyter Notebooks.
+                        <br>
+                        <br>
+                        For <i>circuit building</i>: select the "Cells Placement" or the "Connectome" panel in the <a href='https://collab.humanbrainproject.eu/#/collab/1655/nav/66853' target="_blank">"Circuit Building"</a> item of the Online Use Cases. Successively, click on the "Rat Cerebellum Volume" panel and follow the instruction to run the Jupyter Notebook.<br>
+                        <br>
+                        For <i>functional simulation</i>: select the "Cerebellum" panel in the <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/66856" target="_blank">"Brain Area Circuit In Silico Experiments"</a> item of the Online Use Cases. Successively, click on the "Functional Simulations with Point Neurons" panel and follow the instructions to run the Jupyter Notebook.
+                        <br>
+                        <br>
+
+                        Please refer to the python code and the inline comments, which you will find in the Jupyter Notebooks, for details on how to reproduce Fig. 2 and Fig. 3 of the paper.
+                    </span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div> 
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+</html>

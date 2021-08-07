@@ -1,0 +1,234 @@
+<DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Solinas et al. 2019</title>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="solinas_et_al_2019.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./solinas_et_al_2019.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+
+            <h5 class="title-style">A kinetic model for Brain-Derived Neurotrophic Factor mediated spike timing-dependent LTP</h5>
+
+        </div>
+        <div>
+            <p>
+            <strong>Authors: </strong>
+            Sergio M. G. Solinas<sup>1,2</sup>,
+            Elke Edelmann<sup>3,4</sup>, 
+            Volkmar Leßmann<sup>3,4</sup>, 
+            Michele Migliore<sup>1</sup>
+            </p>
+            <p>
+            <strong>Author information: </strong>
+            <sup>1</sup>Istitute of Biophysics, National Research Council, Palermo, Italy,
+            <sup>2 </sup>Institute of Neuroinformatics, University of Zurich and ETH Zurich, Zurich, Switzerland,
+            <sup>3</sup>Institute of Physiology, Otto-von-Guericke-University, Medical Faculty, Magdeburg, Germany,
+            <sup>4</sup>Center for Behavioral Brain Sciences (CBBS), Magdeburg, Germany.
+            </p>
+            <p>
+            <strong>Corresponding author: </strong>Michele Migliore (
+            <em>
+                <a href="mailto:michele.migliore@cnr.it">michele.migliore@cnr.it</a>
+            </em> )
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p>
+            <strong>Journal: </strong>
+            <a href="https://journals.plos.org/ploscompbiol/" target="_blank">
+                <span class="color_link">Plos Computational Biology</span>
+            </a>
+            </p>
+            <p>
+            <strong>Download Url: </strong>
+            <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006975" target="_blank">
+                <span class="color_link">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006975</span>
+            </a>
+            </p>
+            <p>
+            <strong>Citation: </strong> Solinas SMG, Edelmann E, Leßmann V, Migliore M (2019) A kinetic model for Brain-Derived Neurotrophic Factor mediated spike timing-dependent LTP. PLoS Comput Biol 15:e1006975
+            </p>
+            <p>
+            <strong>DOI: </strong>
+            <a href="https://doi.org/10.1371/journal.pcbi.1006975" target="_blank">
+                <span class="color_link">https://doi.org/10.1371/journal.pcbi.1006975</span>
+            </a>
+            </p>
+            <p>
+            <strong>Licence: </strong>the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp; may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.
+            </p>
+        </div>
+        <div class="note rounded">
+            <h5>Abstract:</h5>
+            Across the mammalian nervous system, neurotrophins control synaptic plasticity, neuromodulation, and neuronal growth. The neurotrophin Brain-Derived Neurotrophic Factor (BDNF) is known to promote structural and functional synaptic plasticity in the hippocampus, the cerebral cortex, and many other brain areas. In recent years, a wealth of data has been accumulated revealing the paramount importance of BDNF for neuronal function. BDNF signaling gives rise to multiple complex signaling pathways that mediate neuronal survival and differentiation during development, and formation of new memories. These different roles of BDNF for neuronal function have essential consequences if BDNF signaling in the brain is reduced. Thus, BDNF knock-out mice or mice that are deficient in BDNF receptor signaling via TrkB and p75 receptors show deficits in neuronal development, synaptic plasticity, and memory formation. Accordingly, BDNF signaling dysfunctions are associated with many neurological and neurodegenerative conditions including Alzheimer's and Huntington's disease. However, despite the widespread implications of BDNF-dependent signaling in synaptic plasticity in healthy and pathological conditions, the interplay of the involved different biochemical pathways at the synaptic level remained mostly unknown. In this paper, we investigated the role of BDNF/TrkB signaling in spike-timing dependent plasticity (STDP) in rodent hippocampus CA1 pyramidal cells, by implementing the first subcellular model of BDNF regulated, spike timing-dependent long-term potentiation (t-LTP). The model is based on previously published experimental findings on STDP and accounts for the observed magnitude, time course, stimulation pattern and BDNF-dependence of t-LTP. It allows interpreting the main experimental findings concerning specific biomolecular processes, and it can be expanded to take into account more detailed biochemical reactions. The results point out a few predictions on how to enhance LTP induction in such a way to rescue or improve cognitive functions under pathological conditions.
+        </div>
+        <h5>Resources</h5>
+        <p>Model and data: the model and the data used in the paper are available at the links reported in the sections below</p>
+        <ul class="collapsible" data-collapsible="expandable">
+            <li>
+                <div class="collapsible-header amber lighten-5">
+                    <i class="material-icons">settings_input_antenna</i>Data
+                </div>
+                <!-- option: folder_special, all_inclusive, transform -->
+                <div class="collapsible-body">
+                    <p>
+                    All electrophysiological experimental data were taken from
+                        <a target="_blank" href="https://www.cell.com/neuron/fulltext/S0896-6273(15)00336-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS08966273150033">
+                            <span class="color_link">Edelmann et al. 2015, Neuron.</span>
+                        </a>
+                   
+                    </p>
+                </div>
+            </li>
+            <li>
+
+                <div id="collapsetitle" class="collapsible-header amber lighten-5">
+                    <i class="material-icons">note_add</i>ModelDB link and test simulations
+                </div>
+                <div id="collapsebody" class="collapsible-body">
+                    <p>A reduced self-consistent set of files needed to reproduce&nbsp;Fig.3A,3B and Fig.4A,4B of the paper is available on
+                    <a href="https://senselab.med.yale.edu/ModelDB/showmodel.cshtml?model=244412#tabs-1" target="_blank">ModelDB</a>
+                    <br>
+                    <br>
+                    The model shows how the back-propagating action potentials in the oblique dendrites of CA1 neurons collide at the spines with a locally elicited EPSP to trigger the release of a retrograde messenger or Brain-Derived Neurotrophic Factor inducing the late expression of spike timing-dependent plasticity.<br>                                                                                                                        
+                    <br>
+                    <em>HOWTO:  Change settings by clicking the <strong>"LTP11"</strong> 
+                        or <strong>"LTP14"</strong> buttons in order to set the 
+                        default parameters to be used for reproducing the manuscript's 
+                        figures Fig.3A,3B and Fig.4A,4B respectively. 
+                        Alternatively you can manually set the "Tstop", "nBPAP" and "nStim" parameters.
+                        Once the parameters are set, click the <strong>"Run"</strong> 
+                        button to launch the simulation. 
+                        After the plots are dispayed, you can toggle on/off individual 
+                        trace visualization by double clicking on trace names in the legend. 
+                        Finally, you can zoom in by clicking and dragging and zoom out 
+                        by double clicking inside the plots or by dragging the cursor
+                        after positioning it on the x-tick/y-tick axis values.</em>
+                    <br>
+                    <br>
+                    <div style="position:relative; margin-left:25px; margin-right:25px">
+                        <div id="plots" class="plots">
+                            <div class="row">
+                                <div class="col s9" style="text-align:center">
+                                    <br>
+                                    <div id="plotlyChart_01"></div>
+                                    <div id="plotlyChart_02"></div>
+                                </div>
+                                <div class="col s3">
+                                    <div style="text-align:center">
+                                        <h6><strong>Settings</strong></h6>
+                                    </div>
+                                    <div class="settings input-field col s12">
+                                        Tstop
+                                        <input type="number" id="tstop" step="1" min="0"/>
+                                    </div>
+                                    <br>
+                                    <div class="settings input-field col s12">
+                                        nBPAP
+                                        <input type="number" id="nbpap" step="0.1" min="0"/>
+                                    </div>
+                                    <br>
+                                    <div class="settings input-field col s12">
+                                        nStim
+                                        <input type="number" id="nstim" step="1" min="0"/>
+                                    </div>
+                                    <p style="text-align:center"><strong>Set defaults</strong></p>
+                                    <div class="row justify-content-md-center">
+                                        <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp11">LTP11</button>
+                                        <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp12">LTP12</button>
+                                        <button type="button" class="col s4 waves-effect waves-teal btn-flat" id="ltp14">LTP14</button>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <button type="submit" style="margin:6px;" class="col s12 waves-effect waves-light btn" id="run">Run</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="overlay" id="error-msg">
+                            <div class="loader-class ">
+                                <div style="text-align:center" class="row">
+                                    An error occurred while connecting to the server
+                                    <br>
+                                    Please try again in a few seconds
+                                </div>
+                            </div>
+                        </div> 
+
+
+                        <div class="overlay" id="loader">
+                            <div class="loader-class ">
+                                <div style="text-align:center" class="row">
+                                    Launching simulation. Please wait ...
+                                    <div class="progress ">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <br>
+        <div class="rainbow-row">
+            <div></div> 
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+    </body>
+</html>
