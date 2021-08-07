@@ -1,7 +1,414 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>EBRAINS Live Papers</title>
-    <meta http-equiv="REFRESH" content="0;url=https://live-papers.brainsimulation.eu/#cf895d83-49b8-4c72-b1ac-8b974bbe4eb5">
+    <script type="text/javascript" src="./static/js/load_ga.js"></script>
+    <title>The HBP BSP "Live Papers"</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/live_paper.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
 </head>
+<body class="container">
+    <br>
+    <div class="box rounded">
+        <div style="text-align:center">
+            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/306845" target="_blank">
+                <img class="hbp-icon-big" src="static/imgs/hbp_diamond_120.png">
+            </a>
+            <h5 style="font-family: 'Merriweather', serif; text-align:center; line-height: 1.25;">
+                <p>The Brain Simulation Platform</p><p>"Live Papers"</p>
+            </h5>
+        </div>
+    </div>
+    <div class="note rounded intro">
+        <div class="intro-text">
+            The <strong>"Live Papers"</strong> of the Human Brain Project
+            <strong>Brain Simulation Platform</strong> are interactive documents
+            that refer to recently published scientific articles whose content is
+            related to the work, tools and services publicly available on
+            the Platform. Interactivity is the unique feature of the
+            "Live Papers": specific links on the documents will allow you to
+            download, visualize or simulate data, models and results presented in the
+            articles.
+            <br>
+            <br>
+        </div>
+        <div>
+            By clicking on the paper link, the "Live Paper" will be opened  on a
+            different tab of you browser window.
+            By clicking on the HBP icon
+            <img class="hbp-icon-small" src="static/imgs/hbp_diamond_120.png">,
+            you will open, instead, the document inside
+            the HBP Collaboratory workspace -Collab- that the authors have
+            created for the article to collect additional comments, data or tools
+            they may want to share*.
+        </div>
+        <div>
+            <br>
+            <i>
+                * Some of the tools used in the "Live Papers" and the article Collabs
+                require an account on the HBP Collaboratory platform.
+                If you do not have an account yet and
+                are willing to get one, please send us an email to
+                <strong>bsp-support [AT] humanbrainproject.eu</strong>
+            </i>
+        </div>
+    </div>
+    <div class="rainbow-row rr-small">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br>
+    <ul class="collapsible" data-collapsible="expandable">
+        <li class="active">
+            <div class="collapsible-header active amber lighten-5" style="">
+                <strong>2021</strong>
+            </div>
+            <!-- option: leak_remove -->
+            <div class="collapsible-body ">
+                <div style="margin-left:25px">
+                    <br>
+                    <table class="striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="2021/giacopelli_et_al_2021/giacopelli_et_al_2021.html" target="_blank" class="waves-effect waves-light">
+                                        Giacopelli G, Tegolo D, Spera E, Migliore M (2021) <i>On the structural connectivity of large-scale models of brain networks at cellular level.</i> Scientific Reports.
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2021/saray_et_al_2021/saray_et_al_2021.html" target="_blank" class="waves-effect waves-light">
+                                        Sáray S, Rössert CA, Appukuttan S, Migliore R, Vitale P, Lupascu CA, Bologna LL, Van Geit W, Romani A, Davison AP, Muller E, Freund TF, Káli S (2021) <i> HippoUnit: A software tool for the automated testing and systematic comparison of detailed models of hippocampal neurons based on electrophysiological data. </i> PLoS Computational Biology.</i>
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/54781/nav/523943" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2021/vitale_et_al_2021/vitale_et_al_2021.html" target="_blank" class="waves-effect waves-light">
+                                        Vitale P, Salgueiro-Pereira AR, Lupascu CA, Willem M, Migliore R, Migliore M and Marie H (2021) <i>
+                                            Analysis of Age-Dependent Alterations in Excitability Properties of CA1 Pyramidal Neurons in an APPPS1 Model of Alzheimer’s Disease.
+                                        </i> Frontiers in Aging Neuroscience.
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </li>
+        <li class="">
+            <div class="collapsible-header amber lighten-5" style="">
+                <strong>2020</strong>
+            </div>
+            <!-- option: leak_remove -->
+            <div class="collapsible-body ">
+                <div style="margin-left:25px">
+                    <br>
+                    <table class="striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="2020/amsalem_et_al_2020/amsalem_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        Amsalem O, Eyal G, Rogozinski N, Kumbhar P, Schürmann F, Segev I (2020) <i>An efficient analytical reduction of detailed nonlinear neuron models.</i> Nature Communications.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/76498/nav/517902" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/ecker_et_al_2020/ecker_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        Ecker A, Romani A, Sáray S, Káli S, Migliore M, Falck J, Lange S, Mercer A, Thomson AM, Muller E, Reimann MW, & Ramaswamy S (2020) <i> Data?driven integration of hippocampal CA1 synaptic physiology in silico. </i> Hippocampus.
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/giacopelli_et_al_2020/giacopelli_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        Giacopelli G, Migliore M, Tegolo D (2020) <i>Graph-theoretical derivation of brain structural connectivity.</i> Applied Mathematics and Computation.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/79510/nav/538229" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/hjorth_et_al_2020/hjorth_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        Hjorth J, Kozlov A, Carannante I, Frost Nylén J, Lindroos R, Johansson Y, Tokarska A, Dorst MC, Suryanarayana SM, Silberberg G, Hellgren Kotaleski J, Grillner S (2020) <i>The microcircuits of striatum in silico.</i> Proceedings of the National Academy of Sciences of the United States of America.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/79101/nav/535423" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/lupascu_et_al_2020/lupascu_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        Lupascu CA, Morabito A, Ruggeri F, Parisi C, Pimpinella D, Pizzarelli R, Meli G, Marinelli S, Cherubini E, Cattaneo A, Migliore M (2020) <i>Computational modeling of inhibitory transsynaptic signaling in hippocampal and cortical neurons expressing intrabodies against gephyrin.</i> Frontiers in Cellular Neuroscience.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/83942" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/mccauley_et_al_2020/mccauley_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        McCauley JP, Petroccione MA, D’Brant LY, Todd GC, Affinnih N, Wisnoski JJ, Zahid S, Shree S, Sousa AA, De Guzman RM, Migliore R, Brazhe A, Leapman RD, Khmaladze A, Semyanov A, Zuloaga DG, Migliore M, Scimemi A (2020) <i>Circadian Modulation of Neurons and Astrocytes Controls Synaptic Plasticity in Hippocampal Area CA1.</i> Cell Reports.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/88245/nav/597156" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/masoli_et_al_2020/masoli_et_al_2020.html" target="_blank" class="waves-effect waves-light">
+                                        Masoli S, Tognolina M, Laforenza U, Moccia F, D’Angelo E (2020) <i> Parameter tuning differentiates granule cell subtypes enriching the repertoire of retransmission properties at the cerebellum input stage.</i> Communications Biology.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/57719" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2020/masoli_et_al_2020b/masoli_et_al_2020b.html" target="_blank" class="waves-effect waves-light">
+                                        Masoli S, Ottaviani A, D’Angelo E (2020) <i> Cerebellar Golgi cell models predict dendritic processing and mechanisms of synaptic plasticity.</i> bioRxiv.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/84490" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                <td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header amber lighten-5" style="">
+                <strong>2019</strong>
+            </div>
+            <!-- option: leak_remove -->
+            <div class="collapsible-body ">
+                <div style="margin-left:25px">
+                    <br>
+                    <table class="striped">
+                        <tbody>
+                        <td>
+                            <a href="2019/bruce_et_al_2019/bruce_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                Bruce NJ, Narzi D, Trpevski D, Van Keulen SC, Nair AG, Roethlisberger U, Wade RC, Paolo Carloni P, Kotaleski JH (2019)<i> Regulation of adenylyl cyclase 5 in striatal neurons confers the ability to detect coincident neuromodulatory signals.</i> PLOS Computational Biology.
+                            </a>
+                        </td>
+                        <td class="ta-center">
+                            <a href="https://collab.humanbrainproject.eu/#/collab/62458" target="_blank" class="waves-effect waves-light">
+                                <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                            </a>
+                        <td>
+                            </tr>
+                        <tr>
+                            <td>
+                                <a href="2019/casali_et_al_2019/casali_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                    Casali S, Marenzi E, Medini C, Casellato C, D'Angelo E (2019) <i> Reconstruction and Simulation of a Scaffold Model of the Cerebellar Network.</i> Frontiers in Neuroinformatics.
+                                </a>
+                            </td>
+                            <td class="ta-center">
+                                <a href="https://collab.humanbrainproject.eu/#/collab/58186/nav/426307" target="_blank" class="waves-effect waves-light">
+                                    <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                </a>
+                            <td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="2019/geminiani_et_al_2019/geminiani_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                    Geminiani A, Pedrocchi A, D'Angelo E, Casellato C (2019)<i> Response Dynamics in an Olivocerebellar Spiking Neural Network With Non-linear Neuron Properties.</i> Frontiers in Neuroinformatics.
+                                </a>
+                            </td>
+                            <td class="ta-center">
+                                <a href="https://collab.humanbrainproject.eu/#/collab/79465/nav/537838" target="_blank" class="waves-effect waves-light">
+                                    <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                </a>
+                            <td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="2019/kokh_et_al_2019/kokh_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                    Kokh DB, Kaufmann T, Kister B, Wade RC (2019)<i> Machine Learning Analysis of ?RAMD Trajectories to Decipher Molecular Determinants of Drug-Target Residence Times.</i> Frontiers in Molecular Bioscience.
+                                </a>
+                            </td>
+                            <td class="ta-center">
+                                <a href="https://collab.humanbrainproject.eu/#/collab/63829" target="_blank" class="waves-effect waves-light">
+                                    <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                </a>
+                            <td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="2019/ludwig_et_al_2019/ludwig_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                    Ludwig A, Serna P, Morgenstein L, Yang G, Bar-Elli O, Ortiz G, Miller E, Oron D, Grupi A, Weiss S, Triller A  (2019)<i> Feasibility analysis of semiconductor voltage nanosensors for neuronal membrane potential sensing</i> BioRxiv.
+                                </a>
+                            </td>
+                            <td class="ta-center">
+                                <a href="https://collab.humanbrainproject.eu/#/collab/80389/nav/544284" target="_blank" class="waves-effect waves-light">
+                                    <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                </a>
+                            <td>
+                        </tr>
+                        <td>
+                            <a href="2019/martinello_et_al_2019/martinello_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                Martinello K, Giacalone E, Migliore M, Brown DA, Shah MM, (2019) <i> The subthreshold-active Kv7 current regulates neurotransmission by limiting spike-induced Ca2+ influx in hippocampal mossy fiber synaptic terminals.</i> Communications Biology.
+                            </a>
+                        </td>
+                        <td class="ta-center">
+                            <a href="https://collab.humanbrainproject.eu/#/collab/69720" target="_blank" class="waves-effect waves-light">
+                                <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                            </a>
+                        <td>
+                            </tr>
+                        <tr>
+                            <td>
+                                <a href="2019/solinas_et_al_2019/solinas_et_al_2019.html" target="_blank" class="waves-effect waves-light">
+                                    Solinas S.M.G, Edelmann E, Leßmann V, Migliore M (2019)<i> A kinetic model for Brain-Derived Neurotrophic Factor mediated spike timing-dependent LTP.</i> PLoS Computational Biology.
+                                </a>
+                            </td>
+                            <td class="ta-center">
+                                <a href="https://collab.humanbrainproject.eu/#/collab/79993" target="_blank" class="waves-effect waves-light">
+                                    <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                </a>
+                            <td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header amber lighten-5" style="">
+                <strong>2018</strong>
+            </div>
+            <!-- option: leak_remove -->
+            <div class="collapsible-body ">
+                <div style="margin-left:25px">
+                    <br>
+                    <table class="striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="2018/eyal_et_al_2018/eyal_et_al_2018.html" target="_blank" class="waves-effect waves-light">
+                                        Eyal G, Amsalem O, Leibner Y, Verhoog MB, Testa-Silva G, Deitcher Y, Lodder JC, Benavides-Piccione R, Morales J, DeFelipe J, de Kock CPJ, Mansvelder HD, Segev I (2018) <i>Models of Human Cortical Pyramidal Neurons.</i> Frontiers In Cellular Neuroscience, eLife Sciences Publications.
+                                    </a>
+                                </td>
+                                <td class="">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/47206" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2018/lindroos_et_al_2018/lindroos_et_al_2018.html" target="_blank" class="waves-effect waves-light">
+                                        Lindroos R, Dorst MC, Du K, Filipovic M, Keller D, Ketzef M, Kozlov AK, Kumar A, Lindahl M, Nair AG, Perez-Fernandez J, Grillner S, Silberberg G, Hellgren Kotaleski J (2018) <i>Basal Ganglia Neuromodulation Over Multiple Temporal and Structural Scales-Simulations of Direct Pathway MSNs Investigate the Fast Onset of Dopaminergic Effects and Predict the Role of Kv4.2.</i> Frontiers in Neural Circuits.
+                                    </a>
+                                </td>
+                                <td class="">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/44569" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2018/migliore_et_al_2018/migliore_et_al_2018.html" target="_blank" class="waves-effect waves-light">
+                                        Migliore R, Lupascu CA, Bologna LL, Romani A, Courcol J-D, Antonel S, et al. (2018) <i>The physiological variability of channel density in hippocampal CA1 pyramidal cells and interneurons explored using a unified data-driven modeling workflow.</i> PLOS Computational Biology.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/18565/nav/167297" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span style="color:#476b6b;font-weight:bold;font-size:16px;font-family: 'Merriweather', serif">External contributions</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="2018/mandge_manchanda_2018/mandge_manchanda_2018.html" target="_blank" class="waves-effect waves-light">
+                                        Mandge D, Manchanda R, <i>A biophysically detailed computational model of urinary bladder small DRG neuron soma.</i> PLOS Computational Biology.
+                                    </a>
+                                </td>
+                                <td class="ta-center">
+                                    <a href="https://collab.humanbrainproject.eu/#/collab/54924" target="_blank" class="waves-effect waves-light">
+                                        <img class="hbp-icon" src="static/imgs/hbp_diamond_120.png">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+        </li>
+    </ul>
+    <div class="rainbow-row rr-small">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
 </html>
