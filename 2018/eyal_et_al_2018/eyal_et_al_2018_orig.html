@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="../../static/js/load_ga.js"></script>
+        <title>Guy Eyal et al. 2018</title>   	
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="../../static/css/live_paper.css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.6/nv.d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/visualizer.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/NeuralEnsemble/neo-viewer@master/js/src/services.js"></script>
+        <style>
+#rcorners1 {
+    border-radius: 25px;
+    padding: 20px; 
+    width: 100%;
+    height: 100%;  
+    background: #FFEBCD;
+}
+    #rcorners2 {
+        border-radius: 25px;
+        padding: 20px; 
+        width: 100%;
+        height: 100%;
+        background: #FFCC99;
+    }
+        </style>
+    </head>
+    <body class="container">
+        <br>
+        <div class="box rounded centered">
+            <a href="../../index.html" class="waves-effect waves-light" style="text-align:center; color:black">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="hbp-icon-small" src="../../static/imgs/hbp_diamond_120.png">
+                            </td>
+                            <td>
+                                <span class="title-style subtitle" style="padding-left:5px;">
+                                    The Brain Simulation Platform "Live Papers"
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </a>
+            <h5 class="title-style">Models of Human Cortical Pyramidal Neurons</h5>
+        </div>
+        <div>
+            <p>
+            <strong>Authors: </strong>Guy Eyal, Oren Amsalem, Yoni Leibner, Matthijs B. Verhoog, Guilherme Testa-Silva, Yair Deitcher, Johannes C Lodder, Ruth Benavides-Piccione, 
+            Juan Morales, Javier DeFelipe, Christiaan P. J. de Kock, Huibert D. Mansvelder and Idan Segev
+            </p>
+        </div>
+        <p>
+        <strong>Corresponding author: </strong>Idan Segev (
+        <em>
+            <a href="mailto:idan@lobster.ls.huji.ac.il">idan@lobster.ls.huji.ac.il</a>
+        </em> )
+        </p>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <p>
+            <strong>Journals: </strong>
+            <a href="https://www.frontiersin.org/journals/cellular-neuroscience" target="_blank">
+                <span class="color_link">Frontier In Cellular Neuroscience</span>,   
+            </a>
+            <a href="https://elifesciences.org/" target="_blank">
+                <span class="color_link">eLife Sciences Publications</span>
+            </a>
+            </p>
+            <p>
+            <strong>DOI: </strong>
+            <a href="https://www.frontiersin.org/articles/10.3389/fncel.2018.00181/full" target="_blank">
+                <span class="color_link">https://www.frontiersin.org/articles/10.3389/fncel.2018.00181/full</span>,
+            </a>
+
+            <a href="https://elifesciences.org/articles/16553" target="_blank">
+                <span class="color_link">     https://elifesciences.org/articles/16553</span>
+            </a>
+            </p>
+            <p>
+            <strong>Licence: </strong>the
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <span class="color_link">Creative Commons Attribution (CC BY) license</span>
+            </a>&nbsp;applies for all files.&nbsp;Under this Open Access license
+            anyone&nbsp; may copy, distribute, or reuse the files as long as the authors and the original source are properly cited.
+            </p>
+            <p>
+            <strong>Citations: </strong> <br> Eyal, G., Verhoog, M. B., Testa-Silva, G., Deitcher, Y., Benavides-Piccione, R., DeFelipe, J., ... 
+            & Segev, I. (2018). Human cortical pyramidal neurons: From spines to spikes via models. Frontiers in cellular neuroscience, 12, 181.
+            <br> Eyal, G., Verhoog, M. B., Testa-Silva, G., Deitcher, Y., Lodder, J. C., Benavides-Piccione, R., ... & Segev, I. (2016). Unique membrane properties and enhanced signal processing in human neocortical neurons. Elife, 5, e16553.
+            </a>
+
+            </p>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id ="" class="note rounded">
+            <h5>Abstract:</h5>
+            <div class="just-text">
+                The advanced cognitive capabilities of the human brain are often attributed to our recently evolved neocortex. 
+                However, it is not known whether the basic building blocks of the human neocortex, the pyramidal neurons, possess unique
+                biophysical properties that might impact on cortical computations. Here we study this question by modelling, in details,
+                pyramidal cells from human neocortex, including models on their membrane properties, excitatory synapses, dendritic spines,
+                dendritic NMDA- and somatic/axonal Na+ spikes. This provided new insights into signal processing and computational
+                capabilities of these principal cells. Six human layer 2 and layer 3 pyramidal cells (HL2/L3 PCs) were modeled,
+                integrating detailed anatomical and physiological data from both fresh and postmortem tissues from human temporal cortex.
+                These cells have specific membrane capacitance (Cm) of ~0.5 µF/cm2, half of the commonly accepted 'universal' value (~1 µF/cm2)
+                for biological membranes; they have particularly large AMPA- and NMDA-conductances per synaptic contact
+                (0.88 and 1.31 nS, respectively) and a steep dependence of the NMDA-conductance on voltage. A large dataset of high-resolution
+                reconstructed HL2/L3 dendritic spines provided estimates for the EPSPs at the spine head (12.7 ± 4.6 mV), spine base (9.7 ± 5.0 mV),
+                and soma (0.3 ± 0.1 mV), and for the spine neck resistance (50–80 MΩ). Matching the shape and firing pattern of experimental
+                somatic Na+-spikes provided estimates for the density of the somatic/axonal excitable membrane ion channels, predicting
+                that 134 ± 28 simultaneously activated HL2/L3-HL2/L3 synapses are required for generating (with 50% probability) a somatic
+                Na+ spike. Dendritic NMDA spikes were triggered in the model when 20 ± 10 excitatory spinous synapses were simultaneously
+                activated on individual dendritic branches. The particularly large number of basal dendrites in HL2/L3 PCs and the distinctive cable
+                elongation of their terminals imply that ~25 NMDA-spikes could be generated independently and simultaneously in these cells, as
+                compared to ~14 in L2/3 PCs from the rat somatosensory cortex. These multi-sites non-linear signals, together with the large (~30,000)
+                excitatory synapses/cell, equip human L2/L3 PCs with enhanced computational capabilities. Our study provides the most comprehensive
+                model of any human neuron to-date demonstrating the biophysical and computational distinctiveness of human cortical neurons. 
+            </div>
+        </div>
+        <br>
+        <p>This Live Paper introduces interactively these 6 modeled human L2/3 neurons, including their morphology, experimental measurements
+        and modelling response to current and synaptic inputs. The models are available to download and could also be simulated on the
+        cloud with NEURON as a service. The user can manipulate current injections to the model and explore the voltage response at any
+        dendritic/somatic and axonal loci.
+        </p>
+        <div class="main">   
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/cell1303_03_model_448.zip?delay=120.33&vinit=-86&dt=.025&amp=0.55&tstop=1500&dur=1000&celsius=37">
+                        <img src="Fig7/2013_03_13_cell03_1204_H42_02.png">
+                    </a>
+                </div>
+                <div class = "col-md-5">
+                    <iframe src="plots/Cell_130303.html"
+                            height=270px width=100% frameBorder="0"></iframe>			
+                </div>
+                <div class="col-md-1">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/cell0603_03_model_476.zip?delay=120.33&vinit=-86&dt=.025&amp=0.7&tstop=1500&dur=1000&celsius=37">
+                        <img src="Fig7/2013_03_06_cell03_789_H41_03.png">
+                    </a>
+                </div>
+                <div class = "col-md-5">
+                    <iframe src="plots/Cell_060303.html"
+                            height=270px width=100% frameBorder="0"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/cell0603_11_model_937.zip?delay=120.33&vinit=-86&dt=.025&amp=0.7&tstop=1500&dur=1000&celsius=37">
+                        <img src="Fig7/2013_03_06_cell11_1125_H41_06.png">
+                    </a>
+                </div>
+                <div class = "col-md-5">
+                    <iframe src="plots/Cell_060311.html"
+                            height=270px width=100% frameBorder="0"></iframe>
+                </div>
+                <div class="col-md-1">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/cell0603_08_model_602.zip?delay=120.33&vinit=-86&dt=.025&amp=0.7&tstop=1500&dur=1000&celsius=37">
+                        <img src="Fig7/2013_03_06_cell08_876_H41_05_Cell2.png">
+                    </a>
+                </div>
+                <div class = "col-md-5">
+                    <iframe src="plots/Cell_060308.html"
+                            height=270px width=100% frameBorder="0"></iframe>			
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/cell1303_05_model_643.zip?delay=120.33&vinit=-86&dt=.025&amp=0.6&tstop=1500&dur=1000&celsius=37">
+                        <img src="Fig7/2013_03_13_cell05_675_H42_04.png">
+                    </a>
+                </div>
+                <div class = "col-md-5">
+                    <iframe src="plots/Cell_130305.html"
+                            height=270px width=100% frameBorder="0"></iframe>			
+                </div>
+                <div class="col-md-1">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/cell1303_06_model_263.zip?delay=120.33&vinit=-86&dt=.025&amp=0.55&tstop=1500&dur=1000&celsius=37">
+                        <img src="Fig7/2013_03_13_cell06_945_H42_05.png">
+                    </a>
+                </div>
+                <div class = "col-md-5">
+                    <iframe src="plots/Cell_130306.html"
+                            height=270px width=100% frameBorder="0"></iframe>			
+                </div>
+            </div>
+            <br>
+            <div class="rainbow-row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <h4><strong><center>Model response to clusterd vs non clusterd input</center></strong></h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/Figure_8_Eyal_et_al_Elife/clustered_input/cell0603_11_model_937.zip?delay=0&vinit=-86&dt=.025&amp=0&tstop=500&dur=0&celsius=37">
+                        <img src="Fig8/clustered.png">
+                    </a>
+                </div>
+                <div class = "col-md-6">
+                    <a href="https://blue-naas.humanbrainproject.eu/#/url/human_cells/Figure_8_Eyal_et_al_Elife/distributed_input/cell0603_11_model_937.zip?delay=0&vinit=-86&dt=.025&amp=0&tstop=500&dur=0&celsius=37">
+                        <img src="Fig8/non_clustered.png">
+                    </a>		
+                </div>
+            </div>
+            <br>
+            <h5>Resources</h5>
+            <p>Data and models: all data and models used in the paper are available at the links reported below:
+            </p>
+            <ul class="collapsible" data-collapsible="expandable">
+                <li class="active">
+                    <div class="collapsible-header amber lighten-5">
+                        <i class="material-icons">settings_input_antenna</i>Morphologies
+                    </div>
+                    <!-- option: leak_remove -->
+                    <div class="collapsible-body ">
+                        <p>Morphology files (in .asc format) used in the paper for each etype (see Table S5 of the Supplementary Material):</p>
+                        <div style="margin-left:25px">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            2013_03_06_cell03_789_H41_03
+                                        </td>
+                                        <td>
+                                            <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/human_cells/cell0603_03_model_476/morphology/2013_03_06_cell03_789_H41_03.ASC" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">archive</i>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://neuroinformatics.nl/HBP/morphology-viewer-dev/?hbp-model-instance-id=283a1b0d-4769-4e27-a6e0-b8a44715492e&referrer=https%3A%2F%2Fcollab.humanbrainproject.eu%2F%23%2Fcollab%2F1655%2Fnav%2F75901%3Fstate%3Dmodel.4649f8ec-1928-4c86-8ecf-475990286c52%2Cexternal" target="_blank" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">3d_rotation</i>View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2013_03_06_cell08_876_H41_05_Cell2
+                                        </td>
+                                        <td>
+                                            <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/human_cells/cell0603_08_model_602/morphology/2013_03_06_cell08_876_H41_05_Cell2.ASC" class="waves-effect waves-light" target="_blank">
+                                                <i class="material-icons left">archive</i>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://neuroinformatics.nl/HBP/morphology-viewer-dev/?hbp-model-instance-id=5a730c73-d07a-4a31-8490-955142360bf3&referrer=https%3A%2F%2Fcollab.humanbrainproject.eu%2F%23%2Fcollab%2F1655%2Fnav%2F75901%3Fstate%3Dmodel.32ed233a-3f8a-42df-bfa8-45c7b28f6167%2Cexternal" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">3d_rotation</i>View
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2013_03_06_cell11_1125_H41_06
+                                        </td>
+                                        <td>
+                                            <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/human_cells/cell0603_11_model_937/morphology/2013_03_06_cell11_1125_H41_06.ASC" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">archive</i>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://neuroinformatics.nl/HBP/morphology-viewer-dev/?hbp-model-instance-id=334f812f-8bb9-488c-b40a-3e280d251f2b&referrer=https%3A%2F%2Fcollab.humanbrainproject.eu%2F%23%2Fcollab%2F1655%2Fnav%2F75901%3Fstate%3Dmodel.a81c0155-a8d1-43ae-82d6-dae4e3bb6f30%2Cexternal" class="waves-effect waves-light" target="_blank">
+                                                <i class="material-icons left">3d_rotation</i>View
+                                            </a>
+                                        </td>			
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2013_03_13_cell03_1204_H42_02
+                                        </td>
+                                        <td>
+                                            <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/human_cells/cell1303_03_model_448/morphology/2013_03_13_cell03_1204_H42_02.ASC" class="waves-effect waves-light" target="_blank">
+                                                <i class="material-icons left">archive</i>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://neuroinformatics.nl/HBP/morphology-viewer-dev/?hbp-model-instance-id=91b97cdf-2273-40de-9c22-4586a36b5455&referrer=https%3A%2F%2Fcollab.humanbrainproject.eu%2F%23%2Fcollab%2F1655%2Fnav%2F75901%3Fstate%3Dmodel.240dcfda-55b7-421e-b593-d29ea6b6fe88%2Cexternal" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">3d_rotation</i>View
+                                            </a>
+                                        </td>				      
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2013_03_13_cell05_675_H42_04
+                                        </td>
+                                        <td>
+                                            <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/human_cells/cell1303_05_model_643/morphology/2013_03_13_cell05_675_H42_04.ASC" class="waves-effect waves-light" target="_blank">
+                                                <i class="material-icons left">archive</i>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://neuroinformatics.nl/HBP/morphology-viewer-dev/?hbp-model-instance-id=407aeee9-16f4-4bf4-b684-589143022418&referrer=https%3A%2F%2Fcollab.humanbrainproject.eu%2F%23%2Fcollab%2F1655%2Fnav%2F75901%3Fstate%3Dmodel.16f2bdb7-6aec-4c29-b2d0-0d35db3b682a%2Cexternal" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">3d_rotation</i>View
+                                            </a>
+                                        </td>				      
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            2013_03_13_cell06_945_H42_05
+                                        </td>
+                                        <td>
+                                            <a href="https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/human_cells/cell1303_06_model_263/morphology/2013_03_13_cell06_945_H42_05.ASC" class="waves-effect waves-light" target="_blank">
+                                                <i class="material-icons left">archive</i>Download
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="https://neuroinformatics.nl/HBP/morphology-viewer-dev/?hbp-model-instance-id=aa464676-0236-4b53-9481-7e485beb877d&referrer=https%3A%2F%2Fcollab.humanbrainproject.eu%2F%23%2Fcollab%2F1655%2Fnav%2F75901%3Fstate%3Dmodel.2f14c756-48fe-49be-a897-479c9cd0af16%2Cexternal" target="_blank" class="waves-effect waves-light">
+                                                <i class="material-icons left">3d_rotation</i>View
+                                            </a>
+                                        </td>			     
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header amber lighten-5">
+                        <i class="material-icons">local_play</i>Cell model
+                    </div>
+                    <!-- option: folder_special, all_inclusive, transform -->
+                    <div class="collapsible-body">
+                        <p>
+                        <span class="txt_style1">The 
+                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.n" target="_blank">
+                                <span class="color_link">Model Catalog</span>
+                            </a>
+                            of the cells
+                        </span>
+                        </p>
+                        <div style="margin-left:25px">
+                            <table class="striped">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.2f14c756-48fe-49be-a897-479c9cd0af16,external" target=”_blank”>
+                                                1303 cell 06</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.16f2bdb7-6aec-4c29-b2d0-0d35db3b682a,external" target=”_blank”>
+                                                1503 cell 05</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.240dcfda-55b7-421e-b593-d29ea6b6fe88" target=”_blank”>
+                                                1303 cell 03</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.a81c0155-a8d1-43ae-82d6-dae4e3bb6f30" target=”_blank”>
+                                                0603 cell 11</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.32ed233a-3f8a-42df-bfa8-45c7b28f6167,external" target=”_blank”>
+                                                0603 cell 08</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://collab.humanbrainproject.eu/#/collab/1655/nav/75901?state=model.4649f8ec-1928-4c86-8ecf-475990286c52,external" target=”_blank”>
+                                                0603 cell 03</a>
+                                        </td>
+                                    </tr>     
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="rainbow-row">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <br>
+    </body>
+</html>
